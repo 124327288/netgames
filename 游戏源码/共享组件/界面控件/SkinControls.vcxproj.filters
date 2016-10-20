@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{d4a4b900-1a2f-4329-9ec4-d686a66c79e0}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{adfa9e9c-1f9c-4aed-a6b8-7374f55a68c8}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{d79d3c91-1964-487d-8335-a9f65f5fc7d6}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PngImage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinAide.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinButton.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinControls.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinFrameWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinHyperLink.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinImage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinListCtrl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinResourceManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinRichEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinSplitter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinWndObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PngImage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinAide.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinButton.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinControls.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinFrameWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinHyperLink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinImage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinListCtrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinResourceManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinRichEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinSplitter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinWndObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\bitmap1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SKIN_BUTTON_BACK.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SKIN_HEAD_TITLE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SKIN_WND_CLOSE.BMP">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SKIN_WND_LEFT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SKIN_WND_MAX.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SKIN_WND_MID.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SKIN_WND_MIN.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SKIN_WND_RESORE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SKIN_WND_RIGHT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SPLITTER_HOR.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SPLITTER_VOR.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\HAND_CUR.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\SkinControls.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="ImageOle.tlh" />
+    <None Include="ImageOle.tli" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SkinControls.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

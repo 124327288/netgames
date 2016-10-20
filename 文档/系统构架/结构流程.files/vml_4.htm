@@ -1,0 +1,211 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" 
+ xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>结构流程</title>
+<style type="text/css">
+	 v\:* { behavior: url(#default#VML); }
+</style>
+
+<script src="vml_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+
+	var pageID = 6;
+	var viewMgr = null;
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+	function getPNZ()
+	{
+		var rawHTML = VMLDiv.innerHTML;
+		var strReturn = ""
+		
+		strReturn = rawHTML.slice( rawHTML.indexOf( '<v:group' ), rawHTML.indexOf( "</v:shape>" ) );
+		strReturn += "</v:shape></v:group>\n";
+				
+		return strReturn;
+	}
+	
+	function load()
+	{
+		viewMgr = new parent.CViewMgr("ConvertedImage", "arrowDiv");
+
+		viewMgr.put_Location = ViewMgrSetVMLLocation;
+
+
+		viewMgr.visBBoxLeft = 0.746365;
+		viewMgr.visBBoxRight = 8.144719;
+		viewMgr.visBBoxBottom = 0.549514;
+		viewMgr.visBBoxTop = 11.694580;
+
+		viewMgr.Zoom = VMLZoomChange;
+		viewMgr.setView= VMLSetView;
+
+		viewMgr.SupportsDetails = true;
+		viewMgr.SupportsSearch = true;
+
+		parent.viewMgr = viewMgr;
+
+		fit();
+	}
+
+	function unload()
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+
+	function fit()
+	{
+		if(parent.frmToolbar)
+		{
+			if (parent.g_WidgetsLoaded)
+			{
+				var zoom100 = parent.frmToolbar.document.all('a100');
+				if (zoom100)
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					zoom100.click();
+				}
+				else
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					viewMgr.Zoom(100);
+				}
+			}
+			else
+			{
+				window.setTimeout("fit()", 500);
+			}
+		}	
+		else
+		{
+			parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+			viewMgr.Zoom(100);
+		}
+	}
+
+	function PostZoomProcessing (newZoomLevel)
+	{
+		parent.viewMgr.PostZoomProcessing = null;
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.viewMgr.getPNZ = getPNZ;
+		parent.CurPageUpdate (pageIndex);
+	}
+
+
+	
+	var isUpLevel = parent.isUpLevel;
+	var OnShapeClick = parent.OnShapeClick;
+	var OnShapeKey = parent.OnShapeKey;
+	var UpdateTooltip = parent.UpdateTooltip;
+	var clickMenu = parent.clickMenu;
+	var toggleMenuDiv = parent.toggleMenuDiv;
+	var toggleMenuLink = parent.toggleMenuLink;
+	var GoToPage = parent.GoToPage;
+
+	window.onload = load;
+	window.onunload = unload;
+	document.onclick = clickMenu;
+
+
+
+
+</script>
+
+</head>
+
+<body style="MARGIN:10px" onresize="VMLOnResize();" onscroll="VMLOnScroll();">
+
+<div id="arrowdiv" style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+
+
+
+<div id="VMLDiv" >
+
+
+<v:group  id="ConvertedImage" style="width:2.655293in;height:4.000000in;position:absolute;visibility=hidden;" coordSize="1328,2000" coordOrigin="-1000,-1000" >
+
+<v:shapetype 
+  id="VISSHAPE"
+  target="_parent"
+  coordsize="1328,2000"
+  coordorigin="-1000,-1000"
+  stroked="f"
+  strokecolor="red"
+  filled="t"
+>
+<v:fill opacity="0.0"/>
+</v:shapetype>
+
+
+<v:shape style="top:-1000.0;left:-1000.0;width:1327.6;height:2000.0;position:absolute" coordSize="1328,2000" coordOrigin="-1000,-1000" >
+<v:imagedata src="vml_4.emz"/>
+</v:shape>
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏框架 GameFrame" origTitle="游戏框架 GameFrame"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -997,779 l 150,779 l 150,32 l -997,32 l -997,779xe" onmouseover="UpdateTooltip(this,6,10)" onclick="OnShapeClick(6,10)" onfocus="UpdateTooltip(this,6,10);" onkeyup="OnShapeKey(6,10)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="客户端内核 IClientKernel" origTitle="客户端内核 IClientKernel"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -905,694 l 79,694 l 79,74 l -905,74 l -905,694xe" onmouseover="UpdateTooltip(this,6,20)" onclick="OnShapeClick(6,20)" onfocus="UpdateTooltip(this,6,20);" onkeyup="OnShapeKey(6,20)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏广场 GamePlaza" origTitle="游戏广场 GamePlaza"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -986,-227 l 139,-227 l 139,-877 l -986,-877 l -986,-227xe" onmouseover="UpdateTooltip(this,6,1)" onclick="OnShapeClick(6,1)" onfocus="UpdateTooltip(this,6,1);" onkeyup="OnShapeKey(6,1)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="房间1 RoomViewItem" origTitle="房间1 RoomViewItem"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -640,-447 l -355,-447 l -355,-764 l -640,-764 l -640,-447xe" onmouseover="UpdateTooltip(this,6,2)" onclick="OnShapeClick(6,2)" onfocus="UpdateTooltip(this,6,2);" onkeyup="OnShapeKey(6,2)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="房间2 RoomViewItem" origTitle="房间2 RoomViewItem"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -288,-447 l -3,-447 l -3,-764 l -288,-764 l -288,-447xe" onmouseover="UpdateTooltip(this,6,3)" onclick="OnShapeClick(6,3)" onfocus="UpdateTooltip(this,6,3);" onkeyup="OnShapeKey(6,3)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="显示 游戏服务列表 ServerItemView" origTitle="显示 游戏服务列表 ServerItemView"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -969,-398 l -772,-398 l -772,-852 l -969,-852 l -969,-398xe" onmouseover="UpdateTooltip(this,6,4)" onclick="OnShapeClick(6,4)" onfocus="UpdateTooltip(this,6,4);" onkeyup="OnShapeKey(6,4)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="头像组件 UserFace" origTitle="头像组件 UserFace"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -835,-254 l -705,-254 l -705,-359 l -835,-359 l -835,-254xe" onmouseover="UpdateTooltip(this,6,5)" onclick="OnShapeClick(6,5)" onfocus="UpdateTooltip(this,6,5);" onkeyup="OnShapeKey(6,5)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="下载组件 DownLoadService" origTitle="下载组件 DownLoadService"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -671,-254 l -541,-254 l -541,-359 l -671,-359 l -671,-254xe" onmouseover="UpdateTooltip(this,6,6)" onclick="OnShapeClick(6,6)" onfocus="UpdateTooltip(this,6,6);" onkeyup="OnShapeKey(6,6)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="信道模块 ChannelService" origTitle="信道模块 ChannelService"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -511,-49 l -336,-49 l -336,-155 l -511,-155 l -511,-49xe" onmouseover="UpdateTooltip(this,6,7)" onclick="OnShapeClick(6,7)" onfocus="UpdateTooltip(this,6,7);" onkeyup="OnShapeKey(6,7)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏等级 GameRankManager" origTitle="游戏等级 GameRankManager"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -510,-254 l -367,-254 l -367,-359 l -510,-359 l -510,-254xe" onmouseover="UpdateTooltip(this,6,8)" onclick="OnShapeClick(6,8)" onfocus="UpdateTooltip(this,6,8);" onkeyup="OnShapeKey(6,8)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="界面控件 SkinControls" origTitle="界面控件 SkinControls"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -340,-254 l -210,-254 l -210,-359 l -340,-359 l -340,-254xe" onmouseover="UpdateTooltip(this,6,9)" onclick="OnShapeClick(6,9)" onfocus="UpdateTooltip(this,6,9);" onkeyup="OnShapeKey(6,9)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏客户端区域 GameClientDlg GameClientView" origTitle="游戏客户端区域 GameClientDlg GameClientView"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -814,555 l -199,555 l -199,156 l -814,156 l -814,555xe" onmouseover="UpdateTooltip(this,6,17)" onclick="OnShapeClick(6,17)" onfocus="UpdateTooltip(this,6,17);" onkeyup="OnShapeKey(6,17)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="表情组件 ClientShare" origTitle="表情组件 ClientShare"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -171,-254 l -41,-254 l -41,-359 l -171,-359 l -171,-254xe" onmouseover="UpdateTooltip(this,6,19)" onclick="OnShapeClick(6,19)" onfocus="UpdateTooltip(this,6,19);" onkeyup="OnShapeKey(6,19)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="头像组件 UserFace" origTitle="头像组件 UserFace"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -121,532 l -6,532 l -6,436 l -121,436 l -121,532xe" onmouseover="UpdateTooltip(this,6,13)" onclick="OnShapeClick(6,13)" onfocus="UpdateTooltip(this,6,13);" onkeyup="OnShapeKey(6,13)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏等级 GameRankManager" origTitle="游戏等级 GameRankManager"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -127,240 l 0,240 l 0,144 l -127,144 l -127,240xe" onmouseover="UpdateTooltip(this,6,15)" onclick="OnShapeClick(6,15)" onfocus="UpdateTooltip(this,6,15);" onkeyup="OnShapeKey(6,15)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="界面控件 SkinControls" origTitle="界面控件 SkinControls"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -121,384 l -6,384 l -6,288 l -121,288 l -121,384xe" onmouseover="UpdateTooltip(this,6,16)" onclick="OnShapeClick(6,16)" onfocus="UpdateTooltip(this,6,16);" onkeyup="OnShapeKey(6,16)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="表情组件 ClientShare" origTitle="表情组件 ClientShare"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -121,667 l -6,667 l -6,571 l -121,571 l -121,667xe" onmouseover="UpdateTooltip(this,6,18)" onclick="OnShapeClick(6,18)" onfocus="UpdateTooltip(this,6,18);" onkeyup="OnShapeKey(6,18)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="关系管理CCompanionManager" origTitle="关系管理CCompanionManager"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -17,-254 l 122,-254 l 122,-359 l -17,-359 l -17,-254xe" onmouseover="UpdateTooltip(this,6,14)" onclick="OnShapeClick(6,14)" onfocus="UpdateTooltip(this,6,14);" onkeyup="OnShapeKey(6,14)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="网络组件 CClientSocket" origTitle="网络组件 CClientSocket"  style="top:-1000;left:-1000;width:1328;height:2000;position:absolute" path=" m -501,997 l -325,997 l -325,891 l -501,891 l -501,997xe" onmouseover="UpdateTooltip(this,6,22)" onclick="OnShapeClick(6,22)" onfocus="UpdateTooltip(this,6,22);" onkeyup="OnShapeKey(6,22)"/> 
+
+</v:group>
+
+
+
+</div>
+
+
+
+</body>
+</html>
+

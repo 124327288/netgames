@@ -1,0 +1,148 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>
+结构流程
+</title>
+<script type="text/javascript" language="javascript">
+function UpdateTooltip(){};
+function OnShapeClick(){};
+</script>
+
+<script src="gif_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+	if(parent.isUpLevel)
+	{
+		location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+	}
+</script>
+
+
+
+<script type="text/jscript" language="jscript">
+
+var pageID = 6;
+
+var isUpLevel = parent.isUpLevel;
+var OnShapeClick = null;
+if (!parent.isMac)
+{
+	OnShapeClick = parent.OnShapeClick;
+}
+
+var OnShapeKey = parent.OnShapeKey;
+var UpdateTooltip = parent.UpdateTooltip;
+var clickMenu = parent.clickMenu;
+var toggleMenuDiv = parent.toggleMenuDiv;
+var toggleMenuLink = parent.toggleMenuLink;
+var GoToPage = parent.GoToPage;
+
+
+if (parent.isUpLevel)
+{
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			var fileEntry = parent.g_FileList[parent.g_CurPageIndex];
+			var fileToLoad = fileToLoad = fileEntry.PriImage;
+			if (fileEntry.SecImage.length > 0)
+			{
+				fileToLoad = fileEntry.SecImage;
+			}
+
+			location.replace(fileToLoad);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+
+	var viewMgr = new parent.CViewMgr();
+	parent.viewMgr = viewMgr;
+
+	viewMgr.SupportsDetails = true;
+	viewMgr.SupportsSearch = true;
+
+	viewMgr.put_Location = ViewMgrSetRasterLocation;
+	viewMgr.visBBoxLeft = 0.746365;
+	viewMgr.visBBoxRight = 8.144719;
+	viewMgr.visBBoxBottom = 0.549514;
+	viewMgr.visBBoxTop = 11.694580;
+	viewMgr.highlightDiv = null;
+}
+
+function load ()
+{
+	if(isUpLevel)
+	{
+		arrowdiv.innerHTML = '<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>';
+
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.CurPageUpdate (pageIndex);
+	}
+}
+
+function unload()
+{
+	if(isUpLevel)
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+}
+
+window.onload = load;
+window.onunload = unload;
+document.onclick = clickMenu;
+
+</script>
+</head>
+
+<body class="pageView" bgcolor="#FFFFFF">
+
+<div id=arrowdiv style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+<DIV id=RasterDiv>
+
+
+<center>
+  <IMG id="ConvertedImage" SRC="gif_4.gif" ALT="客户端结构" name=RasterImage BORDER="0" USEMAP="#visImageMap">
+</center>
+
+<MAP NAME="visImageMap">
+  <AREA shape="POLYGON" tabindex="1" ALT="网络组件 CClientSocket" origTitle="网络组件 CClientSocket" TITLE="网络组件 CClientSocket"  target="_top" COORDS=" 150,601 203,601 203,569 150,569 150,601" onmouseover="UpdateTooltip(this,6,22)" onfocus="UpdateTooltip(this,6,22)" onclick="return OnShapeClick(6,22);" onkeyup="OnShapeKey(6,22);">
+  <AREA shape="POLYGON" tabindex="1" ALT="关系管理CCompanionManager" origTitle="关系管理CCompanionManager" TITLE="关系管理CCompanionManager"  target="_top" COORDS=" 296,224 338,224 338,192 296,192 296,224" onmouseover="UpdateTooltip(this,6,14)" onfocus="UpdateTooltip(this,6,14)" onclick="return OnShapeClick(6,14);" onkeyup="OnShapeKey(6,14);">
+  <AREA shape="POLYGON" tabindex="1" ALT="表情组件 ClientShare" origTitle="表情组件 ClientShare" TITLE="表情组件 ClientShare"  target="_top" COORDS=" 264,501 299,501 299,473 264,473 264,501" onmouseover="UpdateTooltip(this,6,18)" onfocus="UpdateTooltip(this,6,18)" onclick="return OnShapeClick(6,18);" onkeyup="OnShapeKey(6,18);">
+  <AREA shape="POLYGON" tabindex="1" ALT="界面控件 SkinControls" origTitle="界面控件 SkinControls" TITLE="界面控件 SkinControls"  target="_top" COORDS=" 264,416 299,416 299,387 264,387 264,416" onmouseover="UpdateTooltip(this,6,16)" onfocus="UpdateTooltip(this,6,16)" onclick="return OnShapeClick(6,16);" onkeyup="OnShapeKey(6,16);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏等级 GameRankManager" origTitle="游戏等级 GameRankManager" TITLE="游戏等级 GameRankManager"  target="_top" COORDS=" 263,373 301,373 301,344 263,344 263,373" onmouseover="UpdateTooltip(this,6,15)" onfocus="UpdateTooltip(this,6,15)" onclick="return OnShapeClick(6,15);" onkeyup="OnShapeKey(6,15);">
+  <AREA shape="POLYGON" tabindex="1" ALT="头像组件 UserFace" origTitle="头像组件 UserFace" TITLE="头像组件 UserFace"  target="_top" COORDS=" 264,461 299,461 299,432 264,432 264,461" onmouseover="UpdateTooltip(this,6,13)" onfocus="UpdateTooltip(this,6,13)" onclick="return OnShapeClick(6,13);" onkeyup="OnShapeKey(6,13);">
+  <AREA shape="POLYGON" tabindex="1" ALT="表情组件 ClientShare" origTitle="表情组件 ClientShare" TITLE="表情组件 ClientShare"  target="_top" COORDS=" 249,224 289,224 289,192 249,192 249,224" onmouseover="UpdateTooltip(this,6,19)" onfocus="UpdateTooltip(this,6,19)" onclick="return OnShapeClick(6,19);" onkeyup="OnShapeKey(6,19);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏客户端区域 GameClientDlg GameClientView" origTitle="游戏客户端区域 GameClientDlg GameClientView" TITLE="游戏客户端区域 GameClientDlg GameClientView"  target="_top" COORDS=" 55,468 241,468 241,348 55,348 55,468" onmouseover="UpdateTooltip(this,6,17)" onfocus="UpdateTooltip(this,6,17)" onclick="return OnShapeClick(6,17);" onkeyup="OnShapeKey(6,17);">
+  <AREA shape="POLYGON" tabindex="1" ALT="界面控件 SkinControls" origTitle="界面控件 SkinControls" TITLE="界面控件 SkinControls"  target="_top" COORDS=" 198,224 237,224 237,192 198,192 198,224" onmouseover="UpdateTooltip(this,6,9)" onfocus="UpdateTooltip(this,6,9)" onclick="return OnShapeClick(6,9);" onkeyup="OnShapeKey(6,9);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏等级 GameRankManager" origTitle="游戏等级 GameRankManager" TITLE="游戏等级 GameRankManager"  target="_top" COORDS=" 147,224 190,224 190,192 147,192 147,224" onmouseover="UpdateTooltip(this,6,8)" onfocus="UpdateTooltip(this,6,8)" onclick="return OnShapeClick(6,8);" onkeyup="OnShapeKey(6,8);">
+  <AREA shape="POLYGON" tabindex="1" ALT="信道模块 ChannelService" origTitle="信道模块 ChannelService" TITLE="信道模块 ChannelService"  target="_top" COORDS=" 147,286 200,286 200,254 147,254 147,286" onmouseover="UpdateTooltip(this,6,7)" onfocus="UpdateTooltip(this,6,7)" onclick="return OnShapeClick(6,7);" onkeyup="OnShapeKey(6,7);">
+  <AREA shape="POLYGON" tabindex="1" ALT="下载组件 DownLoadService" origTitle="下载组件 DownLoadService" TITLE="下载组件 DownLoadService"  target="_top" COORDS=" 98,224 138,224 138,192 98,192 98,224" onmouseover="UpdateTooltip(this,6,6)" onfocus="UpdateTooltip(this,6,6)" onclick="return OnShapeClick(6,6);" onkeyup="OnShapeKey(6,6);">
+  <AREA shape="POLYGON" tabindex="1" ALT="头像组件 UserFace" origTitle="头像组件 UserFace" TITLE="头像组件 UserFace"  target="_top" COORDS=" 49,224 88,224 88,192 49,192 49,224" onmouseover="UpdateTooltip(this,6,5)" onfocus="UpdateTooltip(this,6,5)" onclick="return OnShapeClick(6,5);" onkeyup="OnShapeKey(6,5);">
+  <AREA shape="POLYGON" tabindex="1" ALT="显示 游戏服务列表 ServerItemView" origTitle="显示 游戏服务列表 ServerItemView" TITLE="显示 游戏服务列表 ServerItemView"  target="_top" COORDS=" 9,181 68,181 68,44 9,44 9,181" onmouseover="UpdateTooltip(this,6,4)" onfocus="UpdateTooltip(this,6,4)" onclick="return OnShapeClick(6,4);" onkeyup="OnShapeKey(6,4);">
+  <AREA shape="POLYGON" tabindex="1" ALT="房间2 RoomViewItem" origTitle="房间2 RoomViewItem" TITLE="房间2 RoomViewItem"  target="_top" COORDS=" 214,166 300,166 300,70 214,70 214,166" onmouseover="UpdateTooltip(this,6,3)" onfocus="UpdateTooltip(this,6,3)" onclick="return OnShapeClick(6,3);" onkeyup="OnShapeKey(6,3);">
+  <AREA shape="POLYGON" tabindex="1" ALT="房间1 RoomViewItem" origTitle="房间1 RoomViewItem" TITLE="房间1 RoomViewItem"  target="_top" COORDS=" 108,166 194,166 194,70 108,70 108,166" onmouseover="UpdateTooltip(this,6,2)" onfocus="UpdateTooltip(this,6,2)" onclick="return OnShapeClick(6,2);" onkeyup="OnShapeKey(6,2);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏广场 GamePlaza" origTitle="游戏广场 GamePlaza" TITLE="游戏广场 GamePlaza"  target="_top" COORDS=" 3,232 343,232 343,36 3,36 3,232" onmouseover="UpdateTooltip(this,6,1)" onfocus="UpdateTooltip(this,6,1)" onclick="return OnShapeClick(6,1);" onkeyup="OnShapeKey(6,1);">
+  <AREA shape="POLYGON" tabindex="1" ALT="客户端内核 IClientKernel" origTitle="客户端内核 IClientKernel" TITLE="客户端内核 IClientKernel"  target="_top" COORDS=" 28,510 325,510 325,323 28,323 28,510" onmouseover="UpdateTooltip(this,6,20)" onfocus="UpdateTooltip(this,6,20)" onclick="return OnShapeClick(6,20);" onkeyup="OnShapeKey(6,20);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏框架 GameFrame" origTitle="游戏框架 GameFrame" TITLE="游戏框架 GameFrame"  target="_top" COORDS=" 0,535 346,535 346,310 0,310 0,535" onmouseover="UpdateTooltip(this,6,10)" onfocus="UpdateTooltip(this,6,10)" onclick="return OnShapeClick(6,10);" onkeyup="OnShapeKey(6,10);">
+</MAP>
+
+
+
+</DIV>
+
+</body>
+</html>
+

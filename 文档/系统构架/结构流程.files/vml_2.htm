@@ -1,0 +1,205 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" 
+ xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>结构流程</title>
+<style type="text/css">
+	 v\:* { behavior: url(#default#VML); }
+</style>
+
+<script src="vml_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+
+	var pageID = 0;
+	var viewMgr = null;
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+	function getPNZ()
+	{
+		var rawHTML = VMLDiv.innerHTML;
+		var strReturn = ""
+		
+		strReturn = rawHTML.slice( rawHTML.indexOf( '<v:group' ), rawHTML.indexOf( "</v:shape>" ) );
+		strReturn += "</v:shape></v:group>\n";
+				
+		return strReturn;
+	}
+	
+	function load()
+	{
+		viewMgr = new parent.CViewMgr("ConvertedImage", "arrowDiv");
+
+		viewMgr.put_Location = ViewMgrSetVMLLocation;
+
+
+		viewMgr.visBBoxLeft = 0.392034;
+		viewMgr.visBBoxRight = 8.202733;
+		viewMgr.visBBoxBottom = 2.006207;
+		viewMgr.visBBoxTop = 11.222139;
+
+		viewMgr.Zoom = VMLZoomChange;
+		viewMgr.setView= VMLSetView;
+
+		viewMgr.SupportsDetails = true;
+		viewMgr.SupportsSearch = true;
+
+		parent.viewMgr = viewMgr;
+
+		fit();
+	}
+
+	function unload()
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+
+	function fit()
+	{
+		if(parent.frmToolbar)
+		{
+			if (parent.g_WidgetsLoaded)
+			{
+				var zoom100 = parent.frmToolbar.document.all('a100');
+				if (zoom100)
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					zoom100.click();
+				}
+				else
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					viewMgr.Zoom(100);
+				}
+			}
+			else
+			{
+				window.setTimeout("fit()", 500);
+			}
+		}	
+		else
+		{
+			parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+			viewMgr.Zoom(100);
+		}
+	}
+
+	function PostZoomProcessing (newZoomLevel)
+	{
+		parent.viewMgr.PostZoomProcessing = null;
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.viewMgr.getPNZ = getPNZ;
+		parent.CurPageUpdate (pageIndex);
+	}
+
+
+	
+	var isUpLevel = parent.isUpLevel;
+	var OnShapeClick = parent.OnShapeClick;
+	var OnShapeKey = parent.OnShapeKey;
+	var UpdateTooltip = parent.UpdateTooltip;
+	var clickMenu = parent.clickMenu;
+	var toggleMenuDiv = parent.toggleMenuDiv;
+	var toggleMenuLink = parent.toggleMenuLink;
+	var GoToPage = parent.GoToPage;
+
+	window.onload = load;
+	window.onunload = unload;
+	document.onclick = clickMenu;
+
+
+
+
+</script>
+
+</head>
+
+<body style="MARGIN:10px" onresize="VMLOnResize();" onscroll="VMLOnScroll();">
+
+<div id="arrowdiv" style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+
+
+
+<div id="VMLDiv" >
+
+
+<v:group  id="ConvertedImage" style="width:3.390085in;height:4.000000in;position:absolute;visibility=hidden;" coordSize="1695,2000" coordOrigin="-1000,-1000" >
+
+<v:shapetype 
+  id="VISSHAPE"
+  target="_parent"
+  coordsize="1695,2000"
+  coordorigin="-1000,-1000"
+  stroked="f"
+  strokecolor="red"
+  filled="t"
+>
+<v:fill opacity="0.0"/>
+</v:shapetype>
+
+
+<v:shape style="top:-1000.0;left:-1000.0;width:1695.0;height:2000.0;position:absolute" coordSize="1695,2000" coordOrigin="-1000,-1000" >
+<v:imagedata src="vml_2.emz"/>
+</v:shape>
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏系统服务端" origTitle="游戏系统服务端"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m -996,153 l 536,153 l 536,-485 l -996,-485 l -996,153xe" onmouseover="UpdateTooltip(this,0,10)" onclick="OnShapeClick(0,10)" onfocus="UpdateTooltip(this,0,10);" onkeyup="OnShapeKey(0,10)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="数据库记录" origTitle="数据库记录"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m -996,-656 l 536,-656 l 536,-996 l -996,-996 l -996,-656xe" onmouseover="UpdateTooltip(this,0,9)" onclick="OnShapeClick(0,9)" onfocus="UpdateTooltip(this,0,9);" onkeyup="OnShapeKey(0,9)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="中心服务器" origTitle="中心服务器"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m -784,-98 l -571,-98 l -571,-226 l -784,-226 l -784,-98xe" onmouseover="UpdateTooltip(this,0,1)" onclick="OnShapeClick(0,1)" onfocus="UpdateTooltip(this,0,1);" onkeyup="OnShapeKey(0,1)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏服务器1" origTitle="游戏服务器1"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m -337,-268 l -124,-268 l -124,-396 l -337,-396 l -337,-268xe" onmouseover="UpdateTooltip(this,0,2)" onclick="OnShapeClick(0,2)" onfocus="UpdateTooltip(this,0,2);" onkeyup="OnShapeKey(0,2)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏服务器2" origTitle="游戏服务器2"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m -337,-98 l -124,-98 l -124,-226 l -337,-226 l -337,-98xe" onmouseover="UpdateTooltip(this,0,3)" onclick="OnShapeClick(0,3)" onfocus="UpdateTooltip(this,0,3);" onkeyup="OnShapeKey(0,3)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏服务器3" origTitle="游戏服务器3"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m -337,72 l -124,72 l -124,-55 l -337,-55 l -337,72xe" onmouseover="UpdateTooltip(this,0,4)" onclick="OnShapeClick(0,4)" onfocus="UpdateTooltip(this,0,4);" onkeyup="OnShapeKey(0,4)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="登陆服务器" origTitle="登陆服务器"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m 110,-98 l 323,-98 l 323,-226 l 110,-226 l 110,-98xe" onmouseover="UpdateTooltip(this,0,5)" onclick="OnShapeClick(0,5)" onfocus="UpdateTooltip(this,0,5);" onkeyup="OnShapeKey(0,5)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="服务数据库" origTitle="服务数据库"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m -768,-869 l -769,-866 l -770,-864 l -771,-862 l -772,-859 l -773,-857 l -774,-854 l -775,-852 l -776,-849 l -777,-847 l -778,-844 l -778,-842 l -779,-839 l -780,-837 l -780,-834 l -781,-832 l -781,-829 l -782,-827 l -782,-824 l -782,-822 l -783,-819 l -783,-816 l -783,-814 l -783,-811 l -783,-809 l -784,-806 l -784,-803 l -783,-801 l -783,-798 l -783,-796 l -783,-793 l -783,-790 l -782,-788 l -782,-785 l -782,-783 l -781,-780 l -781,-777 l -780,-775 l -780,-772 l -779,-770 l -778,-767 l -778,-765 l -777,-762 l -776,-760 l -775,-757 l -774,-755 l -773,-753 l -772,-750 l -771,-748 l -770,-745 l -769,-743 l -768,-741 l -571,-741 l -572,-743 l -573,-745 l -574,-748 l -575,-750 l -576,-753 l -577,-755 l -578,-757 l -579,-760 l -580,-762 l -581,-765 l -581,-767 l -582,-770 l -583,-772 l -583,-775 l -584,-777 l -584,-780 l -585,-783 l -585,-785 l -586,-788 l -586,-790 l -586,-793 l -586,-796 l -587,-798 l -587,-801 l -587,-803 l -587,-806 l -587,-809 l -587,-811 l -586,-814 l -586,-816 l -586,-819 l -586,-822 l -585,-824 l -585,-827 l -584,-829 l -584,-832 l -583,-834 l -583,-837 l -582,-839 l -581,-842 l -581,-844 l -580,-847 l -579,-849 l -578,-852 l -577,-854 l -576,-857 l -575,-859 l -574,-862 l -573,-864 l -572,-866 l -571,-869 l -768,-869xe" onmouseover="UpdateTooltip(this,0,6)" onclick="OnShapeClick(0,6)" onfocus="UpdateTooltip(this,0,6);" onkeyup="OnShapeKey(0,6)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="用户数据库" origTitle="用户数据库"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m 126,-869 l 125,-866 l 124,-864 l 122,-862 l 121,-859 l 120,-857 l 119,-854 l 118,-852 l 118,-849 l 117,-847 l 116,-844 l 115,-842 l 115,-839 l 114,-837 l 113,-834 l 113,-832 l 112,-829 l 112,-827 l 111,-824 l 111,-822 l 111,-819 l 111,-816 l 110,-814 l 110,-811 l 110,-809 l 110,-806 l 110,-803 l 110,-801 l 110,-798 l 110,-796 l 111,-793 l 111,-790 l 111,-788 l 111,-785 l 112,-783 l 112,-780 l 113,-777 l 113,-775 l 114,-772 l 115,-770 l 115,-767 l 116,-765 l 117,-762 l 118,-760 l 118,-757 l 119,-755 l 120,-753 l 121,-750 l 122,-748 l 124,-745 l 125,-743 l 126,-741 l 323,-741 l 322,-743 l 320,-745 l 319,-748 l 318,-750 l 317,-753 l 316,-755 l 315,-757 l 314,-760 l 314,-762 l 313,-765 l 312,-767 l 311,-770 l 311,-772 l 310,-775 l 310,-777 l 309,-780 l 309,-783 l 308,-785 l 308,-788 l 308,-790 l 307,-793 l 307,-796 l 307,-798 l 307,-801 l 307,-803 l 307,-806 l 307,-809 l 307,-811 l 307,-814 l 307,-816 l 308,-819 l 308,-822 l 308,-824 l 309,-827 l 309,-829 l 310,-832 l 310,-834 l 311,-837 l 311,-839 l 312,-842 l 313,-844 l 314,-847 l 314,-849 l 315,-852 l 316,-854 l 317,-857 l 318,-859 l 319,-862 l 320,-864 l 322,-866 l 323,-869 l 126,-869xe" onmouseover="UpdateTooltip(this,0,7)" onclick="OnShapeClick(0,7)" onfocus="UpdateTooltip(this,0,7);" onkeyup="OnShapeKey(0,7)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏数据库" origTitle="游戏数据库"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m -321,-843 l -322,-841 l -323,-838 l -324,-836 l -325,-834 l -326,-831 l -327,-829 l -328,-826 l -329,-824 l -330,-821 l -331,-819 l -332,-816 l -332,-814 l -333,-811 l -333,-809 l -334,-806 l -334,-804 l -335,-801 l -335,-799 l -336,-796 l -336,-793 l -336,-791 l -336,-788 l -337,-786 l -337,-783 l -337,-780 l -337,-778 l -337,-775 l -337,-773 l -336,-770 l -336,-767 l -336,-765 l -336,-762 l -335,-760 l -335,-757 l -334,-754 l -334,-752 l -333,-749 l -333,-747 l -332,-744 l -332,-742 l -331,-739 l -330,-737 l -329,-734 l -328,-732 l -327,-729 l -326,-727 l -325,-725 l -324,-722 l -323,-720 l -322,-718 l -321,-715 l -124,-715 l -125,-718 l -126,-720 l -127,-722 l -129,-725 l -130,-727 l -131,-729 l -131,-732 l -132,-734 l -133,-737 l -134,-739 l -135,-742 l -135,-744 l -136,-747 l -137,-749 l -137,-752 l -138,-754 l -138,-757 l -139,-760 l -139,-762 l -139,-765 l -139,-767 l -140,-770 l -140,-773 l -140,-775 l -140,-778 l -140,-780 l -140,-783 l -140,-786 l -140,-788 l -139,-791 l -139,-793 l -139,-796 l -139,-799 l -138,-801 l -138,-804 l -137,-806 l -137,-809 l -136,-811 l -135,-814 l -135,-816 l -134,-819 l -133,-821 l -132,-824 l -131,-826 l -131,-829 l -130,-831 l -129,-834 l -127,-836 l -126,-838 l -125,-841 l -124,-843 l -321,-843xe" onmouseover="UpdateTooltip(this,0,8)" onclick="OnShapeClick(0,8)" onfocus="UpdateTooltip(this,0,8);" onkeyup="OnShapeKey(0,8)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏系统客户端" origTitle="游戏系统客户端"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m -996,996 l 536,996 l 536,358 l -996,358 l -996,996xe" onmouseover="UpdateTooltip(this,0,11)" onclick="OnShapeClick(0,11)" onfocus="UpdateTooltip(this,0,11);" onkeyup="OnShapeKey(0,11)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="客户端大厅" origTitle="客户端大厅"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m -858,579 l 397,579 l 397,451 l -858,451 l -858,579xe" onmouseover="UpdateTooltip(this,0,12)" onclick="OnShapeClick(0,12)" onfocus="UpdateTooltip(this,0,12);" onkeyup="OnShapeKey(0,12)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏1" origTitle="游戏1"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m -713,847 l -501,847 l -501,720 l -713,720 l -713,847xe" onmouseover="UpdateTooltip(this,0,13)" onclick="OnShapeClick(0,13)" onfocus="UpdateTooltip(this,0,13);" onkeyup="OnShapeKey(0,13)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏2" origTitle="游戏2"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m -337,847 l -124,847 l -124,720 l -337,720 l -337,847xe" onmouseover="UpdateTooltip(this,0,14)" onclick="OnShapeClick(0,14)" onfocus="UpdateTooltip(this,0,14);" onkeyup="OnShapeKey(0,14)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏3" origTitle="游戏3"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m 40,847 l 253,847 l 253,720 l 40,720 l 40,847xe" onmouseover="UpdateTooltip(this,0,15)" onclick="OnShapeClick(0,15)" onfocus="UpdateTooltip(this,0,15);" onkeyup="OnShapeKey(0,15)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="金币数据库等" origTitle="金币数据库等"  style="top:-1000;left:-1000;width:1695;height:2000;position:absolute" path=" m -321,-971 l -322,-968 l -323,-966 l -324,-964 l -325,-961 l -326,-959 l -327,-957 l -328,-954 l -329,-952 l -330,-949 l -331,-947 l -332,-944 l -332,-942 l -333,-939 l -333,-937 l -334,-934 l -334,-931 l -335,-929 l -335,-926 l -336,-924 l -336,-921 l -336,-919 l -336,-916 l -337,-913 l -337,-911 l -337,-908 l -337,-906 l -337,-903 l -337,-900 l -336,-898 l -336,-895 l -336,-893 l -336,-890 l -335,-887 l -335,-885 l -334,-882 l -334,-880 l -333,-877 l -333,-875 l -332,-872 l -332,-870 l -331,-867 l -330,-865 l -329,-862 l -328,-860 l -327,-857 l -326,-855 l -325,-852 l -324,-850 l -323,-848 l -322,-845 l -321,-843 l -124,-843 l -125,-845 l -126,-848 l -127,-850 l -129,-852 l -130,-855 l -131,-857 l -131,-860 l -132,-862 l -133,-865 l -134,-867 l -135,-870 l -135,-872 l -136,-875 l -137,-877 l -137,-880 l -138,-882 l -138,-885 l -139,-887 l -139,-890 l -139,-893 l -139,-895 l -140,-898 l -140,-900 l -140,-903 l -140,-906 l -140,-908 l -140,-911 l -140,-913 l -140,-916 l -139,-919 l -139,-921 l -139,-924 l -139,-926 l -138,-929 l -138,-931 l -137,-934 l -137,-937 l -136,-939 l -135,-942 l -135,-944 l -134,-947 l -133,-949 l -132,-952 l -131,-954 l -131,-957 l -130,-959 l -129,-961 l -127,-964 l -126,-966 l -125,-968 l -124,-971 l -321,-971xe" onmouseover="UpdateTooltip(this,0,29)" onclick="OnShapeClick(0,29)" onfocus="UpdateTooltip(this,0,29);" onkeyup="OnShapeKey(0,29)"/> 
+
+</v:group>
+
+
+
+</div>
+
+
+
+</body>
+</html>
+

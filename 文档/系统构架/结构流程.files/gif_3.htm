@@ -1,0 +1,136 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>
+结构流程
+</title>
+<script type="text/javascript" language="javascript">
+function UpdateTooltip(){};
+function OnShapeClick(){};
+</script>
+
+<script src="gif_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+	if(parent.isUpLevel)
+	{
+		location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+	}
+</script>
+
+
+
+<script type="text/jscript" language="jscript">
+
+var pageID = 5;
+
+var isUpLevel = parent.isUpLevel;
+var OnShapeClick = null;
+if (!parent.isMac)
+{
+	OnShapeClick = parent.OnShapeClick;
+}
+
+var OnShapeKey = parent.OnShapeKey;
+var UpdateTooltip = parent.UpdateTooltip;
+var clickMenu = parent.clickMenu;
+var toggleMenuDiv = parent.toggleMenuDiv;
+var toggleMenuLink = parent.toggleMenuLink;
+var GoToPage = parent.GoToPage;
+
+
+if (parent.isUpLevel)
+{
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			var fileEntry = parent.g_FileList[parent.g_CurPageIndex];
+			var fileToLoad = fileToLoad = fileEntry.PriImage;
+			if (fileEntry.SecImage.length > 0)
+			{
+				fileToLoad = fileEntry.SecImage;
+			}
+
+			location.replace(fileToLoad);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+
+	var viewMgr = new parent.CViewMgr();
+	parent.viewMgr = viewMgr;
+
+	viewMgr.SupportsDetails = true;
+	viewMgr.SupportsSearch = true;
+
+	viewMgr.put_Location = ViewMgrSetRasterLocation;
+	viewMgr.visBBoxLeft = 1.415656;
+	viewMgr.visBBoxRight = 7.009541;
+	viewMgr.visBBoxBottom = 2.755906;
+	viewMgr.visBBoxTop = 10.433071;
+	viewMgr.highlightDiv = null;
+}
+
+function load ()
+{
+	if(isUpLevel)
+	{
+		arrowdiv.innerHTML = '<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>';
+
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.CurPageUpdate (pageIndex);
+	}
+}
+
+function unload()
+{
+	if(isUpLevel)
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+}
+
+window.onload = load;
+window.onunload = unload;
+document.onclick = clickMenu;
+
+</script>
+</head>
+
+<body class="pageView" bgcolor="#FFFFFF">
+
+<div id=arrowdiv style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+<DIV id=RasterDiv>
+
+
+<center>
+  <IMG id="ConvertedImage" SRC="gif_3.gif" ALT="服务端结构" name=RasterImage BORDER="0" USEMAP="#visImageMap">
+</center>
+
+<MAP NAME="visImageMap">
+  <AREA shape="POLYGON" tabindex="1" ALT="网络组件 CClientSocket" origTitle="网络组件 CClientSocket" TITLE="网络组件 CClientSocket"  target="_top" COORDS=" 177,479 254,479 254,433 177,433 177,479" onmouseover="UpdateTooltip(this,5,13)" onfocus="UpdateTooltip(this,5,13)" onclick="return OnShapeClick(5,13);" onkeyup="OnShapeKey(5,13);">
+  <AREA shape="POLYGON" tabindex="1" ALT="列表服务 CServerListCenter" origTitle="列表服务 CServerListCenter" TITLE="列表服务 CServerListCenter"  target="_top" COORDS=" 42,170 134,170 134,123 42,123 42,170" onmouseover="UpdateTooltip(this,5,6)" onfocus="UpdateTooltip(this,5,6)" onclick="return OnShapeClick(5,6);" onkeyup="OnShapeKey(5,6);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏服务 GameService" origTitle="游戏服务 GameService" TITLE="游戏服务 GameService"  target="_top" COORDS=" 216,170 293,170 293,123 216,123 216,170" onmouseover="UpdateTooltip(this,5,4)" onfocus="UpdateTooltip(this,5,4)" onclick="return OnShapeClick(5,4);" onkeyup="OnShapeKey(5,4);">
+  <AREA shape="POLYGON" tabindex="1" ALT="登陆服务器 LogonServer" origTitle="登陆服务器 LogonServer" TITLE="登陆服务器 LogonServer"  target="_top" COORDS=" 177,362 254,362 254,316 177,316 177,362" onmouseover="UpdateTooltip(this,5,3)" onfocus="UpdateTooltip(this,5,3)" onclick="return OnShapeClick(5,3);" onkeyup="OnShapeKey(5,3);">
+  <AREA shape="POLYGON" tabindex="1" ALT="服务装载器 ServiceLoader" origTitle="服务装载器 ServiceLoader" TITLE="服务装载器 ServiceLoader"  target="_top" COORDS=" 216,247 293,247 293,200 216,200 216,247" onmouseover="UpdateTooltip(this,5,2)" onfocus="UpdateTooltip(this,5,2)" onclick="return OnShapeClick(5,2);" onkeyup="OnShapeKey(5,2);">
+  <AREA shape="POLYGON" tabindex="1" ALT="中心服务器 CenterServer" origTitle="中心服务器 CenterServer" TITLE="中心服务器 CenterServer"  target="_top" COORDS=" 49,247 127,247 127,200 49,200 49,247" onmouseover="UpdateTooltip(this,5,1)" onfocus="UpdateTooltip(this,5,1)" onclick="return OnShapeClick(5,1);" onkeyup="OnShapeKey(5,1);">
+  <AREA shape="POLYGON" tabindex="1" ALT="服务核心 ServerKernel" origTitle="服务核心 ServerKernel" TITLE="服务核心 ServerKernel"  target="_top" COORDS=" 0,564 438,564 438,31 0,31 0,564" onmouseover="UpdateTooltip(this,5,16)" onfocus="UpdateTooltip(this,5,16)" onclick="return OnShapeClick(5,16);" onkeyup="OnShapeKey(5,16);">
+</MAP>
+
+
+
+</DIV>
+
+</body>
+</html>
+

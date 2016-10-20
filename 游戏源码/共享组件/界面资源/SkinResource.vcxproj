@@ -1,0 +1,1181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>SkinResource</ProjectName>
+    <ProjectGuid>{1C2AF6C9-6787-41D2-8281-BCCEFBB46768}</ProjectGuid>
+    <Keyword>MFCDLLProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;SKIN_RESOURCE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../链接库/SkinControlsD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../运行/Debug/SkinResourceD.dll</OutputFile>
+      <ModuleDefinitionFile>.\SkinResourceD.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(OutDir)SkinResourceD.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\发布组件\客户端组件\Debug
+copy /y ..\..\运行\Debug\$(TargetFileName) ..\..\发布组件\客户端组件\Debug\$(TargetFileName)
+</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXEXT;SKIN_RESOURCE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../链接库/SkinControls.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../运行/Release/SkinResource.dll</OutputFile>
+      <ModuleDefinitionFile>.\SkinResource.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(OutDir)SkinResource.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\发布组件\客户端组件\Release
+copy /y ..\..\运行\Release\$(TargetFileName) ..\..\发布组件\客户端组件\Release\$(TargetFileName)
+</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="PlatformResource.cpp" />
+    <ClCompile Include="SkinResource.cpp" />
+    <ClCompile Include="SkinResourceModule.cpp" />
+    <ClCompile Include="Stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PlatformResource.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SkinResource.h" />
+    <ClInclude Include="SkinResourceModule.h" />
+    <ClInclude Include="Stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\Bill\BILL_BL.bmp" />
+    <Image Include="Res\Bill\BILL_BM.bmp" />
+    <Image Include="Res\Bill\BILL_BR.bmp" />
+    <Image Include="Res\Bill\BILL_ML.bmp" />
+    <Image Include="Res\Bill\BILL_MR.bmp" />
+    <Image Include="Res\Bill\BILL_TL.bmp" />
+    <Image Include="Res\Bill\BILL_TM.bmp" />
+    <Image Include="Res\Bill\BILL_TR.bmp" />
+    <Image Include="Res\Browse\BROWSE_BL.bmp" />
+    <Image Include="Res\Browse\BROWSE_BM.bmp" />
+    <Image Include="Res\Browse\BROWSE_BR.bmp" />
+    <Image Include="Res\Browse\BROWSE_ML.bmp" />
+    <Image Include="Res\Browse\BROWSE_MR.bmp" />
+    <Image Include="Res\Browse\BROWSE_TL.bmp" />
+    <Image Include="Res\Browse\BROWSE_TM.bmp" />
+    <Image Include="Res\Browse\BROWSE_TR.bmp" />
+    <Image Include="Res\BT_ITEM_AVTIVE.bmp" />
+    <Image Include="Res\BT_ITEM_NORMAL.bmp" />
+    <Image Include="Res\BT_SELECT_FACE.bmp" />
+    <Image Include="Res\Bugle_frame\BT_COLOR_SET.bmp" />
+    <Image Include="Res\Bugle_frame\BT_EXPESSION.bmp" />
+    <Image Include="Res\Chat\BT_CHAT_CLOSE.bmp" />
+    <Image Include="Res\Chat\BT_CHAT_CONTROL.bmp" />
+    <Image Include="Res\Chat\CHAT_BL.bmp" />
+    <Image Include="Res\Chat\CHAT_BM.bmp" />
+    <Image Include="Res\Chat\CHAT_BR.bmp" />
+    <Image Include="Res\Chat\CHAT_CONTROL.bmp" />
+    <Image Include="Res\Chat\CHAT_CONTROL_BACK.bmp" />
+    <Image Include="Res\Chat\CHAT_ML.bmp" />
+    <Image Include="Res\Chat\CHAT_MR.bmp" />
+    <Image Include="Res\Chat\CHAT_SUTRA_BL.bmp" />
+    <Image Include="Res\Chat\CHAT_SUTRA_BM.bmp" />
+    <Image Include="Res\Chat\CHAT_SUTRA_BR.bmp" />
+    <Image Include="Res\Chat\CHAT_SUTRA_ML.bmp" />
+    <Image Include="Res\Chat\CHAT_SUTRA_MR.bmp" />
+    <Image Include="Res\Chat\CHAT_SUTRA_TL.bmp" />
+    <Image Include="Res\Chat\CHAT_SUTRA_TM.bmp" />
+    <Image Include="Res\Chat\CHAT_SUTRA_TR.bmp" />
+    <Image Include="Res\Chat\CHAT_TL.bmp" />
+    <Image Include="Res\Chat\CHAT_TM.bmp" />
+    <Image Include="Res\Chat\CHAT_TR.bmp" />
+    <Image Include="Res\Chat_button\BT_CHAT_SHORT.bmp" />
+    <Image Include="Res\Chat_button\BT_CLEAN_SCREEN.bmp" />
+    <Image Include="Res\Chat_button\BT_COLOR_SET.bmp" />
+    <Image Include="Res\Chat_button\BT_EXPESSION.bmp" />
+    <Image Include="Res\Chat_button\BT_MORE_FUNCTION.bmp" />
+    <Image Include="Res\Chat_button\BT_PHRASE.bmp" />
+    <Image Include="Res\Chat_button\BT_SAVE_CHAT.bmp" />
+    <Image Include="Res\Chat_button\BT_SEND_CHAT.bmp" />
+    <Image Include="Res\Chat_expession\CHAT_BUGLE.bmp" />
+    <Image Include="Res\Chat_expession\CHAT_GIFT1.bmp" />
+    <Image Include="Res\Chat_expession\CHAT_GIFT10.bmp" />
+    <Image Include="Res\Chat_expession\CHAT_GIFT11.bmp" />
+    <Image Include="Res\Chat_expession\CHAT_GIFT2.bmp" />
+    <Image Include="Res\Chat_expession\CHAT_GIFT3.bmp" />
+    <Image Include="Res\Chat_expession\CHAT_GIFT4.bmp" />
+    <Image Include="Res\Chat_expession\CHAT_GIFT5.bmp" />
+    <Image Include="Res\Chat_expession\CHAT_GIFT6.bmp" />
+    <Image Include="Res\Chat_expession\CHAT_GIFT7.bmp" />
+    <Image Include="Res\Chat_expession\CHAT_GIFT8.bmp" />
+    <Image Include="Res\Chat_expession\CHAT_GIFT9.bmp" />
+    <Image Include="Res\Control\ENCIRCLE_BL.bmp" />
+    <Image Include="Res\Control\ENCIRCLE_BM.bmp" />
+    <Image Include="Res\Control\ENCIRCLE_BR.bmp" />
+    <Image Include="Res\Control\ENCIRCLE_ML.bmp" />
+    <Image Include="Res\Control\ENCIRCLE_MR.bmp" />
+    <Image Include="Res\Control\ENCIRCLE_TL.bmp" />
+    <Image Include="Res\Control\ENCIRCLE_TM.bmp" />
+    <Image Include="Res\Control\ENCIRCLE_TR.bmp" />
+    <Image Include="Res\Control\SKIN_BUTTON_BACK.bmp" />
+    <Image Include="Res\Control\SKIN_HEADER_L.bmp" />
+    <Image Include="Res\Control\SKIN_HEADER_M.bmp" />
+    <Image Include="Res\Control\SKIN_HEADER_R.bmp" />
+    <Image Include="Res\Control\SKIN_ICON.ico" />
+    <Image Include="Res\Control\SKIN_MENU_FLAGS.bmp" />
+    <Image Include="Res\Control\SKIN_WND_BL.bmp" />
+    <Image Include="Res\Control\SKIN_WND_BM.bmp" />
+    <Image Include="Res\Control\SKIN_WND_BR.bmp" />
+    <Image Include="Res\Control\Skin_wnd_close.bmp" />
+    <Image Include="Res\Control\SKIN_WND_MAX.bmp" />
+    <Image Include="Res\Control\SKIN_WND_MIN.bmp" />
+    <Image Include="Res\Control\SKIN_WND_ML.bmp" />
+    <Image Include="Res\Control\SKIN_WND_MR.bmp" />
+    <Image Include="Res\Control\SKIN_WND_RESORE.bmp" />
+    <Image Include="Res\Control\SKIN_WND_TL.bmp" />
+    <Image Include="Res\Control\SKIN_WND_TM.bmp" />
+    <Image Include="Res\Control\SKIN_WND_TR.bmp" />
+    <Image Include="Res\Control\SPLITTER_HOR.bmp" />
+    <Image Include="Res\Control\SPLITTER_VOR.bmp" />
+    <Image Include="Res\Def_resource\Bugle_frame\BT_COLOR_SET.bmp" />
+    <Image Include="Res\Def_resource\Bugle_frame\BT_EXPESSION.bmp" />
+    <Image Include="Res\Def_resource\Exchange_frame\arrowhead.png" />
+    <Image Include="Res\Def_resource\Game_chat\CHAT_BL.bmp" />
+    <Image Include="Res\Def_resource\Game_chat\CHAT_BM.bmp" />
+    <Image Include="Res\Def_resource\Game_chat\CHAT_BR.bmp" />
+    <Image Include="Res\Def_resource\Game_chat\CHAT_ML.bmp" />
+    <Image Include="Res\Def_resource\Game_chat\CHAT_MR.bmp" />
+    <Image Include="Res\Def_resource\Game_chat\CHAT_TL.bmp" />
+    <Image Include="Res\Def_resource\Game_chat\CHAT_TM.bmp" />
+    <Image Include="Res\Def_resource\Game_chat\CHAT_TR.bmp" />
+    <Image Include="Res\Def_resource\Game_frame\Bt_bugle.bmp" />
+    <Image Include="Res\Def_resource\Game_frame\BT_CLEAN_SCREEN.bmp" />
+    <Image Include="Res\Def_resource\Game_frame\BT_COLOR_SET.bmp" />
+    <Image Include="Res\Def_resource\Game_frame\BT_EXPESSION.bmp" />
+    <Image Include="Res\Def_resource\Game_frame\BT_LOOKON.bmp" />
+    <Image Include="Res\Def_resource\Game_frame\BT_LOOKON_EX.bmp" />
+    <Image Include="Res\Def_resource\Game_frame\BT_OPTION.bmp" />
+    <Image Include="Res\Def_resource\Game_frame\BT_RULE.bmp" />
+    <Image Include="Res\Def_resource\Game_frame\BT_SEND_CHAT.bmp" />
+    <Image Include="Res\Def_resource\Game_frame\BT_SOUND.bmp" />
+    <Image Include="Res\Def_resource\Game_frame\BT_SOUND_EX.bmp" />
+    <Image Include="Res\Def_resource\Game_frame\HIDE_USER_LIST.bmp" />
+    <Image Include="Res\Def_resource\Game_frame\SHOW_USER_LIST.bmp" />
+    <Image Include="Res\Def_resource\Game_list\LIST_BL.bmp" />
+    <Image Include="Res\Def_resource\Game_list\LIST_BM.bmp" />
+    <Image Include="Res\Def_resource\Game_list\LIST_BR.bmp" />
+    <Image Include="Res\Def_resource\Game_list\LIST_ML.bmp" />
+    <Image Include="Res\Def_resource\Game_list\LIST_MR.bmp" />
+    <Image Include="Res\Def_resource\Game_list\LIST_TL.bmp" />
+    <Image Include="Res\Def_resource\Game_list\LIST_TM.bmp" />
+    <Image Include="Res\Def_resource\Game_list\LIST_TR.bmp" />
+    <Image Include="Res\Def_resource\Game_user\BT_EXCHANGE_CHARM_VALUE.bmp" />
+    <Image Include="Res\Def_resource\Game_user\FEMALE.bmp" />
+    <Image Include="Res\Def_resource\Game_user\MALE.bmp" />
+    <Image Include="Res\Def_resource\Global_gift\BT_GIFT1.bmp" />
+    <Image Include="Res\Def_resource\Global_gift\BT_GIFT10.bmp" />
+    <Image Include="Res\Def_resource\Global_gift\BT_GIFT11.bmp" />
+    <Image Include="Res\Def_resource\Global_gift\BT_GIFT2.bmp" />
+    <Image Include="Res\Def_resource\Global_gift\Bt_gift3.bmp" />
+    <Image Include="Res\Def_resource\Global_gift\BT_GIFT4.bmp" />
+    <Image Include="Res\Def_resource\Global_gift\BT_GIFT5.bmp" />
+    <Image Include="Res\Def_resource\Global_gift\BT_GIFT6.bmp" />
+    <Image Include="Res\Def_resource\Global_gift\BT_GIFT7.bmp" />
+    <Image Include="Res\Def_resource\Global_gift\BT_GIFT8.bmp" />
+    <Image Include="Res\Def_resource\Global_gift\BT_GIFT9.bmp" />
+    <Image Include="Res\Def_resource\Global_property\BT_PROPERTY_1.bmp" />
+    <Image Include="Res\Def_resource\Global_property\BT_PROPERTY_10.bmp" />
+    <Image Include="Res\Def_resource\Global_property\BT_PROPERTY_11.bmp" />
+    <Image Include="Res\Def_resource\Global_property\BT_PROPERTY_12.bmp" />
+    <Image Include="Res\Def_resource\Global_property\Bt_property_13.bmp" />
+    <Image Include="Res\Def_resource\Global_property\BT_PROPERTY_14.bmp" />
+    <Image Include="Res\Def_resource\Global_property\BT_PROPERTY_15.bmp" />
+    <Image Include="Res\Def_resource\Global_property\BT_PROPERTY_2.bmp" />
+    <Image Include="Res\Def_resource\Global_property\BT_PROPERTY_3.bmp" />
+    <Image Include="Res\Def_resource\Global_property\BT_PROPERTY_4.bmp" />
+    <Image Include="Res\Def_resource\Global_property\BT_PROPERTY_5.bmp" />
+    <Image Include="Res\Def_resource\Global_property\BT_PROPERTY_6.bmp" />
+    <Image Include="Res\Def_resource\Global_property\BT_PROPERTY_7.bmp" />
+    <Image Include="Res\Def_resource\Global_property\BT_PROPERTY_8.bmp" />
+    <Image Include="Res\Def_resource\Global_property\BT_PROPERTY_9.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER1.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER10.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER11.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER12.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER13.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER14.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER15.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER2.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER3.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER4.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER5.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER6.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER7.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER8.bmp" />
+    <Image Include="Res\Def_resource\Global_property\PROPERTY_FORMER9.bmp" />
+    <Image Include="Res\Def_resource\Global_user\USER_INFO_L.bmp" />
+    <Image Include="Res\Def_resource\Global_user\USER_INFO_M.bmp" />
+    <Image Include="Res\Def_resource\Global_user\USER_INFO_R.bmp" />
+    <Image Include="Res\Def_resource\Plaza_browse\BROWSE_BL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_browse\BROWSE_BM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_browse\BROWSE_BR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_browse\BROWSE_ML.bmp" />
+    <Image Include="Res\Def_resource\Plaza_browse\BROWSE_MR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_browse\BROWSE_TL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_browse\BROWSE_TM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_browse\BROWSE_TR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_browse\BT_WEB_HOME.bmp" />
+    <Image Include="Res\Def_resource\Plaza_browse\BT_WEB_LAST.bmp" />
+    <Image Include="Res\Def_resource\Plaza_browse\BT_WEB_NEXT.bmp" />
+    <Image Include="Res\Def_resource\Plaza_browse\BT_WEB_RELOAD.bmp" />
+    <Image Include="Res\Def_resource\Plaza_browse\BT_WEB_STOP.bmp" />
+    <Image Include="Res\Def_resource\Plaza_chat\Bt_bugle.bmp" />
+    <Image Include="Res\Def_resource\Plaza_chat\BT_CLEAN_SCREEN.bmp" />
+    <Image Include="Res\Def_resource\Plaza_chat\BT_COLOR_SET.bmp" />
+    <Image Include="Res\Def_resource\Plaza_chat\BT_EXPESSION.bmp" />
+    <Image Include="Res\Def_resource\Plaza_chat\BT_SEND_CHAT.bmp" />
+    <Image Include="Res\Def_resource\Plaza_chat\CHAT_BL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_chat\CHAT_BM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_chat\CHAT_BR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_chat\CHAT_ML.bmp" />
+    <Image Include="Res\Def_resource\Plaza_chat\CHAT_MR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_chat\CHAT_TL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_chat\CHAT_TM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_chat\CHAT_TR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\BT_ITEM_AVTIVE.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\BT_ITEM_NORMAL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BT_CLOSE.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BT_MAX.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BT_MIN.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BT_NAVIGATION_1.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BT_NAVIGATION_2.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BT_NAVIGATION_3.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BT_NAVIGATION_4.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BT_NAVIGATION_5.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BT_OPTION.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BT_RESORE.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BT_SELF_SET.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_BT_SWITCH.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_ML.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_MR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_TL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_TM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\FRAME_TR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\HIDE_GAME_LIST.bmp" />
+    <Image Include="Res\Def_resource\Plaza_frame\SHOW_GAME_LIST.bmp" />
+    <Image Include="Res\Def_resource\Plaza_other\OP_ACTIVE.bmp" />
+    <Image Include="Res\Def_resource\Plaza_other\OP_BACKGROUND.bmp" />
+    <Image Include="Res\Def_resource\Plaza_other\OP_HOT.bmp" />
+    <Image Include="Res\Def_resource\Plaza_other\OP_NORMAL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_server\SERVER_BL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_server\SERVER_BM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_server\SERVER_BR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_server\SERVER_BT_HIDE_1.bmp" />
+    <Image Include="Res\Def_resource\Plaza_server\SERVER_BT_HIDE_2.bmp" />
+    <Image Include="Res\Def_resource\Plaza_server\SERVER_BT_SHOW_1.bmp" />
+    <Image Include="Res\Def_resource\Plaza_server\SERVER_BT_SHOW_2.bmp" />
+    <Image Include="Res\Def_resource\Plaza_server\SERVER_ML.bmp" />
+    <Image Include="Res\Def_resource\Plaza_server\SERVER_MR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_server\SERVER_TL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_server\SERVER_TM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_server\SERVER_TR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_user\HIDE_USER_LIST.bmp" />
+    <Image Include="Res\Def_resource\Plaza_user\SHOW_USER_LIST.bmp" />
+    <Image Include="Res\Def_resource\Plaza_user\USER_LIST_BL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_user\USER_LIST_BM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_user\USER_LIST_BR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_user\USER_LIST_ML.bmp" />
+    <Image Include="Res\Def_resource\Plaza_user\USER_LIST_MR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_user\USER_LIST_TL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_user\USER_LIST_TM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_user\USER_LIST_TR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\BT_WHISPER.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\BT_WHISPER_ADD_USER.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\BT_WHISPER_CLEAN_SCREEN.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\BT_WHISPER_COLOR_SET.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\BT_WHISPER_EXPESSION.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\BT_WHISPER_LEAVE_CHAT.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\BT_WHISPER_MORE_FUNCTION.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\BT_WHISPER_SEND_CONTROL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\CHAT_WHISPER_BL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\CHAT_WHISPER_BM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\CHAT_WHISPER_BR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\CHAT_WHISPER_ML.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\CHAT_WHISPER_MR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\CHAT_WHISPER_TL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\CHAT_WHISPER_TM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\CHAT_WHISPER_TR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\INPUT_WHISPER_BL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\INPUT_WHISPER_BM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\INPUT_WHISPER_BR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\INPUT_WHISPER_ML.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\INPUT_WHISPER_MR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\INPUT_WHISPER_TL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\INPUT_WHISPER_TM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\INPUT_WHISPER_TR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\USER_WHISPER_BL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\USER_WHISPER_BM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\USER_WHISPER_BR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\USER_WHISPER_ML.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\USER_WHISPER_MR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\USER_WHISPER_TL.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\USER_WHISPER_TM.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\USER_WHISPER_TR.bmp" />
+    <Image Include="Res\Def_resource\Plaza_whisper\WHISPER_SPLITTER_CHAT.bmp" />
+    <Image Include="Res\Def_resource\Property_frame\PROPERTY_AREA_L.bmp" />
+    <Image Include="Res\Def_resource\Property_frame\PROPERTY_AREA_M.bmp" />
+    <Image Include="Res\Def_resource\Property_frame\PROPERTY_AREA_R.bmp" />
+    <Image Include="Res\Def_resource\Property_frame\PROPERTY_BT_TO_L.bmp" />
+    <Image Include="Res\Def_resource\Property_frame\PROPERTY_BT_TO_R.bmp" />
+    <Image Include="Res\Def_resource\Skin_control\SKIN_BUTTON_BACK.bmp" />
+    <Image Include="Res\Def_resource\Skin_control\SKIN_HEAD_TITLE.bmp" />
+    <Image Include="Res\Def_resource\Skin_control\Skin_wnd_close.bmp" />
+    <Image Include="Res\Def_resource\Skin_control\SKIN_WND_LEFT.bmp" />
+    <Image Include="Res\Def_resource\Skin_control\SKIN_WND_MAX.bmp" />
+    <Image Include="Res\Def_resource\Skin_control\SKIN_WND_MID.bmp" />
+    <Image Include="Res\Def_resource\Skin_control\SKIN_WND_MIN.bmp" />
+    <Image Include="Res\Def_resource\Skin_control\SKIN_WND_RESORE.bmp" />
+    <Image Include="Res\Def_resource\Skin_control\SKIN_WND_RIGHT.bmp" />
+    <Image Include="Res\Def_resource\Skin_control\SPLITTER_HOR.bmp" />
+    <Image Include="Res\Def_resource\Skin_control\SPLITTER_VOR.bmp" />
+    <Image Include="Res\Def_resource\Table_frame\BT_AUTO_JOIN.bmp" />
+    <Image Include="Res\Def_resource\Table_frame\BT_BANK.bmp" />
+    <Image Include="Res\Def_resource\Table_frame\BT_QUIT_ROOM.bmp" />
+    <Image Include="Res\Def_resource\Table_frame\BT_SEARCH_USER.bmp" />
+    <Image Include="Res\Def_resource\Table_frame\TABLE_BL.bmp" />
+    <Image Include="Res\Def_resource\Table_frame\TABLE_BM.bmp" />
+    <Image Include="Res\Def_resource\Table_frame\TABLE_BR.bmp" />
+    <Image Include="Res\Def_resource\Table_frame\TABLE_ML.bmp" />
+    <Image Include="Res\Def_resource\Table_frame\TABLE_MR.bmp" />
+    <Image Include="Res\Def_resource\Table_frame\TABLE_TL.bmp" />
+    <Image Include="Res\Def_resource\Table_frame\TABLE_TM.bmp" />
+    <Image Include="Res\Def_resource\Table_frame\TABLE_TR.bmp" />
+    <Image Include="Res\ENCIRCLE_BL.bmp" />
+    <Image Include="Res\ENCIRCLE_BM.bmp" />
+    <Image Include="Res\ENCIRCLE_BR.bmp" />
+    <Image Include="Res\ENCIRCLE_ML.bmp" />
+    <Image Include="Res\ENCIRCLE_MR.bmp" />
+    <Image Include="Res\ENCIRCLE_TL.bmp" />
+    <Image Include="Res\ENCIRCLE_TM.bmp" />
+    <Image Include="Res\ENCIRCLE_TR.bmp" />
+    <Image Include="Res\Exchange_frame\arrowhead.png" />
+    <Image Include="Res\Frame\FRAME_BL.bmp" />
+    <Image Include="Res\Frame\FRAME_BM.bmp" />
+    <Image Include="Res\Frame\FRAME_BR.bmp" />
+    <Image Include="Res\Frame\FRAME_BT_CLOSE.bmp" />
+    <Image Include="Res\Frame\FRAME_BT_INSURE.bmp" />
+    <Image Include="Res\Frame\FRAME_BT_MASTER.bmp" />
+    <Image Include="Res\Frame\FRAME_BT_MEMBER.bmp" />
+    <Image Include="Res\Frame\FRAME_BT_MIN.bmp" />
+    <Image Include="Res\Frame\FRAME_BT_NAVIGATION_1.bmp" />
+    <Image Include="Res\Frame\FRAME_BT_NAVIGATION_2.bmp" />
+    <Image Include="Res\Frame\FRAME_BT_NAVIGATION_3.bmp" />
+    <Image Include="Res\Frame\FRAME_BT_NAVIGATION_4.bmp" />
+    <Image Include="Res\Frame\FRAME_BT_NAVIGATION_5.bmp" />
+    <Image Include="Res\Frame\FRAME_BT_OPTION.bmp" />
+    <Image Include="Res\Frame\FRAME_BT_PAYMENT.bmp" />
+    <Image Include="Res\Frame\FRAME_BT_SERVICE.bmp" />
+    <Image Include="Res\Frame\FRAME_BT_TRIBUNE.bmp" />
+    <Image Include="Res\Frame\FRAME_ML.bmp" />
+    <Image Include="Res\Frame\FRAME_MR.bmp" />
+    <Image Include="Res\Frame\FRAME_TL.bmp" />
+    <Image Include="Res\Frame\FRAME_TM.bmp" />
+    <Image Include="Res\Frame\FRAME_TR.bmp" />
+    <Image Include="Res\Game_chat\CHAT_BL.bmp" />
+    <Image Include="Res\Game_chat\CHAT_BM.bmp" />
+    <Image Include="Res\Game_chat\CHAT_BR.bmp" />
+    <Image Include="Res\Game_chat\CHAT_ML.bmp" />
+    <Image Include="Res\Game_chat\CHAT_MR.bmp" />
+    <Image Include="Res\Game_chat\CHAT_TL.bmp" />
+    <Image Include="Res\Game_chat\CHAT_TM.bmp" />
+    <Image Include="Res\Game_chat\CHAT_TR.bmp" />
+    <Image Include="Res\Game_frame\Bt_bugle.bmp" />
+    <Image Include="Res\Game_frame\BT_CLEAN_SCREEN.bmp" />
+    <Image Include="Res\Game_frame\BT_COLOR_SET.bmp" />
+    <Image Include="Res\Game_frame\BT_EXPESSION.bmp" />
+    <Image Include="Res\Game_frame\BT_LOOKON.bmp" />
+    <Image Include="Res\Game_frame\BT_LOOKON_EX.bmp" />
+    <Image Include="Res\Game_frame\BT_OPTION.bmp" />
+    <Image Include="Res\Game_frame\BT_RULE.bmp" />
+    <Image Include="Res\Game_frame\BT_SEND_CHAT.bmp" />
+    <Image Include="Res\Game_frame\BT_SOUND.bmp" />
+    <Image Include="Res\Game_frame\BT_SOUND_EX.bmp" />
+    <Image Include="Res\Game_frame\HIDE_USER_LIST.bmp" />
+    <Image Include="Res\Game_frame\SHOW_USER_LIST.bmp" />
+    <Image Include="Res\Game_list\LIST_BL.bmp" />
+    <Image Include="Res\Game_list\LIST_BM.bmp" />
+    <Image Include="Res\Game_list\LIST_BR.bmp" />
+    <Image Include="Res\Game_list\LIST_ML.bmp" />
+    <Image Include="Res\Game_list\LIST_MR.bmp" />
+    <Image Include="Res\Game_list\LIST_TL.bmp" />
+    <Image Include="Res\Game_list\LIST_TM.bmp" />
+    <Image Include="Res\Game_list\LIST_TR.bmp" />
+    <Image Include="Res\Game_user\BT_EXCHANGE_CHARM_VALUE.bmp" />
+    <Image Include="Res\Game_user\FEMALE.bmp" />
+    <Image Include="Res\Game_user\MALE.bmp" />
+    <Image Include="Res\Gitf_effect\MOVE_GIFT1.png" />
+    <Image Include="Res\Gitf_effect\MOVE_GIFT10.png" />
+    <Image Include="Res\Gitf_effect\MOVE_GIFT11.png" />
+    <Image Include="Res\Gitf_effect\MOVE_GIFT2.png" />
+    <Image Include="Res\Gitf_effect\MOVE_GIFT3.png" />
+    <Image Include="Res\Gitf_effect\MOVE_GIFT4.png" />
+    <Image Include="Res\Gitf_effect\MOVE_GIFT5.png" />
+    <Image Include="Res\Gitf_effect\MOVE_GIFT6.png" />
+    <Image Include="Res\Gitf_effect\MOVE_GIFT7.png" />
+    <Image Include="Res\Gitf_effect\MOVE_GIFT8.png" />
+    <Image Include="Res\Gitf_effect\MOVE_GIFT9.png" />
+    <Image Include="Res\Global_gift\BT_GIFT1.bmp" />
+    <Image Include="Res\Global_gift\BT_GIFT10.bmp" />
+    <Image Include="Res\Global_gift\BT_GIFT11.bmp" />
+    <Image Include="Res\Global_gift\BT_GIFT2.bmp" />
+    <Image Include="Res\Global_gift\Bt_gift3.bmp" />
+    <Image Include="Res\Global_gift\BT_GIFT4.bmp" />
+    <Image Include="Res\Global_gift\BT_GIFT5.bmp" />
+    <Image Include="Res\Global_gift\BT_GIFT6.bmp" />
+    <Image Include="Res\Global_gift\BT_GIFT7.bmp" />
+    <Image Include="Res\Global_gift\BT_GIFT8.bmp" />
+    <Image Include="Res\Global_gift\BT_GIFT9.bmp" />
+    <Image Include="Res\Global_property\BT_PROPERTY_1.bmp" />
+    <Image Include="Res\Global_property\BT_PROPERTY_10.bmp" />
+    <Image Include="Res\Global_property\BT_PROPERTY_11.bmp" />
+    <Image Include="Res\Global_property\BT_PROPERTY_12.bmp" />
+    <Image Include="Res\Global_property\Bt_property_13.bmp" />
+    <Image Include="Res\Global_property\BT_PROPERTY_14.bmp" />
+    <Image Include="Res\Global_property\BT_PROPERTY_15.bmp" />
+    <Image Include="Res\Global_property\BT_PROPERTY_2.bmp" />
+    <Image Include="Res\Global_property\BT_PROPERTY_3.bmp" />
+    <Image Include="Res\Global_property\BT_PROPERTY_4.bmp" />
+    <Image Include="Res\Global_property\BT_PROPERTY_5.bmp" />
+    <Image Include="Res\Global_property\BT_PROPERTY_6.bmp" />
+    <Image Include="Res\Global_property\BT_PROPERTY_7.bmp" />
+    <Image Include="Res\Global_property\BT_PROPERTY_8.bmp" />
+    <Image Include="Res\Global_property\BT_PROPERTY_9.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER1.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER10.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER11.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER12.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER13.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER14.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER15.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER2.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER3.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER4.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER5.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER6.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER7.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER8.bmp" />
+    <Image Include="Res\Global_property\PROPERTY_FORMER9.bmp" />
+    <Image Include="Res\Global_user\BT_HIDE_USER_INFO.bmp" />
+    <Image Include="Res\Global_user\BT_SHOW_USER_INFO.bmp" />
+    <Image Include="Res\Global_user\BT_USER_INFO_MENU.bmp" />
+    <Image Include="Res\Global_user\USER_INFO_FULL_L.bmp" />
+    <Image Include="Res\Global_user\USER_INFO_FULL_M.bmp" />
+    <Image Include="Res\Global_user\USER_INFO_FULL_R.bmp" />
+    <Image Include="Res\Global_user\USER_INFO_L.bmp" />
+    <Image Include="Res\Global_user\USER_INFO_M.bmp" />
+    <Image Include="Res\Global_user\USER_INFO_R.bmp" />
+    <Image Include="Res\HIDE_GAME_LIST.bmp" />
+    <Image Include="Res\HIDE_USER_LIST.bmp" />
+    <Image Include="Res\List_button\BT_CUSTOM_USER_ACTIVE.bmp" />
+    <Image Include="Res\List_button\BT_CUSTOM_USER_NORMAL.bmp" />
+    <Image Include="Res\List_button\BT_FRIEND_ACTIVE.bmp" />
+    <Image Include="Res\List_button\BT_FRIEND_NORMAL.bmp" />
+    <Image Include="Res\List_button\BT_NORMAL_USER_ACTIVE.bmp" />
+    <Image Include="Res\List_button\BT_NORMAL_USER_NORMAL.bmp" />
+    <Image Include="Res\List_button\BT_USER_ACTIVE.bmp" />
+    <Image Include="Res\List_button\BT_USER_NORMAL.bmp" />
+    <Image Include="Res\LOGON_TITLE.bmp" />
+    <Image Include="Res\LOGO_LOGON.bmp" />
+    <Image Include="Res\LOGO_NULL_TABLE.bmp" />
+    <Image Include="Res\LOGO_SEARCH.bmp" />
+    <Image Include="Res\Plaza_browse\BROWSE_BL.bmp" />
+    <Image Include="Res\Plaza_browse\BROWSE_BM.bmp" />
+    <Image Include="Res\Plaza_browse\BROWSE_BR.bmp" />
+    <Image Include="Res\Plaza_browse\BROWSE_ML.bmp" />
+    <Image Include="Res\Plaza_browse\BROWSE_MR.bmp" />
+    <Image Include="Res\Plaza_browse\BROWSE_TL.bmp" />
+    <Image Include="Res\Plaza_browse\BROWSE_TM.bmp" />
+    <Image Include="Res\Plaza_browse\BROWSE_TR.bmp" />
+    <Image Include="Res\Plaza_browse\BT_WEB_HOME.bmp" />
+    <Image Include="Res\Plaza_browse\BT_WEB_LAST.bmp" />
+    <Image Include="Res\Plaza_browse\BT_WEB_NEXT.bmp" />
+    <Image Include="Res\Plaza_browse\BT_WEB_RELOAD.bmp" />
+    <Image Include="Res\Plaza_browse\BT_WEB_STOP.bmp" />
+    <Image Include="Res\Plaza_chat\Bt_bugle.bmp" />
+    <Image Include="Res\Plaza_chat\BT_CHAT_CLOSE.bmp" />
+    <Image Include="Res\Plaza_chat\BT_CHAT_CONTROL.bmp" />
+    <Image Include="Res\Plaza_chat\BT_CHAT_SHORT.bmp" />
+    <Image Include="Res\Plaza_chat\BT_CLEAN_SCREEN.bmp" />
+    <Image Include="Res\Plaza_chat\BT_COLOR_SET.bmp" />
+    <Image Include="Res\Plaza_chat\BT_EXPESSION.bmp" />
+    <Image Include="Res\Plaza_chat\BT_MORE_FUNCTION.bmp" />
+    <Image Include="Res\Plaza_chat\BT_PHRASE.bmp" />
+    <Image Include="Res\Plaza_chat\BT_SAVE_CHAT.bmp" />
+    <Image Include="Res\Plaza_chat\BT_SEND_CHAT.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_BL.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_BM.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_BR.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_CONTROL_BACK.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_ML.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_MR.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_SUTRA_BL.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_SUTRA_BM.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_SUTRA_BR.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_SUTRA_ML.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_SUTRA_MR.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_SUTRA_TL.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_SUTRA_TM.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_SUTRA_TR.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_TL.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_TM.bmp" />
+    <Image Include="Res\Plaza_chat\CHAT_TR.bmp" />
+    <Image Include="Res\Plaza_frame\BT_ITEM_AVTIVE.bmp" />
+    <Image Include="Res\Plaza_frame\BT_ITEM_NORMAL.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BL.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BM.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BR.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BT_CLOSE.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BT_MASTER.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BT_MAX.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BT_MIN.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BT_NAVIGATION_1.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BT_NAVIGATION_2.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BT_NAVIGATION_3.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BT_NAVIGATION_4.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BT_NAVIGATION_5.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BT_OPTION.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BT_RESORE.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BT_SELF_SET.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_BT_SWITCH.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_ML.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_MR.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_TL.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_TM.bmp" />
+    <Image Include="Res\Plaza_frame\FRAME_TR.bmp" />
+    <Image Include="Res\Plaza_frame\HIDE_GAME_LIST.bmp" />
+    <Image Include="Res\Plaza_frame\SHOW_GAME_LIST.bmp" />
+    <Image Include="Res\Plaza_other\COLLOCATE_BAR.bmp" />
+    <Image Include="Res\PLAZA_OTHER\INDIVIDUAL_BAR.bmp" />
+    <Image Include="Res\Plaza_other\OP_ACTIVE.bmp" />
+    <Image Include="Res\Plaza_other\OP_BACKGROUND.bmp" />
+    <Image Include="Res\Plaza_other\OP_HOT.bmp" />
+    <Image Include="Res\Plaza_other\OP_NORMAL.bmp" />
+    <Image Include="Res\Plaza_server\FRAME_BT_SERVICE.bmp" />
+    <Image Include="Res\Plaza_server\FRAME_SERVICE_VIEW.bmp" />
+    <Image Include="Res\Plaza_server\SERVER_BL.bmp" />
+    <Image Include="Res\Plaza_server\SERVER_BM.bmp" />
+    <Image Include="Res\Plaza_server\SERVER_BR.bmp" />
+    <Image Include="Res\Plaza_server\SERVER_BT_HIDE_1.bmp" />
+    <Image Include="Res\Plaza_server\SERVER_BT_HIDE_2.bmp" />
+    <Image Include="Res\Plaza_server\SERVER_BT_SHOW_1.bmp" />
+    <Image Include="Res\Plaza_server\SERVER_BT_SHOW_2.bmp" />
+    <Image Include="Res\Plaza_server\SERVER_ML.bmp" />
+    <Image Include="Res\Plaza_server\SERVER_MR.bmp" />
+    <Image Include="Res\Plaza_server\SERVER_TL.bmp" />
+    <Image Include="Res\Plaza_server\SERVER_TM.bmp" />
+    <Image Include="Res\Plaza_server\SERVER_TR.bmp" />
+    <Image Include="Res\Plaza_server\SERVICE_VIEW_BACK.bmp" />
+    <Image Include="Res\Plaza_user\BT_CUSTOM_USER_ACTIVE.bmp" />
+    <Image Include="Res\Plaza_user\BT_CUSTOM_USER_NORMAL.bmp" />
+    <Image Include="Res\Plaza_user\BT_NORMAL_USER_ACTIVE.bmp" />
+    <Image Include="Res\Plaza_user\BT_NORMAL_USER_NORMAL.bmp" />
+    <Image Include="Res\Plaza_user\HIDE_USER_LIST.bmp" />
+    <Image Include="Res\Plaza_user\SHOW_USER_LIST.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_BL.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_BM.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_BR.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_ML.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_MR.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_SUTRA_BL.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_SUTRA_BM.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_SUTRA_BR.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_SUTRA_ML.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_SUTRA_MR.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_SUTRA_TL.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_SUTRA_TM.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_SUTRA_TR.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_TL.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_TM.bmp" />
+    <Image Include="Res\Plaza_user\USER_LIST_TR.bmp" />
+    <Image Include="Res\Plaza_whisper\BT_WHISPER.bmp" />
+    <Image Include="Res\Plaza_whisper\BT_WHISPER_ADD_USER.bmp" />
+    <Image Include="Res\Plaza_whisper\BT_WHISPER_CLEAN_SCREEN.bmp" />
+    <Image Include="Res\Plaza_whisper\BT_WHISPER_COLOR_SET.bmp" />
+    <Image Include="Res\Plaza_whisper\BT_WHISPER_EXPESSION.bmp" />
+    <Image Include="Res\Plaza_whisper\BT_WHISPER_LEAVE_CHAT.bmp" />
+    <Image Include="Res\Plaza_whisper\BT_WHISPER_MORE_FUNCTION.bmp" />
+    <Image Include="Res\Plaza_whisper\BT_WHISPER_SEND_CONTROL.bmp" />
+    <Image Include="Res\Plaza_whisper\CHAT_WHISPER_BL.bmp" />
+    <Image Include="Res\Plaza_whisper\CHAT_WHISPER_BM.bmp" />
+    <Image Include="Res\Plaza_whisper\CHAT_WHISPER_BR.bmp" />
+    <Image Include="Res\Plaza_whisper\CHAT_WHISPER_ML.bmp" />
+    <Image Include="Res\Plaza_whisper\CHAT_WHISPER_MR.bmp" />
+    <Image Include="Res\Plaza_whisper\CHAT_WHISPER_TL.bmp" />
+    <Image Include="Res\Plaza_whisper\CHAT_WHISPER_TM.bmp" />
+    <Image Include="Res\Plaza_whisper\CHAT_WHISPER_TR.bmp" />
+    <Image Include="Res\PLAZA_WHISPER\collocat.bmp" />
+    <Image Include="Res\PLAZA_WHISPER\COLLOCATE_BAR.bmp" />
+    <Image Include="Res\Plaza_whisper\INPUT_WHISPER_BL.bmp" />
+    <Image Include="Res\Plaza_whisper\INPUT_WHISPER_BM.bmp" />
+    <Image Include="Res\Plaza_whisper\INPUT_WHISPER_BR.bmp" />
+    <Image Include="Res\Plaza_whisper\INPUT_WHISPER_ML.bmp" />
+    <Image Include="Res\Plaza_whisper\INPUT_WHISPER_MR.bmp" />
+    <Image Include="Res\Plaza_whisper\INPUT_WHISPER_TL.bmp" />
+    <Image Include="Res\Plaza_whisper\INPUT_WHISPER_TM.bmp" />
+    <Image Include="Res\Plaza_whisper\INPUT_WHISPER_TR.bmp" />
+    <Image Include="Res\Plaza_whisper\USER_WHISPER_BL.bmp" />
+    <Image Include="Res\Plaza_whisper\USER_WHISPER_BM.bmp" />
+    <Image Include="Res\Plaza_whisper\USER_WHISPER_BR.bmp" />
+    <Image Include="Res\Plaza_whisper\USER_WHISPER_ML.bmp" />
+    <Image Include="Res\Plaza_whisper\USER_WHISPER_MR.bmp" />
+    <Image Include="Res\Plaza_whisper\USER_WHISPER_TL.bmp" />
+    <Image Include="Res\Plaza_whisper\USER_WHISPER_TM.bmp" />
+    <Image Include="Res\Plaza_whisper\USER_WHISPER_TR.bmp" />
+    <Image Include="Res\Plaza_whisper\WHISPER_SPLITTER_CHAT.bmp" />
+    <Image Include="Res\Property_frame\PROPERTY_AREA_L.bmp" />
+    <Image Include="Res\Property_frame\PROPERTY_AREA_M.bmp" />
+    <Image Include="Res\Property_frame\PROPERTY_AREA_R.bmp" />
+    <Image Include="Res\Property_frame\PROPERTY_BT_TO_L.bmp" />
+    <Image Include="Res\Property_frame\PROPERTY_BT_TO_R.bmp" />
+    <Image Include="Res\Property_menu\Menu_gift_1.bmp" />
+    <Image Include="Res\Property_menu\Menu_gift_10.bmp" />
+    <Image Include="Res\Property_menu\Menu_gift_11.bmp" />
+    <Image Include="Res\Property_menu\Menu_gift_2.bmp" />
+    <Image Include="Res\Property_menu\Menu_gift_3.bmp" />
+    <Image Include="Res\Property_menu\Menu_gift_4.bmp" />
+    <Image Include="Res\Property_menu\Menu_gift_5.bmp" />
+    <Image Include="Res\Property_menu\Menu_gift_6.bmp" />
+    <Image Include="Res\Property_menu\Menu_gift_7.bmp" />
+    <Image Include="Res\Property_menu\Menu_gift_8.bmp" />
+    <Image Include="Res\Property_menu\Menu_gift_9.bmp" />
+    <Image Include="Res\Red_resource\Bugle_frame\BT_COLOR_SET.bmp" />
+    <Image Include="Res\Red_resource\Bugle_frame\BT_EXPESSION.bmp" />
+    <Image Include="Res\Red_resource\Game_chat\CHAT_BL.bmp" />
+    <Image Include="Res\Red_resource\Game_chat\CHAT_BM.bmp" />
+    <Image Include="Res\Red_resource\Game_chat\CHAT_BR.bmp" />
+    <Image Include="Res\Red_resource\Game_chat\CHAT_ML.bmp" />
+    <Image Include="Res\Red_resource\Game_chat\CHAT_MR.bmp" />
+    <Image Include="Res\Red_resource\Game_chat\CHAT_TL.bmp" />
+    <Image Include="Res\Red_resource\Game_chat\CHAT_TM.bmp" />
+    <Image Include="Res\Red_resource\Game_chat\CHAT_TR.bmp" />
+    <Image Include="Res\Red_resource\Game_frame\Bt_bugle.bmp" />
+    <Image Include="Res\Red_resource\Game_frame\BT_CLEAN_SCREEN.bmp" />
+    <Image Include="Res\Red_resource\Game_frame\BT_COLOR_SET.bmp" />
+    <Image Include="Res\Red_resource\Game_frame\BT_EXPESSION.bmp" />
+    <Image Include="Res\Red_resource\Game_frame\BT_LOOKON.bmp" />
+    <Image Include="Res\Red_resource\Game_frame\BT_LOOKON_EX.bmp" />
+    <Image Include="Res\Red_resource\Game_frame\BT_OPTION.bmp" />
+    <Image Include="Res\Red_resource\Game_frame\BT_RULE.bmp" />
+    <Image Include="Res\Red_resource\Game_frame\BT_SEND_CHAT.bmp" />
+    <Image Include="Res\Red_resource\Game_frame\BT_SOUND.bmp" />
+    <Image Include="Res\Red_resource\Game_frame\BT_SOUND_EX.bmp" />
+    <Image Include="Res\Red_resource\Game_frame\HIDE_USER_LIST.bmp" />
+    <Image Include="Res\Red_resource\Game_frame\SHOW_USER_LIST.bmp" />
+    <Image Include="Res\Red_resource\Game_list\LIST_BL.bmp" />
+    <Image Include="Res\Red_resource\Game_list\LIST_BM.bmp" />
+    <Image Include="Res\Red_resource\Game_list\LIST_BR.bmp" />
+    <Image Include="Res\Red_resource\Game_list\LIST_ML.bmp" />
+    <Image Include="Res\Red_resource\Game_list\LIST_MR.bmp" />
+    <Image Include="Res\Red_resource\Game_list\LIST_TL.bmp" />
+    <Image Include="Res\Red_resource\Game_list\LIST_TM.bmp" />
+    <Image Include="Res\Red_resource\Game_list\LIST_TR.bmp" />
+    <Image Include="Res\Red_resource\Game_user\BT_EXCHANGE_CHARM_VALUE.bmp" />
+    <Image Include="Res\Red_resource\Game_user\FEMALE.bmp" />
+    <Image Include="Res\Red_resource\Game_user\MALE.bmp" />
+    <Image Include="Res\Red_resource\Global_gift\BT_GIFT1.bmp" />
+    <Image Include="Res\Red_resource\Global_gift\BT_GIFT10.bmp" />
+    <Image Include="Res\Red_resource\Global_gift\BT_GIFT11.bmp" />
+    <Image Include="Res\Red_resource\Global_gift\BT_GIFT2.bmp" />
+    <Image Include="Res\Red_resource\Global_gift\Bt_gift3.bmp" />
+    <Image Include="Res\Red_resource\Global_gift\BT_GIFT4.bmp" />
+    <Image Include="Res\Red_resource\Global_gift\BT_GIFT5.bmp" />
+    <Image Include="Res\Red_resource\Global_gift\BT_GIFT6.bmp" />
+    <Image Include="Res\Red_resource\Global_gift\BT_GIFT7.bmp" />
+    <Image Include="Res\Red_resource\Global_gift\BT_GIFT8.bmp" />
+    <Image Include="Res\Red_resource\Global_gift\BT_GIFT9.bmp" />
+    <Image Include="Res\Red_resource\Global_property\BT_PROPERTY_1.bmp" />
+    <Image Include="Res\Red_resource\Global_property\BT_PROPERTY_10.bmp" />
+    <Image Include="Res\Red_resource\Global_property\BT_PROPERTY_11.bmp" />
+    <Image Include="Res\Red_resource\Global_property\BT_PROPERTY_12.bmp" />
+    <Image Include="Res\Red_resource\Global_property\Bt_property_13.bmp" />
+    <Image Include="Res\Red_resource\Global_property\BT_PROPERTY_14.bmp" />
+    <Image Include="Res\Red_resource\Global_property\BT_PROPERTY_15.bmp" />
+    <Image Include="Res\Red_resource\Global_property\BT_PROPERTY_2.bmp" />
+    <Image Include="Res\Red_resource\Global_property\BT_PROPERTY_3.bmp" />
+    <Image Include="Res\Red_resource\Global_property\BT_PROPERTY_4.bmp" />
+    <Image Include="Res\Red_resource\Global_property\BT_PROPERTY_5.bmp" />
+    <Image Include="Res\Red_resource\Global_property\BT_PROPERTY_6.bmp" />
+    <Image Include="Res\Red_resource\Global_property\BT_PROPERTY_7.bmp" />
+    <Image Include="Res\Red_resource\Global_property\BT_PROPERTY_8.bmp" />
+    <Image Include="Res\Red_resource\Global_property\BT_PROPERTY_9.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER1.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER10.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER11.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER12.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER13.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER14.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER15.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER2.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER3.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER4.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER5.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER6.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER7.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER8.bmp" />
+    <Image Include="Res\Red_resource\Global_property\PROPERTY_FORMER9.bmp" />
+    <Image Include="Res\Red_resource\Global_user\USER_INFO_L.bmp" />
+    <Image Include="Res\Red_resource\Global_user\USER_INFO_M.bmp" />
+    <Image Include="Res\Red_resource\Global_user\USER_INFO_R.bmp" />
+    <Image Include="Res\Red_resource\Plaza_browse\BROWSE_BL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_browse\BROWSE_BM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_browse\BROWSE_BR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_browse\BROWSE_ML.bmp" />
+    <Image Include="Res\Red_resource\Plaza_browse\BROWSE_MR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_browse\BROWSE_TL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_browse\BROWSE_TM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_browse\BROWSE_TR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_browse\BT_WEB_HOME.bmp" />
+    <Image Include="Res\Red_resource\Plaza_browse\BT_WEB_LAST.bmp" />
+    <Image Include="Res\Red_resource\Plaza_browse\BT_WEB_NEXT.bmp" />
+    <Image Include="Res\Red_resource\Plaza_browse\BT_WEB_RELOAD.bmp" />
+    <Image Include="Res\Red_resource\Plaza_browse\BT_WEB_STOP.bmp" />
+    <Image Include="Res\Red_resource\Plaza_chat\Bt_bugle.bmp" />
+    <Image Include="Res\Red_resource\Plaza_chat\BT_CLEAN_SCREEN.bmp" />
+    <Image Include="Res\Red_resource\Plaza_chat\BT_COLOR_SET.bmp" />
+    <Image Include="Res\Red_resource\Plaza_chat\BT_EXPESSION.bmp" />
+    <Image Include="Res\Red_resource\Plaza_chat\BT_SEND_CHAT.bmp" />
+    <Image Include="Res\Red_resource\Plaza_chat\CHAT_BL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_chat\CHAT_BM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_chat\CHAT_BR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_chat\CHAT_ML.bmp" />
+    <Image Include="Res\Red_resource\Plaza_chat\CHAT_MR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_chat\CHAT_TL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_chat\CHAT_TM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_chat\CHAT_TR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\BT_ITEM_AVTIVE.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\BT_ITEM_NORMAL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BT_CLOSE.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BT_MAX.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BT_MIN.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BT_NAVIGATION_1.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BT_NAVIGATION_2.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BT_NAVIGATION_3.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BT_NAVIGATION_4.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BT_NAVIGATION_5.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BT_OPTION.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BT_RESORE.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BT_SELF_SET.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_BT_SWITCH.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_ML.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_MR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_TL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_TM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\FRAME_TR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\HIDE_GAME_LIST.bmp" />
+    <Image Include="Res\Red_resource\Plaza_frame\SHOW_GAME_LIST.bmp" />
+    <Image Include="Res\Red_resource\Plaza_other\OP_ACTIVE.bmp" />
+    <Image Include="Res\Red_resource\Plaza_other\OP_BACKGROUND.bmp" />
+    <Image Include="Res\Red_resource\Plaza_other\OP_HOT.bmp" />
+    <Image Include="Res\Red_resource\Plaza_other\OP_NORMAL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_server\SERVER_BL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_server\SERVER_BM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_server\SERVER_BR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_server\SERVER_BT_HIDE_1.bmp" />
+    <Image Include="Res\Red_resource\Plaza_server\SERVER_BT_HIDE_2.bmp" />
+    <Image Include="Res\Red_resource\Plaza_server\SERVER_BT_SHOW_1.bmp" />
+    <Image Include="Res\Red_resource\Plaza_server\SERVER_BT_SHOW_2.bmp" />
+    <Image Include="Res\Red_resource\Plaza_server\SERVER_ML.bmp" />
+    <Image Include="Res\Red_resource\Plaza_server\SERVER_MR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_server\SERVER_TL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_server\SERVER_TM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_server\SERVER_TR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_user\HIDE_USER_LIST.bmp" />
+    <Image Include="Res\Red_resource\Plaza_user\SHOW_USER_LIST.bmp" />
+    <Image Include="Res\Red_resource\Plaza_user\USER_LIST_BL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_user\USER_LIST_BM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_user\USER_LIST_BR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_user\USER_LIST_ML.bmp" />
+    <Image Include="Res\Red_resource\Plaza_user\USER_LIST_MR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_user\USER_LIST_TL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_user\USER_LIST_TM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_user\USER_LIST_TR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\BT_WHISPER.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\BT_WHISPER_ADD_USER.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\BT_WHISPER_CLEAN_SCREEN.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\BT_WHISPER_COLOR_SET.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\BT_WHISPER_EXPESSION.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\BT_WHISPER_LEAVE_CHAT.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\BT_WHISPER_MORE_FUNCTION.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\BT_WHISPER_SEND_CONTROL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\CHAT_WHISPER_BL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\CHAT_WHISPER_BM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\CHAT_WHISPER_BR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\CHAT_WHISPER_ML.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\CHAT_WHISPER_MR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\CHAT_WHISPER_TL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\CHAT_WHISPER_TM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\CHAT_WHISPER_TR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\INPUT_WHISPER_BL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\INPUT_WHISPER_BM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\INPUT_WHISPER_BR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\INPUT_WHISPER_ML.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\INPUT_WHISPER_MR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\INPUT_WHISPER_TL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\INPUT_WHISPER_TM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\INPUT_WHISPER_TR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\USER_WHISPER_BL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\USER_WHISPER_BM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\USER_WHISPER_BR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\USER_WHISPER_ML.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\USER_WHISPER_MR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\USER_WHISPER_TL.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\USER_WHISPER_TM.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\USER_WHISPER_TR.bmp" />
+    <Image Include="Res\Red_resource\Plaza_whisper\WHISPER_SPLITTER_CHAT.bmp" />
+    <Image Include="Res\Red_resource\Property_frame\PROPERTY_AREA_L.bmp" />
+    <Image Include="Res\Red_resource\Property_frame\PROPERTY_AREA_M.bmp" />
+    <Image Include="Res\Red_resource\Property_frame\PROPERTY_AREA_R.bmp" />
+    <Image Include="Res\Red_resource\Property_frame\PROPERTY_BT_TO_L.bmp" />
+    <Image Include="Res\Red_resource\Property_frame\PROPERTY_BT_TO_R.bmp" />
+    <Image Include="Res\Red_resource\Skin_control\SKIN_BUTTON_BACK.bmp" />
+    <Image Include="Res\Red_resource\Skin_control\SKIN_HEAD_TITLE.bmp" />
+    <Image Include="Res\Red_resource\Skin_control\Skin_wnd_close.bmp" />
+    <Image Include="Res\Red_resource\Skin_control\SKIN_WND_LEFT.bmp" />
+    <Image Include="Res\Red_resource\Skin_control\SKIN_WND_MAX.bmp" />
+    <Image Include="Res\Red_resource\Skin_control\SKIN_WND_MID.bmp" />
+    <Image Include="Res\Red_resource\Skin_control\SKIN_WND_MIN.bmp" />
+    <Image Include="Res\Red_resource\Skin_control\SKIN_WND_RESORE.bmp" />
+    <Image Include="Res\Red_resource\Skin_control\SKIN_WND_RIGHT.bmp" />
+    <Image Include="Res\Red_resource\Skin_control\SPLITTER_HOR.bmp" />
+    <Image Include="Res\Red_resource\Skin_control\SPLITTER_VOR.bmp" />
+    <Image Include="Res\Red_resource\Table_frame\BT_AUTO_JOIN.bmp" />
+    <Image Include="Res\Red_resource\Table_frame\BT_BANK.bmp" />
+    <Image Include="Res\Red_resource\Table_frame\BT_QUIT_ROOM.bmp" />
+    <Image Include="Res\Red_resource\Table_frame\BT_SEARCH_USER.bmp" />
+    <Image Include="Res\Red_resource\Table_frame\TABLE_BL.bmp" />
+    <Image Include="Res\Red_resource\Table_frame\TABLE_BM.bmp" />
+    <Image Include="Res\Red_resource\Table_frame\TABLE_BR.bmp" />
+    <Image Include="Res\Red_resource\Table_frame\TABLE_ML.bmp" />
+    <Image Include="Res\Red_resource\Table_frame\TABLE_MR.bmp" />
+    <Image Include="Res\Red_resource\Table_frame\TABLE_TL.bmp" />
+    <Image Include="Res\Red_resource\Table_frame\TABLE_TM.bmp" />
+    <Image Include="Res\Red_resource\Table_frame\TABLE_TR.bmp" />
+    <Image Include="Res\SEARCH_LOGO.bmp" />
+    <Image Include="Res\Server\SERVER_BL.bmp" />
+    <Image Include="Res\Server\SERVER_BM.bmp" />
+    <Image Include="Res\Server\SERVER_BR.bmp" />
+    <Image Include="Res\Server\SERVER_ML.bmp" />
+    <Image Include="Res\Server\SERVER_MR.bmp" />
+    <Image Include="Res\Server\SERVER_TL.bmp" />
+    <Image Include="Res\Server\SERVER_TM.bmp" />
+    <Image Include="Res\Server\SERVER_TR.bmp" />
+    <Image Include="Res\SERVER_LIST_IMAGE.bmp" />
+    <Image Include="Res\SHOW_GAME_LIST.bmp" />
+    <Image Include="Res\SHOW_USER_LIST.bmp" />
+    <Image Include="Res\SKIN_BUTTON_BACK.bmp" />
+    <Image Include="Res\Skin_control\ENCIRCLE_BL.bmp" />
+    <Image Include="Res\Skin_control\ENCIRCLE_BM.bmp" />
+    <Image Include="Res\Skin_control\ENCIRCLE_BR.bmp" />
+    <Image Include="Res\Skin_control\ENCIRCLE_ML.bmp" />
+    <Image Include="Res\Skin_control\ENCIRCLE_MR.bmp" />
+    <Image Include="Res\Skin_control\ENCIRCLE_TL.bmp" />
+    <Image Include="Res\Skin_control\ENCIRCLE_TM.bmp" />
+    <Image Include="Res\Skin_control\ENCIRCLE_TR.bmp" />
+    <Image Include="Res\Skin_control\SKIN_BUTTON_BACK.bmp" />
+    <Image Include="Res\SKIN_CONTROL\SKIN_COMBOBOX_THUMB.bmp" />
+    <Image Include="Res\Skin_control\SKIN_HEADER_L.bmp" />
+    <Image Include="Res\Skin_control\SKIN_HEADER_M.bmp" />
+    <Image Include="Res\Skin_control\SKIN_HEADER_R.bmp" />
+    <Image Include="Res\Skin_control\SKIN_HEAD_TITLE.bmp" />
+    <Image Include="Res\Skin_control\SKIN_ICON.ico" />
+    <Image Include="Res\Skin_control\SKIN_MENU_FLAGS.bmp" />
+    <Image Include="Res\Skin_control\SKIN_WND_BL.bmp" />
+    <Image Include="Res\Skin_control\SKIN_WND_BM.bmp" />
+    <Image Include="Res\Skin_control\SKIN_WND_BR.bmp" />
+    <Image Include="Res\Skin_control\Skin_wnd_close.bmp" />
+    <Image Include="Res\Skin_control\SKIN_WND_LEFT.bmp" />
+    <Image Include="Res\Skin_control\SKIN_WND_MAX.bmp" />
+    <Image Include="Res\Skin_control\SKIN_WND_MID.bmp" />
+    <Image Include="Res\Skin_control\SKIN_WND_MIN.bmp" />
+    <Image Include="Res\Skin_control\SKIN_WND_ML.bmp" />
+    <Image Include="Res\Skin_control\SKIN_WND_MR.bmp" />
+    <Image Include="Res\Skin_control\SKIN_WND_RESORE.bmp" />
+    <Image Include="Res\Skin_control\SKIN_WND_RIGHT.bmp" />
+    <Image Include="Res\Skin_control\SKIN_WND_TL.bmp" />
+    <Image Include="Res\Skin_control\SKIN_WND_TM.bmp" />
+    <Image Include="Res\Skin_control\SKIN_WND_TR.bmp" />
+    <Image Include="Res\Skin_control\SPLITTER_HOR.bmp" />
+    <Image Include="Res\Skin_control\SPLITTER_VOR.bmp" />
+    <Image Include="Res\SKIN_HEADER_L.bmp" />
+    <Image Include="Res\SKIN_HEADER_M.bmp" />
+    <Image Include="Res\SKIN_HEADER_R.bmp" />
+    <Image Include="Res\SKIN_ICON.ico" />
+    <Image Include="Res\SKIN_MENU_FLAGS.bmp" />
+    <Image Include="Res\SKIN_PREVIEW.bmp" />
+    <Image Include="Res\SKIN_WND_BL.bmp" />
+    <Image Include="Res\SKIN_WND_BM.bmp" />
+    <Image Include="Res\SKIN_WND_BR.bmp" />
+    <Image Include="Res\Skin_wnd_close.bmp" />
+    <Image Include="Res\SKIN_WND_MAX.bmp" />
+    <Image Include="Res\SKIN_WND_MIN.bmp" />
+    <Image Include="Res\SKIN_WND_ML.bmp" />
+    <Image Include="Res\SKIN_WND_MR.bmp" />
+    <Image Include="Res\SKIN_WND_RESORE.bmp" />
+    <Image Include="Res\SKIN_WND_TL.bmp" />
+    <Image Include="Res\SKIN_WND_TM.bmp" />
+    <Image Include="Res\SKIN_WND_TR.bmp" />
+    <Image Include="Res\SPLITTER_HOR.bmp" />
+    <Image Include="Res\SPLITTER_VOR.bmp" />
+    <Image Include="Res\Table\TABLE_BL.bmp" />
+    <Image Include="Res\Table\TABLE_BM.bmp" />
+    <Image Include="Res\Table\TABLE_BR.bmp" />
+    <Image Include="Res\Table\TABLE_ML.bmp" />
+    <Image Include="Res\Table\TABLE_MR.bmp" />
+    <Image Include="Res\Table\TABLE_TL.bmp" />
+    <Image Include="Res\Table\TABLE_TM.bmp" />
+    <Image Include="Res\Table\TABLE_TR.bmp" />
+    <Image Include="Res\Table_button\BT_AUTO_JOIN.bmp" />
+    <Image Include="Res\Table_button\BT_BUGLE.bmp" />
+    <Image Include="Res\Table_button\BT_GAME_OPTION.bmp" />
+    <Image Include="Res\Table_button\BT_GOLD_MANAGER.bmp" />
+    <Image Include="Res\Table_button\BT_JOIN_MENU.bmp" />
+    <Image Include="Res\Table_button\BT_QUIT_GAME.bmp" />
+    <Image Include="Res\Table_button\BT_SEARCH_USER.bmp" />
+    <Image Include="Res\Table_button\BT_VIEW_MODE.bmp" />
+    <Image Include="Res\Table_frame\BT_AUTO_JOIN.bmp" />
+    <Image Include="Res\Table_frame\BT_BANK.bmp" />
+    <Image Include="Res\Table_frame\BT_CALL_MASTER.bmp" />
+    <Image Include="Res\Table_frame\BT_GAME_OPTION.bmp" />
+    <Image Include="Res\Table_frame\BT_GOLD_MANAGER.bmp" />
+    <Image Include="Res\Table_frame\BT_JOIN_MENU.bmp" />
+    <Image Include="Res\Table_frame\BT_QUIT_GAME.bmp" />
+    <Image Include="Res\Table_frame\BT_QUIT_ROOM.bmp" />
+    <Image Include="Res\Table_frame\BT_SEARCH_USER.bmp" />
+    <Image Include="Res\TABLE_FRAME\BT_SERVER_MANAGE.bmp" />
+    <Image Include="Res\Table_frame\BT_VIEW_MODE.bmp" />
+    <Image Include="Res\Table_frame\TABLE_BL.bmp" />
+    <Image Include="Res\Table_frame\TABLE_BM.bmp" />
+    <Image Include="Res\Table_frame\TABLE_BR.bmp" />
+    <Image Include="Res\Table_frame\TABLE_GROUND.bmp" />
+    <Image Include="Res\Table_frame\TABLE_INVALID.bmp" />
+    <Image Include="Res\Table_frame\TABLE_ML.bmp" />
+    <Image Include="Res\Table_frame\TABLE_MR.bmp" />
+    <Image Include="Res\Table_frame\TABLE_NUMBER_BACK.bmp" />
+    <Image Include="Res\Table_frame\TABLE_TL.bmp" />
+    <Image Include="Res\Table_frame\TABLE_TM.bmp" />
+    <Image Include="Res\Table_frame\TABLE_TR.bmp" />
+    <Image Include="Res\TABLE_GROUND.bmp" />
+    <Image Include="Res\TABLE_INVALID.bmp" />
+    <Image Include="Res\TABLE_NUMBER_BACK.bmp" />
+    <Image Include="Res\User_info\BT_HIDE_USER_INFO.bmp" />
+    <Image Include="Res\User_info\BT_SHOW_USER_INFO.bmp" />
+    <Image Include="Res\User_info\BT_USER_CONTROL_DOWN.bmp" />
+    <Image Include="Res\User_info\BT_USER_CONTROL_UP.bmp" />
+    <Image Include="Res\User_info\USER_INFO_FULL_L.bmp" />
+    <Image Include="Res\User_info\USER_INFO_FULL_M.bmp" />
+    <Image Include="Res\User_info\USER_INFO_FULL_R.bmp" />
+    <Image Include="Res\User_info\USER_INFO_L.bmp" />
+    <Image Include="Res\User_info\USER_INFO_M.bmp" />
+    <Image Include="Res\User_info\USER_INFO_R.bmp" />
+    <Image Include="Res\User_list\USER_LIST_BL.bmp" />
+    <Image Include="Res\User_list\USER_LIST_BM.bmp" />
+    <Image Include="Res\User_list\USER_LIST_BR.bmp" />
+    <Image Include="Res\User_list\USER_LIST_ML.bmp" />
+    <Image Include="Res\User_list\USER_LIST_MR.bmp" />
+    <Image Include="Res\User_list\USER_LIST_SUTRA_BL.bmp" />
+    <Image Include="Res\User_list\USER_LIST_SUTRA_BM.bmp" />
+    <Image Include="Res\User_list\USER_LIST_SUTRA_BR.bmp" />
+    <Image Include="Res\User_list\USER_LIST_SUTRA_ML.bmp" />
+    <Image Include="Res\User_list\USER_LIST_SUTRA_MR.bmp" />
+    <Image Include="Res\User_list\USER_LIST_SUTRA_TL.bmp" />
+    <Image Include="Res\User_list\USER_LIST_SUTRA_TM.bmp" />
+    <Image Include="Res\User_list\USER_LIST_SUTRA_TR.bmp" />
+    <Image Include="Res\User_list\USER_LIST_TL.bmp" />
+    <Image Include="Res\User_list\USER_LIST_TM.bmp" />
+    <Image Include="Res\User_list\USER_LIST_TR.bmp" />
+    <Image Include="Res\Video_frame\BT_BIG_FLOWER.bmp" />
+    <Image Include="Res\Video_frame\BT_BIG_MORE.bmp" />
+    <Image Include="Res\Video_frame\BT_BIG_NOSEE.bmp" />
+    <Image Include="Res\Video_frame\BT_BIG_NOTALK.bmp" />
+    <Image Include="Res\Video_frame\BT_BIG_RESORE.bmp" />
+    <Image Include="Res\Video_frame\BT_BIG_SEE.bmp" />
+    <Image Include="Res\Video_frame\BT_BIG_TALK.bmp" />
+    <Image Include="Res\Video_frame\BT_SMALL_FLOWER.bmp" />
+    <Image Include="Res\Video_frame\BT_SMALL_MORE.bmp" />
+    <Image Include="Res\Video_frame\BT_SMALL_NOSEE.bmp" />
+    <Image Include="Res\Video_frame\BT_SMALL_NOTALK.bmp" />
+    <Image Include="Res\Video_frame\BT_SMALL_RESORE.bmp" />
+    <Image Include="Res\Video_frame\BT_SMALL_SEE.bmp" />
+    <Image Include="Res\Video_frame\BT_SMALL_TALK.bmp" />
+    <Image Include="Res\Video_frame\LARGE_FEMALE.bmp" />
+    <Image Include="Res\Video_frame\LARGE_FRAME.bmp" />
+    <Image Include="Res\Video_frame\LARGE_MALE.bmp" />
+    <Image Include="Res\Video_frame\LARGE_PHOTO.bmp" />
+    <Image Include="Res\Video_frame\LARGE_VOLUME.bmp" />
+    <Image Include="Res\Video_frame\LARGE_VOLUME_EX.bmp" />
+    <Image Include="Res\Video_frame\SMALL_FEMALE.bmp" />
+    <Image Include="Res\Video_frame\SMALL_FRAME.bmp" />
+    <Image Include="Res\Video_frame\SMALL_MALE.bmp" />
+    <Image Include="Res\Video_frame\SMALL_PHOTO.bmp" />
+    <Image Include="Res\Video_frame\SMALL_VOLUME.bmp" />
+    <Image Include="Res\Video_frame\SMALL_VOLUME_EX.bmp" />
+    <Image Include="Res\Web\BT_WEB_HOME.bmp" />
+    <Image Include="Res\Web\BT_WEB_LAST.bmp" />
+    <Image Include="Res\Web\BT_WEB_NEXT.bmp" />
+    <Image Include="Res\Web\BT_WEB_RELOAD.bmp" />
+    <Image Include="Res\Web\BT_WEB_STOP.bmp" />
+    <Image Include="Res\whisper\BT_WHISPER.bmp" />
+    <Image Include="Res\whisper\BT_WHISPER_ADD_USER.bmp" />
+    <Image Include="Res\whisper\BT_WHISPER_CLEAN_SCREEN.bmp" />
+    <Image Include="Res\whisper\BT_WHISPER_COLOR_SET.bmp" />
+    <Image Include="Res\whisper\BT_WHISPER_EXPESSION.bmp" />
+    <Image Include="Res\whisper\BT_WHISPER_LEAVE_CHAT.bmp" />
+    <Image Include="Res\whisper\BT_WHISPER_MORE_FUNCTION.bmp" />
+    <Image Include="Res\whisper\BT_WHISPER_PHRASE.bmp" />
+    <Image Include="Res\whisper\BT_WHISPER_SEND_CONTROL.bmp" />
+    <Image Include="Res\whisper\CHAT_WHISPER_BL.bmp" />
+    <Image Include="Res\whisper\CHAT_WHISPER_BM.bmp" />
+    <Image Include="Res\whisper\CHAT_WHISPER_BR.bmp" />
+    <Image Include="Res\whisper\CHAT_WHISPER_ML.bmp" />
+    <Image Include="Res\whisper\CHAT_WHISPER_MR.bmp" />
+    <Image Include="Res\whisper\CHAT_WHISPER_TL.bmp" />
+    <Image Include="Res\whisper\CHAT_WHISPER_TM.bmp" />
+    <Image Include="Res\whisper\CHAT_WHISPER_TR.bmp" />
+    <Image Include="Res\whisper\INPUT_WHISPER_BL.bmp" />
+    <Image Include="Res\whisper\INPUT_WHISPER_BM.bmp" />
+    <Image Include="Res\whisper\INPUT_WHISPER_BR.bmp" />
+    <Image Include="Res\whisper\INPUT_WHISPER_ML.bmp" />
+    <Image Include="Res\whisper\INPUT_WHISPER_MR.bmp" />
+    <Image Include="Res\whisper\INPUT_WHISPER_TL.bmp" />
+    <Image Include="Res\whisper\INPUT_WHISPER_TM.bmp" />
+    <Image Include="Res\whisper\INPUT_WHISPER_TR.bmp" />
+    <Image Include="Res\whisper\USER_WHISPER_BL.bmp" />
+    <Image Include="Res\whisper\USER_WHISPER_BM.bmp" />
+    <Image Include="Res\whisper\USER_WHISPER_BR.bmp" />
+    <Image Include="Res\whisper\USER_WHISPER_ML.bmp" />
+    <Image Include="Res\whisper\USER_WHISPER_MR.bmp" />
+    <Image Include="Res\whisper\USER_WHISPER_TL.bmp" />
+    <Image Include="Res\whisper\USER_WHISPER_TM.bmp" />
+    <Image Include="Res\whisper\USER_WHISPER_TR.bmp" />
+    <Image Include="Res\whisper\WHISPER_SPLITTER_CHAT.bmp" />
+    <Image Include="Res\WIZARD_MAP.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\HAND_CUR.cur" />
+    <None Include="res\SkinResource.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SkinResource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\界面控件\SkinControls.vcxproj">
+      <Project>{9580a9ba-2c2c-4359-852c-fd627732bf1d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

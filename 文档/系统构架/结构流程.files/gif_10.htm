@@ -1,0 +1,158 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>
+结构流程
+</title>
+<script type="text/javascript" language="javascript">
+function UpdateTooltip(){};
+function OnShapeClick(){};
+</script>
+
+<script src="gif_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+	if(parent.isUpLevel)
+	{
+		location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+	}
+</script>
+
+
+
+<script type="text/jscript" language="jscript">
+
+var pageID = 12;
+
+var isUpLevel = parent.isUpLevel;
+var OnShapeClick = null;
+if (!parent.isMac)
+{
+	OnShapeClick = parent.OnShapeClick;
+}
+
+var OnShapeKey = parent.OnShapeKey;
+var UpdateTooltip = parent.UpdateTooltip;
+var clickMenu = parent.clickMenu;
+var toggleMenuDiv = parent.toggleMenuDiv;
+var toggleMenuLink = parent.toggleMenuLink;
+var GoToPage = parent.GoToPage;
+
+
+if (parent.isUpLevel)
+{
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			var fileEntry = parent.g_FileList[parent.g_CurPageIndex];
+			var fileToLoad = fileToLoad = fileEntry.PriImage;
+			if (fileEntry.SecImage.length > 0)
+			{
+				fileToLoad = fileEntry.SecImage;
+			}
+
+			location.replace(fileToLoad);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+
+	var viewMgr = new parent.CViewMgr();
+	parent.viewMgr = viewMgr;
+
+	viewMgr.SupportsDetails = true;
+	viewMgr.SupportsSearch = true;
+
+	viewMgr.put_Location = ViewMgrSetRasterLocation;
+	viewMgr.visBBoxLeft = 0.421562;
+	viewMgr.visBBoxRight = 7.954423;
+	viewMgr.visBBoxBottom = 2.321168;
+	viewMgr.visBBoxTop = 16.418990;
+	viewMgr.highlightDiv = null;
+}
+
+function load ()
+{
+	if(isUpLevel)
+	{
+		arrowdiv.innerHTML = '<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>';
+
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.CurPageUpdate (pageIndex);
+	}
+}
+
+function unload()
+{
+	if(isUpLevel)
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+}
+
+window.onload = load;
+window.onunload = unload;
+document.onclick = clickMenu;
+
+</script>
+</head>
+
+<body class="pageView" bgcolor="#FFFFFF">
+
+<div id=arrowdiv style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+<DIV id=RasterDiv>
+
+
+<center>
+  <IMG id="ConvertedImage" SRC="gif_10.gif" ALT="标准游戏流程" name=RasterImage BORDER="0" USEMAP="#visImageMap">
+</center>
+
+<MAP NAME="visImageMap">
+  <AREA shape="POLYGON" tabindex="1" ALT="重置客户端 游戏结束" origTitle="重置客户端 游戏结束" TITLE="重置客户端 游戏结束"  target="_top" COORDS=" 133,591 183,591 183,566 133,566 133,591" onmouseover="UpdateTooltip(this,12,48)" onfocus="UpdateTooltip(this,12,48)" onclick="return OnShapeClick(12,48);" onkeyup="OnShapeKey(12,48);">
+  <AREA shape="POLYGON" tabindex="1" ALT="设置游戏数据" origTitle="设置游戏数据" TITLE="设置游戏数据"  target="_top" COORDS=" 58,551 99,551 99,528 58,528 58,551" onmouseover="UpdateTooltip(this,12,46)" onfocus="UpdateTooltip(this,12,46)" onclick="return OnShapeClick(12,46);" onkeyup="OnShapeKey(12,46);">
+  <AREA shape="POLYGON" tabindex="1" ALT="设置界面" origTitle="设置界面" TITLE="设置界面"  target="_top" COORDS=" 217,552 259,552 259,527 217,527 217,552" onmouseover="UpdateTooltip(this,12,44)" onfocus="UpdateTooltip(this,12,44)" onclick="return OnShapeClick(12,44);" onkeyup="OnShapeKey(12,44);">
+  <AREA shape="POLYGON" tabindex="1" ALT="CMD_S_GAME_END OnEventGameEnd 接收结束数据" origTitle="CMD_S_GAME_END OnEventGameEnd 接收结束数据" TITLE="CMD_S_GAME_END OnEventGameEnd 接收结束数据"  target="_top" COORDS=" 128,552 188,552 188,527 128,527 128,552" onmouseover="UpdateTooltip(this,12,43)" onfocus="UpdateTooltip(this,12,43)" onclick="return OnShapeClick(12,43);" onkeyup="OnShapeKey(12,43);">
+  <AREA shape="POLYGON" tabindex="1" ALT="GameClientDlg 客户端" origTitle="GameClientDlg 客户端" TITLE="GameClientDlg 客户端"  target="_top" COORDS=" 21,601 297,601 297,518 21,518 21,601" onmouseover="UpdateTooltip(this,12,42)" onfocus="UpdateTooltip(this,12,42)" onclick="return OnShapeClick(12,42);" onkeyup="OnShapeKey(12,42);">
+  <AREA shape="POLYGON" tabindex="1" ALT="CMD_S_GAME_END SendTableData 发送结束数据" origTitle="CMD_S_GAME_END SendTableData 发送结束数据" TITLE="CMD_S_GAME_END SendTableData 发送结束数据"  target="_top" COORDS=" 132,491 184,491 184,466 132,466 132,491" onmouseover="UpdateTooltip(this,12,40)" onfocus="UpdateTooltip(this,12,40)" onclick="return OnShapeClick(12,40);" onkeyup="OnShapeKey(12,40);">
+  <AREA shape="POLYGON" tabindex="1" ALT="满足结束条件" origTitle="满足结束条件" TITLE="满足结束条件"  target="_top" COORDS=" 137,436 158,449 179,436 158,423 137,436" onmouseover="UpdateTooltip(this,12,36)" onfocus="UpdateTooltip(this,12,36)" onclick="return OnShapeClick(12,36);" onkeyup="OnShapeKey(12,36);">
+  <AREA shape="POLYGON" tabindex="1" ALT="发送操作动作 CMD_S_OUT_CARD SendGameScene" origTitle="发送操作动作 CMD_S_OUT_CARD SendGameScene" TITLE="发送操作动作 CMD_S_OUT_CARD SendGameScene"  target="_top" COORDS=" 209,449 259,449 259,423 209,423 209,449" onmouseover="UpdateTooltip(this,12,34)" onfocus="UpdateTooltip(this,12,34)" onclick="return OnShapeClick(12,34);" onkeyup="OnShapeKey(12,34);">
+  <AREA shape="POLYGON" tabindex="1" ALT="接收当前玩家操作 CMD_C_OUT_CARD OnGameMessage" origTitle="接收当前玩家操作 CMD_C_OUT_CARD OnGameMessage" TITLE="接收当前玩家操作 CMD_C_OUT_CARD OnGameMessage"  target="_top" COORDS=" 133,407 183,407 183,382 133,382 133,407" onmouseover="UpdateTooltip(this,12,33)" onfocus="UpdateTooltip(this,12,33)" onclick="return OnShapeClick(12,33);" onkeyup="OnShapeKey(12,33);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏服务器" origTitle="游戏服务器" TITLE="游戏服务器"  target="_top" COORDS=" 19,502 297,502 297,370 19,370 19,502" onmouseover="UpdateTooltip(this,12,32)" onfocus="UpdateTooltip(this,12,32)" onclick="return OnShapeClick(12,32);" onkeyup="OnShapeKey(12,32);">
+  <AREA shape="POLYGON" tabindex="1" ALT="发送当前玩家操作 CMD_C_OUT_CARD SendData" origTitle="发送当前玩家操作 CMD_C_OUT_CARD SendData" TITLE="发送当前玩家操作 CMD_C_OUT_CARD SendData"  target="_top" COORDS=" 133,344 183,344 183,319 133,319 133,344" onmouseover="UpdateTooltip(this,12,30)" onfocus="UpdateTooltip(this,12,30)" onclick="return OnShapeClick(12,30);" onkeyup="OnShapeKey(12,30);">
+  <AREA shape="POLYGON" tabindex="1" ALT="设置游戏数据" origTitle="设置游戏数据" TITLE="设置游戏数据"  target="_top" COORDS=" 58,304 99,304 99,281 58,281 58,304" onmouseover="UpdateTooltip(this,12,28)" onfocus="UpdateTooltip(this,12,28)" onclick="return OnShapeClick(12,28);" onkeyup="OnShapeKey(12,28);">
+  <AREA shape="POLYGON" tabindex="1" ALT="设置界面" origTitle="设置界面" TITLE="设置界面"  target="_top" COORDS=" 217,305 259,305 259,280 217,280 217,305" onmouseover="UpdateTooltip(this,12,26)" onfocus="UpdateTooltip(this,12,26)" onclick="return OnShapeClick(12,26);" onkeyup="OnShapeKey(12,26);">
+  <AREA shape="POLYGON" tabindex="1" ALT="CMD_S_GAME_START OnEventGameStart 接收开始数据" origTitle="CMD_S_GAME_START OnEventGameStart 接收开始数据" TITLE="CMD_S_GAME_START OnEventGameStart 接收开始数据"  target="_top" COORDS=" 128,305 188,305 188,280 128,280 128,305" onmouseover="UpdateTooltip(this,12,23)" onfocus="UpdateTooltip(this,12,23)" onclick="return OnShapeClick(12,23);" onkeyup="OnShapeKey(12,23);">
+  <AREA shape="POLYGON" tabindex="1" ALT="GameClientDlg 客户端" origTitle="GameClientDlg 客户端" TITLE="GameClientDlg 客户端"  target="_top" COORDS=" 21,354 297,354 297,271 21,271 21,354" onmouseover="UpdateTooltip(this,12,22)" onfocus="UpdateTooltip(this,12,22)" onclick="return OnShapeClick(12,22);" onkeyup="OnShapeKey(12,22);">
+  <AREA shape="POLYGON" tabindex="1" ALT="CMD_S_GAME_START SendTableData 发送开始数据" origTitle="CMD_S_GAME_START SendTableData 发送开始数据" TITLE="CMD_S_GAME_START SendTableData 发送开始数据"  target="_top" COORDS=" 128,246 188,246 188,221 128,221 128,246" onmouseover="UpdateTooltip(this,12,20)" onfocus="UpdateTooltip(this,12,20)" onclick="return OnShapeClick(12,20);" onkeyup="OnShapeKey(12,20);">
+  <AREA shape="POLYGON" tabindex="1" ALT="不做动作" origTitle="不做动作" TITLE="不做动作"  target="_top" COORDS=" 229,162 271,162 271,136 229,136 229,162" onmouseover="UpdateTooltip(this,12,15)" onfocus="UpdateTooltip(this,12,15)" onclick="return OnShapeClick(12,15);" onkeyup="OnShapeKey(12,15);">
+  <AREA shape="POLYGON" tabindex="1" ALT="OnEventGameStart 游戏开始" origTitle="OnEventGameStart 游戏开始" TITLE="OnEventGameStart 游戏开始"  target="_top" COORDS=" 137,212 179,212 179,187 137,187 137,212" onmouseover="UpdateTooltip(this,12,14)" onfocus="UpdateTooltip(this,12,14)" onclick="return OnShapeClick(12,14);" onkeyup="OnShapeKey(12,14);">
+  <AREA shape="POLYGON" tabindex="1" ALT="发送准备 SendUserReady" origTitle="发送准备 SendUserReady" TITLE="发送准备 SendUserReady"  target="_top" COORDS=" 221,108 255,108 255,83 221,83 221,108" onmouseover="UpdateTooltip(this,12,9)" onfocus="UpdateTooltip(this,12,9)" onclick="return OnShapeClick(12,9);" onkeyup="OnShapeKey(12,9);">
+  <AREA shape="POLYGON" tabindex="1" ALT="发送准备 SendUserReady" origTitle="发送准备 SendUserReady" TITLE="发送准备 SendUserReady"  target="_top" COORDS=" 169,108 204,108 204,83 169,83 169,108" onmouseover="UpdateTooltip(this,12,8)" onfocus="UpdateTooltip(this,12,8)" onclick="return OnShapeClick(12,8);" onkeyup="OnShapeKey(12,8);">
+  <AREA shape="POLYGON" tabindex="1" ALT="发送准备 SendUserReady" origTitle="发送准备 SendUserReady" TITLE="发送准备 SendUserReady"  target="_top" COORDS=" 118,108 152,108 152,83 118,83 118,108" onmouseover="UpdateTooltip(this,12,7)" onfocus="UpdateTooltip(this,12,7)" onclick="return OnShapeClick(12,7);" onkeyup="OnShapeKey(12,7);">
+  <AREA shape="POLYGON" tabindex="1" ALT="发送准备 SendUserReady" origTitle="发送准备 SendUserReady" TITLE="发送准备 SendUserReady"  target="_top" COORDS=" 66,108 100,108 100,83 66,83 66,108" onmouseover="UpdateTooltip(this,12,6)" onfocus="UpdateTooltip(this,12,6)" onclick="return OnShapeClick(12,6);" onkeyup="OnShapeKey(12,6);">
+  <AREA shape="POLYGON" tabindex="1" ALT="玩家2" origTitle="玩家2" TITLE="玩家2"  target="_top" COORDS=" 118,74 152,74 152,49 118,49 118,74" onmouseover="UpdateTooltip(this,12,5)" onfocus="UpdateTooltip(this,12,5)" onclick="return OnShapeClick(12,5);" onkeyup="OnShapeKey(12,5);">
+  <AREA shape="POLYGON" tabindex="1" ALT="玩家3" origTitle="玩家3" TITLE="玩家3"  target="_top" COORDS=" 169,74 204,74 204,49 169,49 169,74" onmouseover="UpdateTooltip(this,12,4)" onfocus="UpdateTooltip(this,12,4)" onclick="return OnShapeClick(12,4);" onkeyup="OnShapeKey(12,4);">
+  <AREA shape="POLYGON" tabindex="1" ALT="玩家4" origTitle="玩家4" TITLE="玩家4"  target="_top" COORDS=" 221,74 255,74 255,49 221,49 221,74" onmouseover="UpdateTooltip(this,12,1)" onfocus="UpdateTooltip(this,12,1)" onclick="return OnShapeClick(12,1);" onkeyup="OnShapeKey(12,1);">
+  <AREA shape="POLYGON" tabindex="1" ALT="符合游戏开始条件" origTitle="符合游戏开始条件" TITLE="符合游戏开始条件"  target="_top" COORDS=" 177,143 158,131 129,149 158,167 188,149 177,143 177,143 177,143" onmouseover="UpdateTooltip(this,12,3)" onfocus="UpdateTooltip(this,12,3)" onclick="return OnShapeClick(12,3);" onkeyup="OnShapeKey(12,3);">
+  <AREA shape="POLYGON" tabindex="1" ALT="玩家1" origTitle="玩家1" TITLE="玩家1"  target="_top" COORDS=" 66,74 100,74 100,49 66,49 66,74" onmouseover="UpdateTooltip(this,12,2)" onfocus="UpdateTooltip(this,12,2)" onclick="return OnShapeClick(12,2);" onkeyup="OnShapeKey(12,2);">
+  <AREA shape="POLYGON" tabindex="1" ALT="GameClientDlg 客户端" origTitle="GameClientDlg 客户端" TITLE="GameClientDlg 客户端"  target="_top" COORDS=" 20,115 296,115 296,32 20,32 20,115" onmouseover="UpdateTooltip(this,12,18)" onfocus="UpdateTooltip(this,12,18)" onclick="return OnShapeClick(12,18);" onkeyup="OnShapeKey(12,18);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏服务器" origTitle="游戏服务器" TITLE="游戏服务器"  target="_top" COORDS=" 20,256 297,256 297,124 20,124 20,256" onmouseover="UpdateTooltip(this,12,19)" onfocus="UpdateTooltip(this,12,19)" onclick="return OnShapeClick(12,19);" onkeyup="OnShapeKey(12,19);">
+</MAP>
+
+
+
+</DIV>
+
+</body>
+</html>
+

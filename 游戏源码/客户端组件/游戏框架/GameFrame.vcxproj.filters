@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ClientKernel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientKernelSink.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameFrame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameFrameApp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameFrameControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameFrameDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameFrameView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalOption.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadDraw.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInfoView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UserListView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ClientKernel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientKernelSink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameFrame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameFrameApp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameFrameControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameFrameDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameFrameView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalOption.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadDraw.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInfoView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UserListView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\Bt_bugle.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_CLEAN_SCREEN.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\BT_CLEAN_SCREEN.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\BT_CLEAN_SCREEN.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\BT_COLOR_SET.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\BT_COLOR_SET.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_COLOR_SET.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\UserView\BT_EXCHANGE_CHARM_VALUE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_EXPESSION.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\BT_EXPESSION.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\BT_EXPESSION.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_GAME_OPTION.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_GAME_QUIT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_GAME_RULE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_LOOKON.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_LOOKON_EX.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\BT_OPTION.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_OPTION.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\BT_OPTION.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\BT_QUIT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\BT_QUIT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_QUIT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_SEND_CHAT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\BT_SEND_CHAT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\BT_SEND_CHAT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_SOUND.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_SOUND_EX.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CHAT_BUGLE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\UserView\FeMale.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Flowers\Flower1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Flowers\Flower10.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Flowers\Flower11.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Flowers\Flower2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Flowers\Flower3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Flowers\Flower4.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Flowers\Flower5.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Flowers\Flower6.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Flowers\Flower7.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Flowers\Flower8.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Flowers\Flower9.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\HIDE_USER_LIST.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_chat\LEFT_CHAT_BL.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_chat\LEFT_CHAT_BM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_chat\LEFT_CHAT_BR.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_chat\LEFT_CHAT_LM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_chat\LEFT_CHAT_RM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_chat\LEFT_CHAT_TL.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_chat\LEFT_CHAT_TM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_chat\LEFT_CHAT_TR.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_list\LEFT_LIST_BL.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_list\LEFT_LIST_BM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_list\LEFT_LIST_BR.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_list\LEFT_LIST_LM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_list\LEFT_LIST_RM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_list\LEFT_LIST_TL.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_list\LEFT_LIST_TM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_list\LEFT_LIST_TR.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\LEFT_VIEW_LB.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_LB.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\LEFT_VIEW_LB.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\LEFT_VIEW_LBM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\LEFT_VIEW_LBM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_LBM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\LEFT_VIEW_LM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_LM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\LEFT_VIEW_LM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\LEFT_VIEW_LT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\LEFT_VIEW_LT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_LT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\LEFT_VIEW_LTM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_LTM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\LEFT_VIEW_LTM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\LEFT_VIEW_MB.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\LEFT_VIEW_MB.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_MB.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_MM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\LEFT_VIEW_MM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\LEFT_VIEW_MM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_MMM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\LEFT_VIEW_MT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\LEFT_VIEW_MT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_MT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\LEFT_VIEW_MTM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\LEFT_VIEW_MTM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_MTM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_RB.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\LEFT_VIEW_RB.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\LEFT_VIEW_RB.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\LEFT_VIEW_RBM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\LEFT_VIEW_RBM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_RBM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\LEFT_VIEW_RM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_RM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\LEFT_VIEW_RM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\LEFT_VIEW_RT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_RT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\LEFT_VIEW_RT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\LEFT_VIEW_RTM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\LEFT_VIEW_RTM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Left_view\LEFT_VIEW_RTM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\UserView\Male.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\SHOW_USER_LIST.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\USER_READY.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\USER_STATUS.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\USER_STAUS.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\USER_TIMER.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\VIEW_B.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\VIEW_B.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\VIEW_B.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\VIEW_BL.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\VIEW_BL.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\VIEW_BL.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\VIEW_BR.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\VIEW_BR.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\VIEW_BR.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\VIEW_L.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\VIEW_L.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\VIEW_L.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\VIEW_R.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\VIEW_R.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\VIEW_R.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\VIEW_T.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\VIEW_T.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\VIEW_T.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\VIEW_TL.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\VIEW_TL.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\VIEW_TL.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\VIEW_TR.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Card_frame\VIEW_TR.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Chess_frame\VIEW_TR.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\TIME_BACK.PNG" />
+    <Image Include="Res\TIME_NUMBER.PNG" />
+    <Image Include="Res\USER_READY.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GameFrame.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\GameFrame.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

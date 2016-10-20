@@ -1,0 +1,137 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>
+结构流程
+</title>
+<script type="text/javascript" language="javascript">
+function UpdateTooltip(){};
+function OnShapeClick(){};
+</script>
+
+<script src="gif_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+	if(parent.isUpLevel)
+	{
+		location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+	}
+</script>
+
+
+
+<script type="text/jscript" language="jscript">
+
+var pageID = 9;
+
+var isUpLevel = parent.isUpLevel;
+var OnShapeClick = null;
+if (!parent.isMac)
+{
+	OnShapeClick = parent.OnShapeClick;
+}
+
+var OnShapeKey = parent.OnShapeKey;
+var UpdateTooltip = parent.UpdateTooltip;
+var clickMenu = parent.clickMenu;
+var toggleMenuDiv = parent.toggleMenuDiv;
+var toggleMenuLink = parent.toggleMenuLink;
+var GoToPage = parent.GoToPage;
+
+
+if (parent.isUpLevel)
+{
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			var fileEntry = parent.g_FileList[parent.g_CurPageIndex];
+			var fileToLoad = fileToLoad = fileEntry.PriImage;
+			if (fileEntry.SecImage.length > 0)
+			{
+				fileToLoad = fileEntry.SecImage;
+			}
+
+			location.replace(fileToLoad);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+
+	var viewMgr = new parent.CViewMgr();
+	parent.viewMgr = viewMgr;
+
+	viewMgr.SupportsDetails = true;
+	viewMgr.SupportsSearch = true;
+
+	viewMgr.put_Location = ViewMgrSetRasterLocation;
+	viewMgr.visBBoxLeft = 0.473478;
+	viewMgr.visBBoxRight = 6.615840;
+	viewMgr.visBBoxBottom = 2.322835;
+	viewMgr.visBBoxTop = 10.434738;
+	viewMgr.highlightDiv = null;
+}
+
+function load ()
+{
+	if(isUpLevel)
+	{
+		arrowdiv.innerHTML = '<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>';
+
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.CurPageUpdate (pageIndex);
+	}
+}
+
+function unload()
+{
+	if(isUpLevel)
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+}
+
+window.onload = load;
+window.onunload = unload;
+document.onclick = clickMenu;
+
+</script>
+</head>
+
+<body class="pageView" bgcolor="#FFFFFF">
+
+<div id=arrowdiv style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+<DIV id=RasterDiv>
+
+
+<center>
+  <IMG id="ConvertedImage" SRC="gif_7.gif" ALT="登陆服务器" name=RasterImage BORDER="0" USEMAP="#visImageMap">
+</center>
+
+<MAP NAME="visImageMap">
+  <AREA shape="POLYGON" tabindex="1" ALT="CCenterSocket 中心连接" origTitle="CCenterSocket 中心连接" TITLE="CCenterSocket 中心连接"  target="_top" COORDS=" 223,394 310,394 310,350 223,350 223,394" onmouseover="UpdateTooltip(this,9,12)" onfocus="UpdateTooltip(this,9,12)" onclick="return OnShapeClick(9,12);" onkeyup="OnShapeKey(9,12);">
+  <AREA shape="POLYGON" tabindex="1" ALT="登陆服务器工程实现： 通过对话框，设置服务参数。此参数包括数据库名称，地址等。 根据服务参数配置启动登陆服务，如果参数不正确则启..." origTitle="登陆服务器工程实现： 通过对话框，设置服务参数。此参数包括数据库名称，地址等。 根据服务参数配置启动登陆服务，如果参数不正确则启..." TITLE="登陆服务器工程实现： 通过对话框，设置服务参数。此参数包括数据库名称，地址等。 根据服务参数配置启动登陆服务，如果参数不正确则启..."  target="_top" COORDS=" 82,71 455,71 455,0 82,0 82,71" onmouseover="UpdateTooltip(this,9,9)" onfocus="UpdateTooltip(this,9,9)" onclick="return OnShapeClick(9,9);" onkeyup="OnShapeKey(9,9);">
+  <AREA shape="POLYGON" tabindex="1" ALT="CInitParamter 服务参数" origTitle="CInitParamter 服务参数" TITLE="CInitParamter 服务参数"  target="_top" COORDS=" 232,320 305,320 305,276 232,276 232,320" onmouseover="UpdateTooltip(this,9,7)" onfocus="UpdateTooltip(this,9,7)" onclick="return OnShapeClick(9,7);" onkeyup="OnShapeKey(9,7);">
+  <AREA shape="POLYGON" tabindex="1" ALT="CAttemperEngineSink 调度引擎" origTitle="CAttemperEngineSink 调度引擎" TITLE="CAttemperEngineSink 调度引擎"  target="_top" COORDS=" 326,465 418,465 418,422 326,422 326,465" onmouseover="UpdateTooltip(this,9,6)" onfocus="UpdateTooltip(this,9,6)" onclick="return OnShapeClick(9,6);" onkeyup="OnShapeKey(9,6);">
+  <AREA shape="POLYGON" tabindex="1" ALT="CDataBaseSink 数据库" origTitle="CDataBaseSink 数据库" TITLE="CDataBaseSink 数据库"  target="_top" COORDS=" 121,467 208,467 208,423 121,423 121,467" onmouseover="UpdateTooltip(this,9,5)" onfocus="UpdateTooltip(this,9,5)" onclick="return OnShapeClick(9,5);" onkeyup="OnShapeKey(9,5);">
+  <AREA shape="POLYGON" tabindex="1" ALT="CSystemOptionDlg 设置对话框" origTitle="CSystemOptionDlg 设置对话框" TITLE="CSystemOptionDlg 设置对话框"  target="_top" COORDS=" 217,236 319,236 319,193 217,193 217,236" onmouseover="UpdateTooltip(this,9,3)" onfocus="UpdateTooltip(this,9,3)" onclick="return OnShapeClick(9,3);" onkeyup="OnShapeKey(9,3);">
+  <AREA shape="POLYGON" tabindex="1" ALT="CServiceEngineHelper 服务引擎" origTitle="CServiceEngineHelper 服务引擎" TITLE="CServiceEngineHelper 服务引擎"  target="_top" COORDS=" 111,473 423,473 423,344 111,344 111,473" onmouseover="UpdateTooltip(this,9,2)" onfocus="UpdateTooltip(this,9,2)" onclick="return OnShapeClick(9,2);" onkeyup="OnShapeKey(9,2);">
+  <AREA shape="POLYGON" tabindex="1" ALT="CLogonService 登陆服务类" origTitle="CLogonService 登陆服务类" TITLE="CLogonService 登陆服务类"  target="_top" COORDS=" 96,496 437,496 437,268 96,268 96,496" onmouseover="UpdateTooltip(this,9,1)" onfocus="UpdateTooltip(this,9,1)" onclick="return OnShapeClick(9,1);" onkeyup="OnShapeKey(9,1);">
+</MAP>
+
+
+
+</DIV>
+
+</body>
+</html>
+

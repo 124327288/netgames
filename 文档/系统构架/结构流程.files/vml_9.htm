@@ -1,0 +1,189 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" 
+ xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>结构流程</title>
+<style type="text/css">
+	 v\:* { behavior: url(#default#VML); }
+</style>
+
+<script src="vml_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+
+	var pageID = 11;
+	var viewMgr = null;
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+	function getPNZ()
+	{
+		var rawHTML = VMLDiv.innerHTML;
+		var strReturn = ""
+		
+		strReturn = rawHTML.slice( rawHTML.indexOf( '<v:group' ), rawHTML.indexOf( "</v:shape>" ) );
+		strReturn += "</v:shape></v:group>\n";
+				
+		return strReturn;
+	}
+	
+	function load()
+	{
+		viewMgr = new parent.CViewMgr("ConvertedImage", "arrowDiv");
+
+		viewMgr.put_Location = ViewMgrSetVMLLocation;
+
+
+		viewMgr.visBBoxLeft = 1.081010;
+		viewMgr.visBBoxRight = 7.580407;
+		viewMgr.visBBoxBottom = 0.669291;
+		viewMgr.visBBoxTop = 11.114856;
+
+		viewMgr.Zoom = VMLZoomChange;
+		viewMgr.setView= VMLSetView;
+
+		viewMgr.SupportsDetails = true;
+		viewMgr.SupportsSearch = true;
+
+		parent.viewMgr = viewMgr;
+
+		fit();
+	}
+
+	function unload()
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+
+	function fit()
+	{
+		if(parent.frmToolbar)
+		{
+			if (parent.g_WidgetsLoaded)
+			{
+				var zoom100 = parent.frmToolbar.document.all('a100');
+				if (zoom100)
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					zoom100.click();
+				}
+				else
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					viewMgr.Zoom(100);
+				}
+			}
+			else
+			{
+				window.setTimeout("fit()", 500);
+			}
+		}	
+		else
+		{
+			parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+			viewMgr.Zoom(100);
+		}
+	}
+
+	function PostZoomProcessing (newZoomLevel)
+	{
+		parent.viewMgr.PostZoomProcessing = null;
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.viewMgr.getPNZ = getPNZ;
+		parent.CurPageUpdate (pageIndex);
+	}
+
+
+	
+	var isUpLevel = parent.isUpLevel;
+	var OnShapeClick = parent.OnShapeClick;
+	var OnShapeKey = parent.OnShapeKey;
+	var UpdateTooltip = parent.UpdateTooltip;
+	var clickMenu = parent.clickMenu;
+	var toggleMenuDiv = parent.toggleMenuDiv;
+	var toggleMenuLink = parent.toggleMenuLink;
+	var GoToPage = parent.GoToPage;
+
+	window.onload = load;
+	window.onunload = unload;
+	document.onclick = clickMenu;
+
+
+
+
+</script>
+
+</head>
+
+<body style="MARGIN:10px" onresize="VMLOnResize();" onscroll="VMLOnScroll();">
+
+<div id="arrowdiv" style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+
+
+
+<div id="VMLDiv" >
+
+
+<v:group  id="ConvertedImage" style="width:2.488864in;height:4.000000in;position:absolute;visibility=hidden;" coordSize="1244,2000" coordOrigin="-1000,-1000" >
+
+<v:shapetype 
+  id="VISSHAPE"
+  target="_parent"
+  coordsize="1244,2000"
+  coordorigin="-1000,-1000"
+  stroked="f"
+  strokecolor="red"
+  filled="t"
+>
+<v:fill opacity="0.0"/>
+</v:shapetype>
+
+
+<v:shape style="top:-1000.0;left:-1000.0;width:1244.4;height:2000.0;position:absolute" coordSize="1244,2000" coordOrigin="-1000,-1000" >
+<v:imagedata src="vml_9.emz"/>
+</v:shape>
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CGameFrame 游戏框架" origTitle="CGameFrame 游戏框架"  style="top:-1000;left:-1000;width:1244;height:2000;position:absolute" path=" m -997,223 l 241,223 l 241,-662 l -997,-662 l -997,223xe" onmouseover="UpdateTooltip(this,11,1)" onclick="OnShapeClick(11,1)" onfocus="UpdateTooltip(this,11,1);" onkeyup="OnShapeKey(11,1)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CGameFrameView 框架视图" origTitle="CGameFrameView 框架视图"  style="top:-1000;left:-1000;width:1244;height:2000;position:absolute" path=" m -959,-93 l -40,-93 l -40,-604 l -959,-604 l -959,-93xe" onmouseover="UpdateTooltip(this,11,2)" onclick="OnShapeClick(11,2)" onfocus="UpdateTooltip(this,11,2);" onkeyup="OnShapeKey(11,2)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CGameFrameControl 框架控制视图" origTitle="CGameFrameControl 框架控制视图"  style="top:-1000;left:-1000;width:1244;height:2000;position:absolute" path=" m -3,-93 l 222,-93 l 222,-604 l -3,-604 l -3,-93xe" onmouseover="UpdateTooltip(this,11,3)" onclick="OnShapeClick(11,3)" onfocus="UpdateTooltip(this,11,3);" onkeyup="OnShapeKey(11,3)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CClientKernel 客户端内核" origTitle="CClientKernel 客户端内核"  style="top:-1000;left:-1000;width:1244;height:2000;position:absolute" path=" m -959,133 l 222,133 l 222,-33 l -959,-33 l -959,133xe" onmouseover="UpdateTooltip(this,11,4)" onclick="OnShapeClick(11,4)" onfocus="UpdateTooltip(this,11,4);" onkeyup="OnShapeKey(11,4)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏框架工程实现： 游戏客户端的公共框架以及游戏开发的辅助函数以及类组件，包括游戏视图组件，游戏框架组件，视图模式控制组件，游戏..." origTitle="游戏框架工程实现： 游戏客户端的公共框架以及游戏开发的辅助函数以及类组件，包括游戏视图组件，游戏框架组件，视图模式控制组件，游戏..."  style="top:-1000;left:-1000;width:1244;height:2000;position:absolute" path=" m -858,-754 l 102,-754 l 102,-997 l -858,-997 l -858,-754xe" onmouseover="UpdateTooltip(this,11,5)" onclick="OnShapeClick(11,5)" onfocus="UpdateTooltip(this,11,5);" onkeyup="OnShapeKey(11,5)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="IClientKernelSink 内核钩子" origTitle="IClientKernelSink 内核钩子"  style="top:-1000;left:-1000;width:1244;height:2000;position:absolute" path=" m -775,106 l 106,106 l 106,-6 l -775,-6 l -775,106xe" onmouseover="UpdateTooltip(this,11,8)" onclick="OnShapeClick(11,8)" onfocus="UpdateTooltip(this,11,8);" onkeyup="OnShapeKey(11,8)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏广场" origTitle="游戏广场"  style="top:-1000;left:-1000;width:1244;height:2000;position:absolute" path=" m -623,550 l -102,550 l -102,437 l -623,437 l -623,550xe" onmouseover="UpdateTooltip(this,11,6)" onclick="OnShapeClick(11,6)" onfocus="UpdateTooltip(this,11,6);" onkeyup="OnShapeKey(11,6)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CClientSocketHelper 网络连接" origTitle="CClientSocketHelper 网络连接"  style="top:-1000;left:-1000;width:1244;height:2000;position:absolute" path=" m -494,772 l -231,772 l -231,659 l -494,659 l -494,772xe" onmouseover="UpdateTooltip(this,11,9)" onclick="OnShapeClick(11,9)" onfocus="UpdateTooltip(this,11,9);" onkeyup="OnShapeKey(11,9)"/> 
+
+</v:group>
+
+
+
+</div>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,231 @@
+<STYLE type=text/css>BODY {
+	COLOR: #000; FONT-FAMILY: 宋体; FONT-SIZE: 12px
+}
+TD {
+	COLOR: #444444; FONT-FAMILY: 宋体; FONT-SIZE: 12px
+}
+A.top {
+	COLOR: #ffffff; FONT-SIZE: 12px
+}
+A:link {
+	text-decoration: none;
+	color: #333333;
+
+
+
+}
+A:visited {
+	text-decoration: none;
+	color: #333333;
+
+
+}
+A:hover {
+	text-decoration: underline;
+	color: #CC9900;
+
+
+}
+.RD {
+	COLOR: #900000; FONT: bold 14px 宋体
+}
+.YL {
+	COLOR: #ff0; FONT: bold 12px 宋体
+}
+.GR {
+	COLOR: #999; FONT-SIZE: 14px
+}
+.WH {
+	COLOR: #fff; FONT: bold 14px 宋体
+}
+.WH:link {
+	COLOR: #fff; FONT: bold 14px 宋体
+}
+.WH:visited {
+	COLOR: #fff; FONT: bold 14px 宋体
+}
+.WH:hover {
+	COLOR: #f60; FONT: bold 14px 宋体
+}
+.WHS {
+	COLOR: #fff; FONT: 12px 宋体
+}
+.WHS:link {
+	COLOR: #fff; FONT: 12px 宋体
+}
+.WHS:visited {
+	COLOR: #fff; FONT: 12px 宋体
+}
+.WHS:hover {
+	COLOR: #f60; FONT: 12px 宋体
+}
+.YLM {
+FONT: normal 14px "宋体"
+}
+.BUY {
+	COLOR: #fc9603; FONT: bold 14px 宋体
+}
+.SELL {
+	COLOR: #00cc00; FONT: bold 14px 宋体
+}
+.COOP {
+	COLOR: #851b91; FONT: bold 14px 宋体
+}
+.AGENT {
+	COLOR: #cc00ff; FONT: bold 14px 宋体
+}
+.ERROR {
+	COLOR: #f00; FONT: bold 14px 宋体
+}
+.NO {
+	COLOR: #900000; FONT-SIZE: 12px
+}
+.STAR {
+	COLOR: #f00; FONT-SIZE: 12px
+}
+.X {
+	FONT-SIZE: 24px; FONT-WEIGHT: bold
+}
+.L {
+	FONT-SIZE: 16px; FONT-WEIGHT: bold
+}
+.M {
+	FONT: bold 9pt 宋体
+}
+.C {
+	FONT-SIZE: 14px
+}
+.S {
+	FONT-SIZE: 14px
+}
+.LM {
+	LINE-HEIGHT: 130%
+}
+.LL {
+	LINE-HEIGHT: 150%
+}
+SELECT {
+	FONT-SIZE: 12px
+}
+INPUT {
+	FONT-SIZE: 12px;
+	background-color: #FFFFFF;
+
+
+
+}
+TEXTAREA {
+	FONT-SIZE: 12px
+}
+
+OLD CSS--------- .f11 {
+	FONT-SIZE: 14px
+}
+.f1 {
+	FONT-SIZE: 10px
+}
+.f2 {
+	FONT-SIZE: 12px
+}
+.f3 {
+	FONT-SIZE: 16px
+}
+.f4 {
+	FONT-SIZE: 18px
+}
+.f5 {
+	FONT-SIZE: 24px
+}
+.f6 {
+	FONT-SIZE: 31px
+}
+.f10{
+        font-family: Arial
+}
+.lh13 {
+	LINE-HEIGHT: 130%
+}
+.lh15 {
+	LINE-HEIGHT: 150%
+}
+.lh17 {
+	LINE-HEIGHT: 170%
+}
+INPUT{
+	BORDER-TOP-WIDTH: 1px;
+	BORDER-LEFT-WIDTH: 1px;
+	FONT-SIZE: 9pt;
+	BORDER-LEFT-COLOR: #cccccc;
+	BORDER-BOTTOM-WIDTH: 1px;
+	BORDER-BOTTOM-COLOR: #cccccc;
+	BORDER-TOP-COLOR: #cccccc;
+	BORDER-RIGHT-WIDTH: 1px;
+	BORDER-RIGHT-COLOR: #cccccc;
+	padding: 1px;
+}
+textarea {border-width: 1; border-color: #000000; background-color: #ffffff; font-family: 宋体; font-size: 9pt; font-style: bold;}
+select {border-width: 1; border-color: #000000; background-color: #ffffff; font-family: 宋体; font-size: 9pt; font-style: bold;}
+</STYLE>
+.in {
+	background-color: #000000;
+}
+.info {
+	font-size: 14px;
+	color: #FF3300;
+	text-decoration: none;
+	font-weight: bolder;
+}
+.lins {
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+	margin: auto;
+
+}
+.unnamed1 {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: normal;
+}
+.unnamed2 {
+}
+ul {
+	color: #000000;
+	font-size: 9pt;
+	text-decoration: none;
+	list-style-image: none;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+
+}
+li {
+	font-size: 9pt;
+	margin: 0px;
+	padding: 0px;
+	list-style-image: none;
+	list-style-type: none;
+	line-height: 20px;
+	height: 20px;
+
+
+}
+ul a:link {
+	color: #000000;
+	font-size: 12px;
+}
+h1 {
+	font-size: 14px;
+	color: #000000;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 25px;
+}
+#show {
+	font-size: 12px;
+	color: #000000;
+	line-height: 21px;
+	text-align: left;
+}

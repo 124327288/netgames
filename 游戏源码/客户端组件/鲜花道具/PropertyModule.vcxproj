@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>PropertyModule</ProjectName>
+    <ProjectGuid>{3BA56C8D-483F-4FAF-8EB6-716D05293A0B}</ProjectGuid>
+    <Keyword>MFCDLLProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;PROPERTY_MODULE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../链接库/ComServiceD.lib;../../链接库/SkinControlsD.lib;../../链接库/ClientShareD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../运行/Debug/PropertyModuleD.dll</OutputFile>
+      <ModuleDefinitionFile>.\PropertyModuleD.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>../../链接库/PropertyModuleD.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\发布组件\客户端组件\Debug
+copy /y ..\..\运行\Debug\$(TargetFileName) ..\..\发布组件\客户端组件\Debug\$(TargetFileName)
+</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXEXT;PROPERTY_MODULE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../链接库/ComService.lib;../../链接库/SkinControls.lib;../../链接库/ClientShare.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../运行/Release/PropertyModule.dll</OutputFile>
+      <ModuleDefinitionFile>.\PropertyModule.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>../../链接库/PropertyModule.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\发布组件\客户端组件\Release
+copy /y ..\..\运行\Release\$(TargetFileName) ..\..\发布组件\客户端组件\Release\$(TargetFileName)
+</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BankServiceDlg.cpp" />
+    <ClCompile Include="BankStorage.cpp" />
+    <ClCompile Include="CharmValueExchange.cpp" />
+    <ClCompile Include="FlowerEffectControl.cpp" />
+    <ClCompile Include="PropertyBar.cpp" />
+    <ClCompile Include="PropertyItem.cpp" />
+    <ClCompile Include="PropertyModule.cpp" />
+    <ClCompile Include="SingleProItem.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BankServiceDlg.h" />
+    <ClInclude Include="BankStorage.h" />
+    <ClInclude Include="CharmValueExchange.h" />
+    <ClInclude Include="FlowerEffectControl.h" />
+    <ClInclude Include="PropertyBar.h" />
+    <ClInclude Include="PropertyItem.h" />
+    <ClInclude Include="PropertyModule.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SingleProItem.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\FlowerEffect\FLOWER10_1.gif" />
+    <Image Include="res\FlowerEffect\FLOWER10_2.bmp" />
+    <Image Include="res\FlowerEffect\FLOWER10_3.gif" />
+    <Image Include="res\FlowerEffect\FLOWER11_1.gif" />
+    <Image Include="res\FlowerEffect\FLOWER11_2.bmp" />
+    <Image Include="res\FlowerEffect\FLOWER11_3.gif" />
+    <Image Include="res\FlowerEffect\FLOWER1_1.gif" />
+    <Image Include="res\FlowerEffect\FLOWER1_2.bmp" />
+    <Image Include="res\FlowerEffect\FLOWER1_3.gif" />
+    <Image Include="res\FlowerEffect\FLOWER2_1.gif" />
+    <Image Include="res\FlowerEffect\FLOWER2_2.bmp" />
+    <Image Include="res\FlowerEffect\FLOWER2_3.gif" />
+    <Image Include="res\FlowerEffect\FLOWER3_1.gif" />
+    <Image Include="res\FlowerEffect\FLOWER3_2.bmp" />
+    <Image Include="res\FlowerEffect\FLOWER3_3.gif" />
+    <Image Include="res\FlowerEffect\FLOWER4_1.gif" />
+    <Image Include="res\FlowerEffect\FLOWER4_2.bmp" />
+    <Image Include="res\FlowerEffect\FLOWER4_3.gif" />
+    <Image Include="res\FlowerEffect\FLOWER5_1.gif" />
+    <Image Include="res\FlowerEffect\FLOWER5_2.bmp" />
+    <Image Include="res\FlowerEffect\FLOWER5_3.gif" />
+    <Image Include="res\FlowerEffect\FLOWER6_1.gif" />
+    <Image Include="res\FlowerEffect\FLOWER6_2.bmp" />
+    <Image Include="res\FlowerEffect\FLOWER6_3.gif" />
+    <Image Include="res\FlowerEffect\FLOWER7_1.gif" />
+    <Image Include="res\FlowerEffect\FLOWER7_2.bmp" />
+    <Image Include="res\FlowerEffect\FLOWER7_3.gif" />
+    <Image Include="res\FlowerEffect\FLOWER8_1.gif" />
+    <Image Include="res\FlowerEffect\FLOWER8_2.bmp" />
+    <Image Include="res\FlowerEffect\FLOWER8_3.gif" />
+    <Image Include="res\FlowerEffect\FLOWER9_1.gif" />
+    <Image Include="res\FlowerEffect\FLOWER9_2.bmp" />
+    <Image Include="res\FlowerEffect\FLOWER9_3.gif" />
+    <Image Include="res\FlowerEffect\GIFT_1.png" />
+    <Image Include="res\FlowerEffect\GIFT_10.png" />
+    <Image Include="res\FlowerEffect\GIFT_11.png" />
+    <Image Include="res\FlowerEffect\GIFT_2.png" />
+    <Image Include="res\FlowerEffect\GIFT_3.png" />
+    <Image Include="res\FlowerEffect\GIFT_4.png" />
+    <Image Include="res\FlowerEffect\GIFT_5.png" />
+    <Image Include="res\FlowerEffect\GIFT_6.png" />
+    <Image Include="res\FlowerEffect\GIFT_7.png" />
+    <Image Include="res\FlowerEffect\GIFT_8.png" />
+    <Image Include="res\FlowerEffect\GIFT_9.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT1.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT10.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT11.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT2.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT3.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT4.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT5.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT6.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT7.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT8.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT9.png" />
+    <Image Include="res\Flowers\BT_FLOWER_1.bmp" />
+    <Image Include="res\Flowers\BT_FLOWER_10.bmp" />
+    <Image Include="res\Flowers\BT_FLOWER_11.bmp" />
+    <Image Include="res\Flowers\BT_FLOWER_2.bmp" />
+    <Image Include="res\Flowers\Bt_flower_3.bmp" />
+    <Image Include="res\Flowers\BT_FLOWER_4.bmp" />
+    <Image Include="res\Flowers\BT_FLOWER_5.bmp" />
+    <Image Include="res\Flowers\BT_FLOWER_6.bmp" />
+    <Image Include="res\Flowers\BT_FLOWER_7.bmp" />
+    <Image Include="res\Flowers\BT_FLOWER_8.bmp" />
+    <Image Include="res\Flowers\BT_FLOWER_9.bmp" />
+    <Image Include="res\Flowers\Flower0.bmp" />
+    <Image Include="res\Flowers\Flower1.bmp" />
+    <Image Include="res\Flowers\Flower10.bmp" />
+    <Image Include="res\Flowers\Flower11.bmp" />
+    <Image Include="res\Flowers\Flower2.bmp" />
+    <Image Include="res\Flowers\Flower3.bmp" />
+    <Image Include="res\Flowers\Flower4.bmp" />
+    <Image Include="res\Flowers\Flower5.bmp" />
+    <Image Include="res\Flowers\Flower6.bmp" />
+    <Image Include="res\Flowers\Flower7.bmp" />
+    <Image Include="res\Flowers\Flower8.bmp" />
+    <Image Include="res\Flowers\Flower9.bmp" />
+    <Image Include="res\Property\arrowhead.png" />
+    <Image Include="res\Property\BLESSING.bmp" />
+    <Image Include="res\Property\BT_COLOR_SET.bmp" />
+    <Image Include="res\Property\BT_EXPESSION.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_1.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_10.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_10_.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_11.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_11_.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_12.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_12_.bmp" />
+    <Image Include="res\Property\Bt_property_13.bmp" />
+    <Image Include="res\Property\Bt_property_13_.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_14.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_14_.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_15.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_15_.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_1_.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_2.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_2_.bmp" />
+    <Image Include="res\Property\Bt_property_3.bmp" />
+    <Image Include="res\Property\Bt_property_3_.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_4.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_4_.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_5.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_5_.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_6.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_6_.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_7.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_7_.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_8.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_8_.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_9.bmp" />
+    <Image Include="res\Property\BT_PROPERTY_9_.bmp" />
+    <Image Include="res\Property\CHAT_BUGLE.bmp" />
+    <Image Include="res\Property\PROPERTY_AREA_L.bmp" />
+    <Image Include="res\Property\PROPERTY_AREA_M.bmp" />
+    <Image Include="res\Property\PROPERTY_AREA_R.bmp" />
+    <Image Include="res\Property\PROPERTY_BT_TO_L.bmp" />
+    <Image Include="res\Property\PROPERTY_BT_TO_R.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PropertyModule.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\PropertyModule.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\共享组件\公共服务\ComService.vcxproj">
+      <Project>{48a17e45-3f15-4acc-92de-da57da6c360b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\共享组件\界面控件\SkinControls.vcxproj">
+      <Project>{9580a9ba-2c2c-4359-852c-fd627732bf1d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\客户端共享\ClientShare.vcxproj">
+      <Project>{1e98c5e5-a9bf-46c7-b57d-559a56ead344}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="PropertyModule.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

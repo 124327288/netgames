@@ -1,0 +1,187 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" 
+ xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>结构流程</title>
+<style type="text/css">
+	 v\:* { behavior: url(#default#VML); }
+</style>
+
+<script src="vml_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+
+	var pageID = 5;
+	var viewMgr = null;
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+	function getPNZ()
+	{
+		var rawHTML = VMLDiv.innerHTML;
+		var strReturn = ""
+		
+		strReturn = rawHTML.slice( rawHTML.indexOf( '<v:group' ), rawHTML.indexOf( "</v:shape>" ) );
+		strReturn += "</v:shape></v:group>\n";
+				
+		return strReturn;
+	}
+	
+	function load()
+	{
+		viewMgr = new parent.CViewMgr("ConvertedImage", "arrowDiv");
+
+		viewMgr.put_Location = ViewMgrSetVMLLocation;
+
+
+		viewMgr.visBBoxLeft = 1.415656;
+		viewMgr.visBBoxRight = 7.009541;
+		viewMgr.visBBoxBottom = 2.755906;
+		viewMgr.visBBoxTop = 10.433071;
+
+		viewMgr.Zoom = VMLZoomChange;
+		viewMgr.setView= VMLSetView;
+
+		viewMgr.SupportsDetails = true;
+		viewMgr.SupportsSearch = true;
+
+		parent.viewMgr = viewMgr;
+
+		fit();
+	}
+
+	function unload()
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+
+	function fit()
+	{
+		if(parent.frmToolbar)
+		{
+			if (parent.g_WidgetsLoaded)
+			{
+				var zoom100 = parent.frmToolbar.document.all('a100');
+				if (zoom100)
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					zoom100.click();
+				}
+				else
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					viewMgr.Zoom(100);
+				}
+			}
+			else
+			{
+				window.setTimeout("fit()", 500);
+			}
+		}	
+		else
+		{
+			parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+			viewMgr.Zoom(100);
+		}
+	}
+
+	function PostZoomProcessing (newZoomLevel)
+	{
+		parent.viewMgr.PostZoomProcessing = null;
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.viewMgr.getPNZ = getPNZ;
+		parent.CurPageUpdate (pageIndex);
+	}
+
+
+	
+	var isUpLevel = parent.isUpLevel;
+	var OnShapeClick = parent.OnShapeClick;
+	var OnShapeKey = parent.OnShapeKey;
+	var UpdateTooltip = parent.UpdateTooltip;
+	var clickMenu = parent.clickMenu;
+	var toggleMenuDiv = parent.toggleMenuDiv;
+	var toggleMenuLink = parent.toggleMenuLink;
+	var GoToPage = parent.GoToPage;
+
+	window.onload = load;
+	window.onunload = unload;
+	document.onclick = clickMenu;
+
+
+
+
+</script>
+
+</head>
+
+<body style="MARGIN:10px" onresize="VMLOnResize();" onscroll="VMLOnScroll();">
+
+<div id="arrowdiv" style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+
+
+
+<div id="VMLDiv" >
+
+
+<v:group  id="ConvertedImage" style="width:2.914557in;height:4.000000in;position:absolute;visibility=hidden;" coordSize="1457,2000" coordOrigin="-1000,-1000" >
+
+<v:shapetype 
+  id="VISSHAPE"
+  target="_parent"
+  coordsize="1457,2000"
+  coordorigin="-1000,-1000"
+  stroked="f"
+  strokecolor="red"
+  filled="t"
+>
+<v:fill opacity="0.0"/>
+</v:shapetype>
+
+
+<v:shape style="top:-1000.0;left:-1000.0;width:1457.3;height:2000.0;position:absolute" coordSize="1457,2000" coordOrigin="-1000,-1000" >
+<v:imagedata src="vml_3.emz"/>
+</v:shape>
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="服务核心 ServerKernel" origTitle="服务核心 ServerKernel"  style="top:-1000;left:-1000;width:1457;height:2000;position:absolute" path=" m -996,873 l 453,873 l 453,-894 l -996,-894 l -996,873xe" onmouseover="UpdateTooltip(this,5,16)" onclick="OnShapeClick(5,16)" onfocus="UpdateTooltip(this,5,16);" onkeyup="OnShapeKey(5,16)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="中心服务器 CenterServer" origTitle="中心服务器 CenterServer"  style="top:-1000;left:-1000;width:1457;height:2000;position:absolute" path=" m -832,-179 l -577,-179 l -577,-332 l -832,-332 l -832,-179xe" onmouseover="UpdateTooltip(this,5,1)" onclick="OnShapeClick(5,1)" onfocus="UpdateTooltip(this,5,1);" onkeyup="OnShapeKey(5,1)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="服务装载器 ServiceLoader" origTitle="服务装载器 ServiceLoader"  style="top:-1000;left:-1000;width:1457;height:2000;position:absolute" path=" m -282,-179 l -27,-179 l -27,-332 l -282,-332 l -282,-179xe" onmouseover="UpdateTooltip(this,5,2)" onclick="OnShapeClick(5,2)" onfocus="UpdateTooltip(this,5,2);" onkeyup="OnShapeKey(5,2)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="登陆服务器 LogonServer" origTitle="登陆服务器 LogonServer"  style="top:-1000;left:-1000;width:1457;height:2000;position:absolute" path=" m -409,204 l -154,204 l -154,51 l -409,51 l -409,204xe" onmouseover="UpdateTooltip(this,5,3)" onclick="OnShapeClick(5,3)" onfocus="UpdateTooltip(this,5,3);" onkeyup="OnShapeKey(5,3)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏服务 GameService" origTitle="游戏服务 GameService"  style="top:-1000;left:-1000;width:1457;height:2000;position:absolute" path=" m -282,-434 l -27,-434 l -27,-587 l -282,-587 l -282,-434xe" onmouseover="UpdateTooltip(this,5,4)" onclick="OnShapeClick(5,4)" onfocus="UpdateTooltip(this,5,4);" onkeyup="OnShapeKey(5,4)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="列表服务 CServerListCenter" origTitle="列表服务 CServerListCenter"  style="top:-1000;left:-1000;width:1457;height:2000;position:absolute" path=" m -858,-434 l -552,-434 l -552,-587 l -858,-587 l -858,-434xe" onmouseover="UpdateTooltip(this,5,6)" onclick="OnShapeClick(5,6)" onfocus="UpdateTooltip(this,5,6);" onkeyup="OnShapeKey(5,6)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="网络组件 CClientSocket" origTitle="网络组件 CClientSocket"  style="top:-1000;left:-1000;width:1457;height:2000;position:absolute" path=" m -409,592 l -154,592 l -154,439 l -409,439 l -409,592xe" onmouseover="UpdateTooltip(this,5,13)" onclick="OnShapeClick(5,13)" onfocus="UpdateTooltip(this,5,13);" onkeyup="OnShapeKey(5,13)"/> 
+
+</v:group>
+
+
+
+</div>
+
+
+
+</body>
+</html>
+

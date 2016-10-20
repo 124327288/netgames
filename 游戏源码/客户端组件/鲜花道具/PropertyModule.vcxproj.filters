@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BankServiceDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BankStorage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CharmValueExchange.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowerEffectControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertyBar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertyItem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertyModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleProItem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BankServiceDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BankStorage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CharmValueExchange.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowerEffectControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyBar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyItem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyModule.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleProItem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Property\BLESSING.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_COLOR_SET.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_EXPESSION.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\BT_FLOWER_1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\BT_FLOWER_10.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\BT_FLOWER_11.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\BT_FLOWER_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\Bt_flower_3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\BT_FLOWER_4.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\BT_FLOWER_5.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\BT_FLOWER_6.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\BT_FLOWER_7.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\BT_FLOWER_8.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\BT_FLOWER_9.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_10.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_10_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_11.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_11_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_12.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_12_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\Bt_property_13.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\Bt_property_13_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_14.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_14_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_15.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_15_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_1_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_2_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\Bt_property_3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\Bt_property_3_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_4.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_4_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_5.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_5_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_6.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_6_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_7.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_7_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_8.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_8_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_9.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\BT_PROPERTY_9_.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\CHAT_BUGLE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\Flower0.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\Flower1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\Flower10.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER10_1.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER10_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER10_3.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\Flower11.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER11_1.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER11_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER11_3.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER1_1.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER1_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER1_3.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\Flower2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER2_1.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER2_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER2_3.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\Flower3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER3_1.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER3_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER3_3.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\Flower4.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER4_1.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER4_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER4_3.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\Flower5.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER5_1.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER5_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER5_3.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\Flower6.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER6_1.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER6_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER6_3.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\Flower7.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER7_1.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER7_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER7_3.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\Flower8.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER8_1.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER8_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER8_3.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Flowers\Flower9.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER9_1.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER9_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\FlowerEffect\FLOWER9_3.gif">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\PROPERTY_AREA_L.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\PROPERTY_AREA_M.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\PROPERTY_AREA_R.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\PROPERTY_BT_TO_L.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\PROPERTY_BT_TO_R.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Property\arrowhead.png" />
+    <Image Include="res\FlowerEffect\GIFT_1.png" />
+    <Image Include="res\FlowerEffect\GIFT_10.png" />
+    <Image Include="res\FlowerEffect\GIFT_11.png" />
+    <Image Include="res\FlowerEffect\GIFT_2.png" />
+    <Image Include="res\FlowerEffect\GIFT_3.png" />
+    <Image Include="res\FlowerEffect\GIFT_4.png" />
+    <Image Include="res\FlowerEffect\GIFT_5.png" />
+    <Image Include="res\FlowerEffect\GIFT_6.png" />
+    <Image Include="res\FlowerEffect\GIFT_7.png" />
+    <Image Include="res\FlowerEffect\GIFT_8.png" />
+    <Image Include="res\FlowerEffect\GIFT_9.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT1.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT10.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT11.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT2.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT3.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT4.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT5.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT6.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT7.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT8.png" />
+    <Image Include="res\FlowerEffect\MOVE_GIFT9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PropertyModule.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\PropertyModule.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

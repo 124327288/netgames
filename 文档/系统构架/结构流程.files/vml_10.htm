@@ -1,0 +1,231 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" 
+ xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>结构流程</title>
+<style type="text/css">
+	 v\:* { behavior: url(#default#VML); }
+</style>
+
+<script src="vml_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+
+	var pageID = 12;
+	var viewMgr = null;
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+	function getPNZ()
+	{
+		var rawHTML = VMLDiv.innerHTML;
+		var strReturn = ""
+		
+		strReturn = rawHTML.slice( rawHTML.indexOf( '<v:group' ), rawHTML.indexOf( "</v:shape>" ) );
+		strReturn += "</v:shape></v:group>\n";
+				
+		return strReturn;
+	}
+	
+	function load()
+	{
+		viewMgr = new parent.CViewMgr("ConvertedImage", "arrowDiv");
+
+		viewMgr.put_Location = ViewMgrSetVMLLocation;
+
+
+		viewMgr.visBBoxLeft = 0.421562;
+		viewMgr.visBBoxRight = 7.954423;
+		viewMgr.visBBoxBottom = 2.321168;
+		viewMgr.visBBoxTop = 16.418990;
+
+		viewMgr.Zoom = VMLZoomChange;
+		viewMgr.setView= VMLSetView;
+
+		viewMgr.SupportsDetails = true;
+		viewMgr.SupportsSearch = true;
+
+		parent.viewMgr = viewMgr;
+
+		fit();
+	}
+
+	function unload()
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+
+	function fit()
+	{
+		if(parent.frmToolbar)
+		{
+			if (parent.g_WidgetsLoaded)
+			{
+				var zoom100 = parent.frmToolbar.document.all('a100');
+				if (zoom100)
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					zoom100.click();
+				}
+				else
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					viewMgr.Zoom(100);
+				}
+			}
+			else
+			{
+				window.setTimeout("fit()", 500);
+			}
+		}	
+		else
+		{
+			parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+			viewMgr.Zoom(100);
+		}
+	}
+
+	function PostZoomProcessing (newZoomLevel)
+	{
+		parent.viewMgr.PostZoomProcessing = null;
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.viewMgr.getPNZ = getPNZ;
+		parent.CurPageUpdate (pageIndex);
+	}
+
+
+	
+	var isUpLevel = parent.isUpLevel;
+	var OnShapeClick = parent.OnShapeClick;
+	var OnShapeKey = parent.OnShapeKey;
+	var UpdateTooltip = parent.UpdateTooltip;
+	var clickMenu = parent.clickMenu;
+	var toggleMenuDiv = parent.toggleMenuDiv;
+	var toggleMenuLink = parent.toggleMenuLink;
+	var GoToPage = parent.GoToPage;
+
+	window.onload = load;
+	window.onunload = unload;
+	document.onclick = clickMenu;
+
+
+
+
+</script>
+
+</head>
+
+<body style="MARGIN:10px" onresize="VMLOnResize();" onscroll="VMLOnScroll();">
+
+<div id="arrowdiv" style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+
+
+
+<div id="VMLDiv" >
+
+
+<v:group  id="ConvertedImage" style="width:2.137312in;height:4.000000in;position:absolute;visibility=hidden;" coordSize="1069,2000" coordOrigin="-1000,-1000" >
+
+<v:shapetype 
+  id="VISSHAPE"
+  target="_parent"
+  coordsize="1069,2000"
+  coordorigin="-1000,-1000"
+  stroked="f"
+  strokecolor="red"
+  filled="t"
+>
+<v:fill opacity="0.0"/>
+</v:shapetype>
+
+
+<v:shape style="top:-1000.0;left:-1000.0;width:1068.7;height:2000.0;position:absolute" coordSize="1069,2000" coordOrigin="-1000,-1000" >
+<v:imagedata src="vml_10.emz"/>
+</v:shape>
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏服务器" origTitle="游戏服务器"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -932,-149 l -12,-149 l -12,-587 l -932,-587 l -932,-149xe" onmouseover="UpdateTooltip(this,12,19)" onclick="OnShapeClick(12,19)" onfocus="UpdateTooltip(this,12,19);" onkeyup="OnShapeKey(12,19)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="GameClientDlg 客户端" origTitle="GameClientDlg 客户端"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -931,-614 l -16,-614 l -16,-890 l -931,-890 l -931,-614xe" onmouseover="UpdateTooltip(this,12,18)" onclick="OnShapeClick(12,18)" onfocus="UpdateTooltip(this,12,18);" onkeyup="OnShapeKey(12,18)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="玩家1" origTitle="玩家1"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -779,-751 l -665,-751 l -665,-835 l -779,-835 l -779,-751xe" onmouseover="UpdateTooltip(this,12,2)" onclick="OnShapeClick(12,2)" onfocus="UpdateTooltip(this,12,2);" onkeyup="OnShapeKey(12,2)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="符合游戏开始条件" origTitle="符合游戏开始条件"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -411,-524 l -473,-561 l -571,-503 l -473,-444 l -376,-503 l -411,-524 l -411,-524 l -411,-524xe" onmouseover="UpdateTooltip(this,12,3)" onclick="OnShapeClick(12,3)" onfocus="UpdateTooltip(this,12,3);" onkeyup="OnShapeKey(12,3)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="玩家4" origTitle="玩家4"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -265,-751 l -151,-751 l -151,-835 l -265,-835 l -265,-751xe" onmouseover="UpdateTooltip(this,12,1)" onclick="OnShapeClick(12,1)" onfocus="UpdateTooltip(this,12,1);" onkeyup="OnShapeKey(12,1)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="玩家3" origTitle="玩家3"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -436,-751 l -322,-751 l -322,-835 l -436,-835 l -436,-751xe" onmouseover="UpdateTooltip(this,12,4)" onclick="OnShapeClick(12,4)" onfocus="UpdateTooltip(this,12,4);" onkeyup="OnShapeKey(12,4)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="玩家2" origTitle="玩家2"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -608,-751 l -494,-751 l -494,-835 l -608,-835 l -608,-751xe" onmouseover="UpdateTooltip(this,12,5)" onclick="OnShapeClick(12,5)" onfocus="UpdateTooltip(this,12,5);" onkeyup="OnShapeKey(12,5)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="发送准备 SendUserReady" origTitle="发送准备 SendUserReady"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -779,-639 l -665,-639 l -665,-723 l -779,-723 l -779,-639xe" onmouseover="UpdateTooltip(this,12,6)" onclick="OnShapeClick(12,6)" onfocus="UpdateTooltip(this,12,6);" onkeyup="OnShapeKey(12,6)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="发送准备 SendUserReady" origTitle="发送准备 SendUserReady"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -608,-639 l -494,-639 l -494,-723 l -608,-723 l -608,-639xe" onmouseover="UpdateTooltip(this,12,7)" onclick="OnShapeClick(12,7)" onfocus="UpdateTooltip(this,12,7);" onkeyup="OnShapeKey(12,7)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="发送准备 SendUserReady" origTitle="发送准备 SendUserReady"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -436,-639 l -322,-639 l -322,-723 l -436,-723 l -436,-639xe" onmouseover="UpdateTooltip(this,12,8)" onclick="OnShapeClick(12,8)" onfocus="UpdateTooltip(this,12,8);" onkeyup="OnShapeKey(12,8)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="发送准备 SendUserReady" origTitle="发送准备 SendUserReady"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -265,-639 l -151,-639 l -151,-723 l -265,-723 l -265,-639xe" onmouseover="UpdateTooltip(this,12,9)" onclick="OnShapeClick(12,9)" onfocus="UpdateTooltip(this,12,9);" onkeyup="OnShapeKey(12,9)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="OnEventGameStart 游戏开始" origTitle="OnEventGameStart 游戏开始"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -543,-294 l -404,-294 l -404,-378 l -543,-378 l -543,-294xe" onmouseover="UpdateTooltip(this,12,14)" onclick="OnShapeClick(12,14)" onfocus="UpdateTooltip(this,12,14);" onkeyup="OnShapeKey(12,14)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="不做动作" origTitle="不做动作"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -237,-461 l -98,-461 l -98,-545 l -237,-545 l -237,-461xe" onmouseover="UpdateTooltip(this,12,15)" onclick="OnShapeClick(12,15)" onfocus="UpdateTooltip(this,12,15);" onkeyup="OnShapeKey(12,15)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CMD_S_GAME_START SendTableData 发送开始数据" origTitle="CMD_S_GAME_START SendTableData 发送开始数据"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -573,-180 l -373,-180 l -373,-263 l -573,-263 l -573,-180xe" onmouseover="UpdateTooltip(this,12,20)" onclick="OnShapeClick(12,20)" onfocus="UpdateTooltip(this,12,20);" onkeyup="OnShapeKey(12,20)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="GameClientDlg 客户端" origTitle="GameClientDlg 客户端"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -929,177 l -14,177 l -14,-99 l -929,-99 l -929,177xe" onmouseover="UpdateTooltip(this,12,22)" onclick="OnShapeClick(12,22)" onfocus="UpdateTooltip(this,12,22);" onkeyup="OnShapeKey(12,22)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CMD_S_GAME_START OnEventGameStart 接收开始数据" origTitle="CMD_S_GAME_START OnEventGameStart 接收开始数据"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -573,15 l -373,15 l -373,-68 l -573,-68 l -573,15xe" onmouseover="UpdateTooltip(this,12,23)" onclick="OnShapeClick(12,23)" onfocus="UpdateTooltip(this,12,23);" onkeyup="OnShapeKey(12,23)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="设置界面" origTitle="设置界面"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -279,15 l -140,15 l -140,-68 l -279,-68 l -279,15xe" onmouseover="UpdateTooltip(this,12,26)" onclick="OnShapeClick(12,26)" onfocus="UpdateTooltip(this,12,26);" onkeyup="OnShapeKey(12,26)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="设置游戏数据" origTitle="设置游戏数据"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -807,11 l -668,11 l -668,-64 l -807,-64 l -807,11xe" onmouseover="UpdateTooltip(this,12,28)" onclick="OnShapeClick(12,28)" onfocus="UpdateTooltip(this,12,28);" onkeyup="OnShapeKey(12,28)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="发送当前玩家操作 CMD_C_OUT_CARD SendData" origTitle="发送当前玩家操作 CMD_C_OUT_CARD SendData"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -557,145 l -390,145 l -390,61 l -557,61 l -557,145xe" onmouseover="UpdateTooltip(this,12,30)" onclick="OnShapeClick(12,30)" onfocus="UpdateTooltip(this,12,30);" onkeyup="OnShapeKey(12,30)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="游戏服务器" origTitle="游戏服务器"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -934,669 l -13,669 l -13,231 l -934,231 l -934,669xe" onmouseover="UpdateTooltip(this,12,32)" onclick="OnShapeClick(12,32)" onfocus="UpdateTooltip(this,12,32);" onkeyup="OnShapeKey(12,32)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="接收当前玩家操作 CMD_C_OUT_CARD OnGameMessage" origTitle="接收当前玩家操作 CMD_C_OUT_CARD OnGameMessage"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -557,354 l -390,354 l -390,270 l -557,270 l -557,354xe" onmouseover="UpdateTooltip(this,12,33)" onclick="OnShapeClick(12,33)" onfocus="UpdateTooltip(this,12,33);" onkeyup="OnShapeKey(12,33)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="发送操作动作 CMD_S_OUT_CARD SendGameScene" origTitle="发送操作动作 CMD_S_OUT_CARD SendGameScene"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -306,492 l -140,492 l -140,408 l -306,408 l -306,492xe" onmouseover="UpdateTooltip(this,12,34)" onclick="OnShapeClick(12,34)" onfocus="UpdateTooltip(this,12,34);" onkeyup="OnShapeKey(12,34)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="满足结束条件" origTitle="满足结束条件"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -543,450 l -473,492 l -404,450 l -473,408 l -543,450xe" onmouseover="UpdateTooltip(this,12,36)" onclick="OnShapeClick(12,36)" onfocus="UpdateTooltip(this,12,36);" onkeyup="OnShapeKey(12,36)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CMD_S_GAME_END SendTableData 发送结束数据" origTitle="CMD_S_GAME_END SendTableData 发送结束数据"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -560,633 l -386,633 l -386,549 l -560,549 l -560,633xe" onmouseover="UpdateTooltip(this,12,40)" onclick="OnShapeClick(12,40)" onfocus="UpdateTooltip(this,12,40);" onkeyup="OnShapeKey(12,40)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="GameClientDlg 客户端" origTitle="GameClientDlg 客户端"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -929,998 l -14,998 l -14,722 l -929,722 l -929,998xe" onmouseover="UpdateTooltip(this,12,42)" onclick="OnShapeClick(12,42)" onfocus="UpdateTooltip(this,12,42);" onkeyup="OnShapeKey(12,42)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CMD_S_GAME_END OnEventGameEnd 接收结束数据" origTitle="CMD_S_GAME_END OnEventGameEnd 接收结束数据"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -573,836 l -373,836 l -373,752 l -573,752 l -573,836xe" onmouseover="UpdateTooltip(this,12,43)" onclick="OnShapeClick(12,43)" onfocus="UpdateTooltip(this,12,43);" onkeyup="OnShapeKey(12,43)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="设置界面" origTitle="设置界面"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -279,836 l -140,836 l -140,752 l -279,752 l -279,836xe" onmouseover="UpdateTooltip(this,12,44)" onclick="OnShapeClick(12,44)" onfocus="UpdateTooltip(this,12,44);" onkeyup="OnShapeKey(12,44)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="设置游戏数据" origTitle="设置游戏数据"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -807,832 l -668,832 l -668,757 l -807,757 l -807,832xe" onmouseover="UpdateTooltip(this,12,46)" onclick="OnShapeClick(12,46)" onfocus="UpdateTooltip(this,12,46);" onkeyup="OnShapeKey(12,46)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="重置客户端 游戏结束" origTitle="重置客户端 游戏结束"  style="top:-1000;left:-1000;width:1069;height:2000;position:absolute" path=" m -557,966 l -390,966 l -390,882 l -557,882 l -557,966xe" onmouseover="UpdateTooltip(this,12,48)" onclick="OnShapeClick(12,48)" onfocus="UpdateTooltip(this,12,48);" onkeyup="OnShapeKey(12,48)"/> 
+
+</v:group>
+
+
+
+</div>
+
+
+
+</body>
+</html>
+

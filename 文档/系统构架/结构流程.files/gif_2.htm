@@ -1,0 +1,145 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>
+结构流程
+</title>
+<script type="text/javascript" language="javascript">
+function UpdateTooltip(){};
+function OnShapeClick(){};
+</script>
+
+<script src="gif_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+	if(parent.isUpLevel)
+	{
+		location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+	}
+</script>
+
+
+
+<script type="text/jscript" language="jscript">
+
+var pageID = 0;
+
+var isUpLevel = parent.isUpLevel;
+var OnShapeClick = null;
+if (!parent.isMac)
+{
+	OnShapeClick = parent.OnShapeClick;
+}
+
+var OnShapeKey = parent.OnShapeKey;
+var UpdateTooltip = parent.UpdateTooltip;
+var clickMenu = parent.clickMenu;
+var toggleMenuDiv = parent.toggleMenuDiv;
+var toggleMenuLink = parent.toggleMenuLink;
+var GoToPage = parent.GoToPage;
+
+
+if (parent.isUpLevel)
+{
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			var fileEntry = parent.g_FileList[parent.g_CurPageIndex];
+			var fileToLoad = fileToLoad = fileEntry.PriImage;
+			if (fileEntry.SecImage.length > 0)
+			{
+				fileToLoad = fileEntry.SecImage;
+			}
+
+			location.replace(fileToLoad);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+
+	var viewMgr = new parent.CViewMgr();
+	parent.viewMgr = viewMgr;
+
+	viewMgr.SupportsDetails = true;
+	viewMgr.SupportsSearch = true;
+
+	viewMgr.put_Location = ViewMgrSetRasterLocation;
+	viewMgr.visBBoxLeft = 0.392034;
+	viewMgr.visBBoxRight = 8.202733;
+	viewMgr.visBBoxBottom = 2.006207;
+	viewMgr.visBBoxTop = 11.222139;
+	viewMgr.highlightDiv = null;
+}
+
+function load ()
+{
+	if(isUpLevel)
+	{
+		arrowdiv.innerHTML = '<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>';
+
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.CurPageUpdate (pageIndex);
+	}
+}
+
+function unload()
+{
+	if(isUpLevel)
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+}
+
+window.onload = load;
+window.onunload = unload;
+document.onclick = clickMenu;
+
+</script>
+</head>
+
+<body class="pageView" bgcolor="#FFFFFF">
+
+<div id=arrowdiv style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+<DIV id=RasterDiv>
+
+
+<center>
+  <IMG id="ConvertedImage" SRC="gif_2.gif" ALT="基本结构" name=RasterImage BORDER="0" USEMAP="#visImageMap">
+</center>
+
+<MAP NAME="visImageMap">
+  <AREA shape="POLYGON" tabindex="1" ALT="金币数据库等" origTitle="金币数据库等" TITLE="金币数据库等"  target="_top" COORDS=" 204,8 203,9 203,9 203,10 202,11 202,11 202,12 202,13 201,14 201,14 201,15 201,16 200,17 200,17 200,18 200,19 200,20 199,20 199,21 199,22 199,23 199,24 199,24 199,25 199,26 199,27 199,27 199,28 199,29 199,30 199,31 199,31 199,32 199,33 199,34 200,34 200,35 200,36 200,37 200,38 201,38 201,39 201,40 201,41 202,41 202,42 202,43 202,43 203,44 203,45 203,46 204,46 263,46 263,46 262,45 262,44 262,43 261,43 261,42 261,41 261,41 260,40 260,39 260,38 260,38 259,37 259,36 259,35 259,34 259,34 259,33 259,32 259,31 258,31 258,30 258,29 258,28 258,27 258,27 258,26 258,25 258,24 258,24 259,23 259,22 259,21 259,20 259,20 259,19 259,18 259,17 260,17 260,16 260,15 260,14 261,14 261,13 261,12 261,11 262,11 262,10 262,9 263,9 263,8 204,8" onmouseover="UpdateTooltip(this,0,29)" onfocus="UpdateTooltip(this,0,29)" onclick="return OnShapeClick(0,29);" onkeyup="OnShapeKey(0,29);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏3" origTitle="游戏3" TITLE="游戏3"  target="_top" COORDS=" 312,556 377,556 377,517 312,517 312,556" onmouseover="UpdateTooltip(this,0,15)" onfocus="UpdateTooltip(this,0,15)" onclick="return OnShapeClick(0,15);" onkeyup="OnShapeKey(0,15);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏2" origTitle="游戏2" TITLE="游戏2"  target="_top" COORDS=" 199,556 263,556 263,517 199,517 199,556" onmouseover="UpdateTooltip(this,0,14)" onfocus="UpdateTooltip(this,0,14)" onclick="return OnShapeClick(0,14);" onkeyup="OnShapeKey(0,14);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏1" origTitle="游戏1" TITLE="游戏1"  target="_top" COORDS=" 85,556 150,556 150,517 85,517 85,556" onmouseover="UpdateTooltip(this,0,13)" onfocus="UpdateTooltip(this,0,13)" onclick="return OnShapeClick(0,13);" onkeyup="OnShapeKey(0,13);">
+  <AREA shape="POLYGON" tabindex="1" ALT="客户端大厅" origTitle="客户端大厅" TITLE="客户端大厅"  target="_top" COORDS=" 42,475 420,475 420,437 42,437 42,475" onmouseover="UpdateTooltip(this,0,12)" onfocus="UpdateTooltip(this,0,12)" onclick="return OnShapeClick(0,12);" onkeyup="OnShapeKey(0,12);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏系统客户端" origTitle="游戏系统客户端" TITLE="游戏系统客户端"  target="_top" COORDS=" 0,601 462,601 462,408 0,408 0,601" onmouseover="UpdateTooltip(this,0,11)" onfocus="UpdateTooltip(this,0,11)" onclick="return OnShapeClick(0,11);" onkeyup="OnShapeKey(0,11);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏数据库" origTitle="游戏数据库" TITLE="游戏数据库"  target="_top" COORDS=" 204,46 203,47 203,48 203,48 202,49 202,50 202,51 202,51 201,52 201,53 201,54 201,54 200,55 200,56 200,57 200,57 200,58 199,59 199,60 199,60 199,61 199,62 199,63 199,64 199,64 199,65 199,66 199,67 199,68 199,68 199,69 199,70 199,71 199,71 199,72 200,73 200,74 200,75 200,75 200,76 201,77 201,78 201,78 201,79 202,80 202,81 202,81 202,82 203,83 203,83 203,84 204,85 263,85 263,84 262,83 262,83 262,82 261,81 261,81 261,80 261,79 260,78 260,78 260,77 260,76 259,75 259,75 259,74 259,73 259,72 259,71 259,71 259,70 258,69 258,68 258,68 258,67 258,66 258,65 258,64 258,64 258,63 258,62 259,61 259,60 259,60 259,59 259,58 259,57 259,57 259,56 260,55 260,54 260,54 260,53 261,52 261,51 261,51 261,50 262,49 262,48 262,48 263,47 263,46 204,46" onmouseover="UpdateTooltip(this,0,8)" onfocus="UpdateTooltip(this,0,8)" onclick="return OnShapeClick(0,8);" onkeyup="OnShapeKey(0,8);">
+  <AREA shape="POLYGON" tabindex="1" ALT="用户数据库" origTitle="用户数据库" TITLE="用户数据库"  target="_top" COORDS=" 338,39 338,39 338,40 337,41 337,41 337,42 336,43 336,44 336,44 336,45 335,46 335,47 335,47 335,48 335,49 334,50 334,50 334,51 334,52 334,53 334,54 334,54 334,55 334,56 334,57 334,57 334,58 334,59 334,60 334,61 334,61 334,62 334,63 334,64 334,65 334,65 334,66 335,67 335,68 335,68 335,69 335,70 336,71 336,71 336,72 336,73 337,74 337,74 337,75 338,76 338,76 338,77 398,77 397,76 397,76 397,75 396,74 396,74 396,73 396,72 395,71 395,71 395,70 395,69 394,68 394,68 394,67 394,66 394,65 394,65 393,64 393,63 393,62 393,61 393,61 393,60 393,59 393,58 393,57 393,57 393,56 393,55 393,54 393,54 393,53 393,52 394,51 394,50 394,50 394,49 394,48 394,47 395,47 395,46 395,45 395,44 396,44 396,43 396,42 396,41 397,41 397,40 397,39 398,39 338,39" onmouseover="UpdateTooltip(this,0,7)" onfocus="UpdateTooltip(this,0,7)" onclick="return OnShapeClick(0,7);" onkeyup="OnShapeKey(0,7);">
+  <AREA shape="POLYGON" tabindex="1" ALT="服务数据库" origTitle="服务数据库" TITLE="服务数据库"  target="_top" COORDS=" 69,39 69,39 68,40 68,41 68,41 67,42 67,43 67,44 67,44 66,45 66,46 66,47 66,47 65,48 65,49 65,50 65,50 65,51 65,52 65,53 64,54 64,54 64,55 64,56 64,57 64,57 64,58 64,59 64,60 64,61 64,61 64,62 65,63 65,64 65,65 65,65 65,66 65,67 65,68 66,68 66,69 66,70 66,71 67,71 67,72 67,73 67,74 68,74 68,75 68,76 69,76 69,77 128,77 128,76 128,76 127,75 127,74 127,74 126,73 126,72 126,71 126,71 125,70 125,69 125,68 125,68 125,67 124,66 124,65 124,65 124,64 124,63 124,62 124,61 124,61 124,60 124,59 124,58 124,57 124,57 124,56 124,55 124,54 124,54 124,53 124,52 124,51 124,50 124,50 125,49 125,48 125,47 125,47 125,46 126,45 126,44 126,44 126,43 127,42 127,41 127,41 128,40 128,39 128,39 69,39" onmouseover="UpdateTooltip(this,0,6)" onfocus="UpdateTooltip(this,0,6)" onclick="return OnShapeClick(0,6);" onkeyup="OnShapeKey(0,6);">
+  <AREA shape="POLYGON" tabindex="1" ALT="登陆服务器" origTitle="登陆服务器" TITLE="登陆服务器"  target="_top" COORDS=" 334,271 398,271 398,232 334,232 334,271" onmouseover="UpdateTooltip(this,0,5)" onfocus="UpdateTooltip(this,0,5)" onclick="return OnShapeClick(0,5);" onkeyup="OnShapeKey(0,5);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏服务器3" origTitle="游戏服务器3" TITLE="游戏服务器3"  target="_top" COORDS=" 199,322 263,322 263,284 199,284 199,322" onmouseover="UpdateTooltip(this,0,4)" onfocus="UpdateTooltip(this,0,4)" onclick="return OnShapeClick(0,4);" onkeyup="OnShapeKey(0,4);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏服务器2" origTitle="游戏服务器2" TITLE="游戏服务器2"  target="_top" COORDS=" 199,271 263,271 263,232 199,232 199,271" onmouseover="UpdateTooltip(this,0,3)" onfocus="UpdateTooltip(this,0,3)" onclick="return OnShapeClick(0,3);" onkeyup="OnShapeKey(0,3);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏服务器1" origTitle="游戏服务器1" TITLE="游戏服务器1"  target="_top" COORDS=" 199,220 263,220 263,181 199,181 199,220" onmouseover="UpdateTooltip(this,0,2)" onfocus="UpdateTooltip(this,0,2)" onclick="return OnShapeClick(0,2);" onkeyup="OnShapeKey(0,2);">
+  <AREA shape="POLYGON" tabindex="1" ALT="中心服务器" origTitle="中心服务器" TITLE="中心服务器"  target="_top" COORDS=" 64,271 128,271 128,232 64,232 64,271" onmouseover="UpdateTooltip(this,0,1)" onfocus="UpdateTooltip(this,0,1)" onclick="return OnShapeClick(0,1);" onkeyup="OnShapeKey(0,1);">
+  <AREA shape="POLYGON" tabindex="1" ALT="数据库记录" origTitle="数据库记录" TITLE="数据库记录"  target="_top" COORDS=" 0,103 462,103 462,0 0,0 0,103" onmouseover="UpdateTooltip(this,0,9)" onfocus="UpdateTooltip(this,0,9)" onclick="return OnShapeClick(0,9);" onkeyup="OnShapeKey(0,9);">
+  <AREA shape="POLYGON" tabindex="1" ALT="游戏系统服务端" origTitle="游戏系统服务端" TITLE="游戏系统服务端"  target="_top" COORDS=" 0,347 462,347 462,154 0,154 0,347" onmouseover="UpdateTooltip(this,0,10)" onfocus="UpdateTooltip(this,0,10)" onclick="return OnShapeClick(0,10);" onkeyup="OnShapeKey(0,10);">
+</MAP>
+
+
+
+</DIV>
+
+</body>
+</html>
+

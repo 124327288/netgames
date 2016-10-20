@@ -1,0 +1,189 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" 
+ xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>结构流程</title>
+<style type="text/css">
+	 v\:* { behavior: url(#default#VML); }
+</style>
+
+<script src="vml_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+
+	var pageID = 9;
+	var viewMgr = null;
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+	function getPNZ()
+	{
+		var rawHTML = VMLDiv.innerHTML;
+		var strReturn = ""
+		
+		strReturn = rawHTML.slice( rawHTML.indexOf( '<v:group' ), rawHTML.indexOf( "</v:shape>" ) );
+		strReturn += "</v:shape></v:group>\n";
+				
+		return strReturn;
+	}
+	
+	function load()
+	{
+		viewMgr = new parent.CViewMgr("ConvertedImage", "arrowDiv");
+
+		viewMgr.put_Location = ViewMgrSetVMLLocation;
+
+
+		viewMgr.visBBoxLeft = 0.473478;
+		viewMgr.visBBoxRight = 6.615840;
+		viewMgr.visBBoxBottom = 2.322835;
+		viewMgr.visBBoxTop = 10.434738;
+
+		viewMgr.Zoom = VMLZoomChange;
+		viewMgr.setView= VMLSetView;
+
+		viewMgr.SupportsDetails = true;
+		viewMgr.SupportsSearch = true;
+
+		parent.viewMgr = viewMgr;
+
+		fit();
+	}
+
+	function unload()
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+
+	function fit()
+	{
+		if(parent.frmToolbar)
+		{
+			if (parent.g_WidgetsLoaded)
+			{
+				var zoom100 = parent.frmToolbar.document.all('a100');
+				if (zoom100)
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					zoom100.click();
+				}
+				else
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					viewMgr.Zoom(100);
+				}
+			}
+			else
+			{
+				window.setTimeout("fit()", 500);
+			}
+		}	
+		else
+		{
+			parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+			viewMgr.Zoom(100);
+		}
+	}
+
+	function PostZoomProcessing (newZoomLevel)
+	{
+		parent.viewMgr.PostZoomProcessing = null;
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.viewMgr.getPNZ = getPNZ;
+		parent.CurPageUpdate (pageIndex);
+	}
+
+
+	
+	var isUpLevel = parent.isUpLevel;
+	var OnShapeClick = parent.OnShapeClick;
+	var OnShapeKey = parent.OnShapeKey;
+	var UpdateTooltip = parent.UpdateTooltip;
+	var clickMenu = parent.clickMenu;
+	var toggleMenuDiv = parent.toggleMenuDiv;
+	var toggleMenuLink = parent.toggleMenuLink;
+	var GoToPage = parent.GoToPage;
+
+	window.onload = load;
+	window.onunload = unload;
+	document.onclick = clickMenu;
+
+
+
+
+</script>
+
+</head>
+
+<body style="MARGIN:10px" onresize="VMLOnResize();" onscroll="VMLOnScroll();">
+
+<div id="arrowdiv" style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+
+
+
+<div id="VMLDiv" >
+
+
+<v:group  id="ConvertedImage" style="width:3.028814in;height:4.000000in;position:absolute;visibility=hidden;" coordSize="1514,2000" coordOrigin="-1000,-1000" >
+
+<v:shapetype 
+  id="VISSHAPE"
+  target="_parent"
+  coordsize="1514,2000"
+  coordorigin="-1000,-1000"
+  stroked="f"
+  strokecolor="red"
+  filled="t"
+>
+<v:fill opacity="0.0"/>
+</v:shapetype>
+
+
+<v:shape style="top:-1000.0;left:-1000.0;width:1514.4;height:2000.0;position:absolute" coordSize="1514,2000" coordOrigin="-1000,-1000" >
+<v:imagedata src="vml_7.emz"/>
+</v:shape>
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CLogonService 登陆服务类" origTitle="CLogonService 登陆服务类"  style="top:-1000;left:-1000;width:1514;height:2000;position:absolute" path=" m -678,648 l 452,648 l 452,-106 l -678,-106 l -678,648xe" onmouseover="UpdateTooltip(this,9,1)" onclick="OnShapeClick(9,1)" onfocus="UpdateTooltip(this,9,1);" onkeyup="OnShapeKey(9,1)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CServiceEngineHelper 服务引擎" origTitle="CServiceEngineHelper 服务引擎"  style="top:-1000;left:-1000;width:1514;height:2000;position:absolute" path=" m -629,571 l 404,571 l 404,145 l -629,145 l -629,571xe" onmouseover="UpdateTooltip(this,9,2)" onclick="OnShapeClick(9,2)" onfocus="UpdateTooltip(this,9,2);" onkeyup="OnShapeKey(9,2)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CSystemOptionDlg 设置对话框" origTitle="CSystemOptionDlg 设置对话框"  style="top:-1000;left:-1000;width:1514;height:2000;position:absolute" path=" m -277,-213 l 61,-213 l 61,-358 l -277,-358 l -277,-213xe" onmouseover="UpdateTooltip(this,9,3)" onclick="OnShapeClick(9,3)" onfocus="UpdateTooltip(this,9,3);" onkeyup="OnShapeKey(9,3)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CDataBaseSink 数据库" origTitle="CDataBaseSink 数据库"  style="top:-1000;left:-1000;width:1514;height:2000;position:absolute" path=" m -596,551 l -308,551 l -308,406 l -596,406 l -596,551xe" onmouseover="UpdateTooltip(this,9,5)" onclick="OnShapeClick(9,5)" onfocus="UpdateTooltip(this,9,5);" onkeyup="OnShapeKey(9,5)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CAttemperEngineSink 调度引擎" origTitle="CAttemperEngineSink 调度引擎"  style="top:-1000;left:-1000;width:1514;height:2000;position:absolute" path=" m 83,547 l 389,547 l 389,401 l 83,401 l 83,547xe" onmouseover="UpdateTooltip(this,9,6)" onclick="OnShapeClick(9,6)" onfocus="UpdateTooltip(this,9,6);" onkeyup="OnShapeKey(9,6)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CInitParamter 服务参数" origTitle="CInitParamter 服务参数"  style="top:-1000;left:-1000;width:1514;height:2000;position:absolute" path=" m -229,63 l 13,63 l 13,-82 l -229,-82 l -229,63xe" onmouseover="UpdateTooltip(this,9,7)" onclick="OnShapeClick(9,7)" onfocus="UpdateTooltip(this,9,7);" onkeyup="OnShapeKey(9,7)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="登陆服务器工程实现： 通过对话框，设置服务参数。此参数包括数据库名称，地址等。 根据服务参数配置启动登陆服务，如果参数不正确则启..." origTitle="登陆服务器工程实现： 通过对话框，设置服务参数。此参数包括数据库名称，地址等。 根据服务参数配置启动登陆服务，如果参数不正确则启..."  style="top:-1000;left:-1000;width:1514;height:2000;position:absolute" path=" m -726,-761 l 510,-761 l 510,-996 l -726,-996 l -726,-761xe" onmouseover="UpdateTooltip(this,9,9)" onclick="OnShapeClick(9,9)" onfocus="UpdateTooltip(this,9,9);" onkeyup="OnShapeKey(9,9)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="CCenterSocket 中心连接" origTitle="CCenterSocket 中心连接"  style="top:-1000;left:-1000;width:1514;height:2000;position:absolute" path=" m -256,310 l 31,310 l 31,165 l -256,165 l -256,310xe" onmouseover="UpdateTooltip(this,9,12)" onclick="OnShapeClick(9,12)" onfocus="UpdateTooltip(this,9,12);" onkeyup="OnShapeKey(9,12)"/> 
+
+</v:group>
+
+
+
+</div>
+
+
+
+</body>
+</html>
+

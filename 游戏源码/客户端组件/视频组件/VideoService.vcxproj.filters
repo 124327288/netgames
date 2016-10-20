@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoService.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoServiceControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoRece.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoSend.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoServiceControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoServiceModule.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\BT_BIG_FLOWER.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_BIG_FRIEND.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_BIG_MORE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_BIG_NOSEE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_BIG_NOTALK.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_BIG_RESORE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_BIG_SEE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_BIG_TALK.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_SMALL_FLOWER.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_SMALL_MORE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_SMALL_NOSEE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_SMALL_NOTALK.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_SMALL_RESORE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_SMALL_SEE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_SMALL_TALK.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\Gift_1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\Gift_10.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\Gift_11.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\Gift_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\Gift_3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\Gift_4.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\Gift_5.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\Gift_6.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\Gift_7.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\Gift_8.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\Gift_9.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\Gift_lily.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\GIFT_RED_ROSE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\Gift_small_lily.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GiftPic\Gift_small_rose.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GoodsPic\GOOD_RED_ROSE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GoodsPic\Good_small_rose.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\IDB_BT_BIG_NOSEE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\IDB_BT_BIG_NOTALK.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\IDB_BT_BIG_TALK.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\IDB_BT_SMALL_FRIEND.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\IDB_BT_SMALL_NOSEE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\LARGE_FEMALE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\LARGE_FRAME.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\LARGE_MALE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\LARGE_PHOTO.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\LARGE_VOLUME.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\LARGE_VOLUME_EX.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\SMALL_FEMALE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\SMALL_FRAME.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\SMALL_MALE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\SMALL_PHOTO.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\SMALL_VOLUME.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\SMALL_VOLUME_EX.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VideoService.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

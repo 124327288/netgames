@@ -1,0 +1,32 @@
+BODY{COLOR: #323232;FONT-SIZE: 12px}
+P{COLOR: #323232;FONT-SIZE: 12px}
+TD{COLOR: #323232;FONT-SIZE: 12px}
+.title{FONT-SIZE: 10.5pt}
+.INPUT{BORDER-BOTTOM: #000000 1px solid;
+    BORDER-LEFT: #000000 1px solid;
+    BORDER-RIGHT: #000000 1px solid;
+    BORDER-TOP: #000000 1px solid
+}
+.menu{FONT-SIZE: 12px}
+A:link{COLOR: #550055;FONT-FAMILY: 宋体;TEXT-DECORATION: none}
+A:visited{COLOR: #555555;FONT-FAMILY: 宋体;TEXT-DECORATION: none}
+A:hover{COLOR: #ff0000;TEXT-DECORATION: underline}
+A.menu:link{COLOR: #ffffff;TEXT-DECORATION: none}
+A.menu:hover{COLOR: #00ff00;TEXT-DECORATION: underline}
+A.menu:visited{COLOR: #ffffff;}
+
+.p1{background:#FF9393}
+.p11{background:#0080C0}  
+.p2{background:#FFECEC}
+.p21{background:#E1F0FF} 
+.p3{background:#E7F3FF} 
+.p4{background:#E7F3FF;font-family:"宋体"} 
+.p5{background:#E7F3FF;font-family:"宋体"} 
+.p6{background:#ff9393;font-family:"宋体"}
+.p61{background:#0080C0;font-family:"宋体"}
+.p7{background:#CCCCCC;font-family:"宋体"}
+.input{ height:20px;BORDER-BOTTOM: #000000 1px groove; BORDER-LEFT: #000000 1px groove; BORDER-RIGHT: #000000 1px groove; BORDER-TOP: #000000 1px groove; FONT-SIZE: 9pt; background:#dddddd }
+FORM{font-family:"宋体";FONT-SIZE: 12px;
+MARGIN-BOTTOM: 0pt;
+MARGIN-TOP: 0pt
+} 

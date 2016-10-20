@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>VideoService</ProjectName>
+    <ProjectGuid>{C2D6B50F-273E-4437-AE5C-9F0E4FD962B0}</ProjectGuid>
+    <Keyword>MFCDLLProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;VIDEO_SERVICE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../链接库/SkinControlsD.lib;../../链接库/PropertyModuleD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../运行/Debug/VideoServiceD.dll</OutputFile>
+      <ModuleDefinitionFile>.\VideoServiceD.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>../../链接库/VideoServiceD.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\发布组件\客户端组件\Debug
+copy /y ..\..\运行\Debug\$(TargetFileName) ..\..\发布组件\客户端组件\Debug\$(TargetFileName)
+</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXEXT;VIDEO_SERVICE_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../链接库/SkinControls.lib;../../链接库/PropertyModule.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../运行/Release/VideoService.dll</OutputFile>
+      <ModuleDefinitionFile>.\VideoService.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>../../链接库/VideoService.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\发布组件\客户端组件\Release
+copy /y ..\..\运行\Release\$(TargetFileName) ..\..\发布组件\客户端组件\Release\$(TargetFileName)
+</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="VideoService.cpp" />
+    <ClCompile Include="VideoServiceControl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Stdafx.h" />
+    <ClInclude Include="VideoRece.h" />
+    <ClInclude Include="VideoSend.h" />
+    <ClInclude Include="VideoServiceControl.h" />
+    <ClInclude Include="VideoServiceModule.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\BT_BIG_FLOWER.bmp" />
+    <Image Include="Res\BT_BIG_FRIEND.bmp" />
+    <Image Include="Res\BT_BIG_MORE.bmp" />
+    <Image Include="Res\BT_BIG_NOSEE.bmp" />
+    <Image Include="Res\BT_BIG_NOTALK.bmp" />
+    <Image Include="Res\BT_BIG_RESORE.bmp" />
+    <Image Include="Res\BT_BIG_SEE.bmp" />
+    <Image Include="Res\BT_BIG_TALK.bmp" />
+    <Image Include="Res\BT_SMALL_FLOWER.bmp" />
+    <Image Include="Res\BT_SMALL_MORE.bmp" />
+    <Image Include="Res\BT_SMALL_NOSEE.bmp" />
+    <Image Include="Res\BT_SMALL_NOTALK.bmp" />
+    <Image Include="Res\BT_SMALL_RESORE.bmp" />
+    <Image Include="Res\BT_SMALL_SEE.bmp" />
+    <Image Include="Res\BT_SMALL_TALK.bmp" />
+    <Image Include="Res\GiftPic\Gift_1.bmp" />
+    <Image Include="Res\GiftPic\Gift_10.bmp" />
+    <Image Include="Res\GiftPic\Gift_11.bmp" />
+    <Image Include="Res\GiftPic\Gift_2.bmp" />
+    <Image Include="Res\GiftPic\Gift_3.bmp" />
+    <Image Include="Res\GiftPic\Gift_4.bmp" />
+    <Image Include="Res\GiftPic\Gift_5.bmp" />
+    <Image Include="Res\GiftPic\Gift_6.bmp" />
+    <Image Include="Res\GiftPic\Gift_7.bmp" />
+    <Image Include="Res\GiftPic\Gift_8.bmp" />
+    <Image Include="Res\GiftPic\Gift_9.bmp" />
+    <Image Include="Res\GiftPic\Gift_lily.bmp" />
+    <Image Include="Res\GiftPic\GIFT_RED_ROSE.bmp" />
+    <Image Include="Res\GiftPic\Gift_small_lily.bmp" />
+    <Image Include="Res\GiftPic\Gift_small_rose.bmp" />
+    <Image Include="Res\GoodsPic\GOOD_RED_ROSE.bmp" />
+    <Image Include="Res\GoodsPic\Good_small_rose.bmp" />
+    <Image Include="Res\IDB_BT_BIG_NOSEE.bmp" />
+    <Image Include="Res\IDB_BT_BIG_NOTALK.bmp" />
+    <Image Include="Res\IDB_BT_BIG_TALK.bmp" />
+    <Image Include="Res\IDB_BT_SMALL_FRIEND.bmp" />
+    <Image Include="Res\IDB_BT_SMALL_NOSEE.bmp" />
+    <Image Include="Res\LARGE_FEMALE.bmp" />
+    <Image Include="Res\LARGE_FRAME.bmp" />
+    <Image Include="Res\LARGE_MALE.bmp" />
+    <Image Include="Res\LARGE_PHOTO.bmp" />
+    <Image Include="Res\LARGE_VOLUME.bmp" />
+    <Image Include="Res\LARGE_VOLUME_EX.bmp" />
+    <Image Include="Res\SMALL_FEMALE.bmp" />
+    <Image Include="Res\SMALL_FRAME.bmp" />
+    <Image Include="Res\SMALL_MALE.bmp" />
+    <Image Include="Res\SMALL_PHOTO.bmp" />
+    <Image Include="Res\SMALL_VOLUME.bmp" />
+    <Image Include="Res\SMALL_VOLUME_EX.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VideoService.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\共享组件\公共服务\ComService.vcxproj">
+      <Project>{48a17e45-3f15-4acc-92de-da57da6c360b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\共享组件\界面控件\SkinControls.vcxproj">
+      <Project>{9580a9ba-2c2c-4359-852c-fd627732bf1d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\客户端共享\ClientShare.vcxproj">
+      <Project>{1e98c5e5-a9bf-46c7-b57d-559a56ead344}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\鲜花道具\PropertyModule.vcxproj">
+      <Project>{3ba56c8d-483f-4faf-8eb6-716d05293a0b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

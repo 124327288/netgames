@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ClientShare.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Expression.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HintMsgBox.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageProxy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ClientShare.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Expression.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HintMsgBox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageProxy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ClientShare.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\ClientShare.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\Ep_res\EP_001.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_002.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_003.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_004.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_005.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_006.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_007.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_008.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_009.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_010.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_011.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_012.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_013.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_014.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_015.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_016.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_017.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_018.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_019.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_020.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_021.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_022.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_023.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_024.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_025.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_026.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_027.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_028.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_029.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_030.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_031.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_032.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_033.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_034.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_035.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_036.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_037.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_038.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_039.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_040.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_041.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_042.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_043.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_044.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_045.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_046.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_047.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_048.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_049.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_050.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_051.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_052.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_053.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_054.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_055.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_056.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_057.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_058.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_059.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_060.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_061.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_062.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_063.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_064.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_065.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_066.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_067.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_068.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_069.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Ep_res\EP_070.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

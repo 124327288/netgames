@@ -1,0 +1,109 @@
+body {
+	font-size: 9pt;
+	text-decoration: none;
+	color: #000000;
+	line-height: normal;
+
+
+
+}
+table {
+	font-size: 12px;
+	text-decoration: none;
+	color: #000000;
+	line-height: 150%;
+
+
+
+}
+td {
+	font-size: 12px;
+	text-decoration: none;
+	color: #000000;
+	line-height: 150%;
+
+
+
+}
+a:link {
+	font-size: 12px;
+	text-decoration: none;
+	color: #000000;
+
+
+}
+a:hover {
+	text-decoration: none;
+	color: #000000;
+
+
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+
+
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+
+
+}
+.head {
+	font-size: 16px;
+	line-height: 30px;
+	text-decoration: none;
+}
+.h2 {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 25px;
+}
+ul {
+	list-style-type: none;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0px;
+	padding: 0px 0px 0px 30px;
+
+}
+li {
+	list-style-type: none;
+	font-size: 12px;
+	line-height: 35px;
+}
+.abb {
+	font-size: 12px;
+	list-style-type: none;
+	line-height: 200%;
+	list-style-position: inside;
+}
+.bian {
+	border: 1px solid #CCCCCC;
+}
+.unnamed1 {
+	list-style-image: url(../imgs/bz.jpg);
+	font-size: 11pt;
+	color: #000000;
+	list-style-type: none;
+}
+.unnamed2 a:link {
+	font-size: 11pt;
+	text-decoration: none;
+}
+.unnamed1 a:link {
+	font-size: 11pt;
+	text-decoration: none;
+	border: 1px #000000;
+
+
+}
+.unnamed1 a:hover {
+	font-size: 11pt;
+	color: #CC6600;
+	text-decoration: underline;
+}
+.unnamed1 a:visited {
+	font-size: 11pt;
+}

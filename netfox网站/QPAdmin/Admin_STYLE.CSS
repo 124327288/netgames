@@ -1,0 +1,95 @@
+body
+{
+	font-family:宋体 Verdana;
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 150%;
+	background:#ffffff;
+	margin: 0px;
+	padding: 0px;
+text-decoration: none;
+scrollbar-face-color: #c6ebde;
+scrollbar-highlight-color: #ffffff; 
+scrollbar-shadow-color: #39867b; 
+scrollbar-3dlight-color: #39867b; 
+scrollbar-arrow-color: #330000; 
+scrollbar-track-color: #e2f3f1; 
+scrollbar-darkshadow-color: #ffffff;
+}
+img {
+	border:0;
+	
+}
+form { margin:0; padding:0;}
+td {font-family: "宋体";font-size: 12px;}
+
+button, input, select,textarea { vertical-align: middle; font-size:12px; }
+a {	text-decoration: none;color: #000000;}
+a:hover{color: #009286;text-decoration: underline;}
+
+.title{background:url(Images/topBar_bg.gif); height:22px; text-align:center; font-weight:bold;}
+.border{border: 1px solid #009286;}
+
+.tdbg{
+	background:#E1F4EE;
+	line-height: 120%;
+}
+.tdbg2{
+	background:#E0EEF5;
+	line-height: 120%;
+}
+.topbg
+{
+	background:#009286;
+	color: #FFFFFF;
+}
+.bgcolor {
+	background-color: #E1F4EE;
+}
+
+.txtrem {text-align:right;font-weight:bold;}
+
+a.detiallink { color:#333; text-decoration: underline; font-weight:bold; }
+a.detiallink:hover {color:#f60;text-decoration:none; font-weight:bold;}
+
+.username { margin-left:25px; font-size:12px; }
+.green { color:Green; font-weight:bold;}
+.red {color:Red; font-weight:bold;}
+
+.ml { margin-left:12px;}
+.mr { margin-right:12px;}
+
+.input { border-bottom:1px solid #BDC5CA; border-right:1px solid #BDC5CA; border-top:1px solid #6F787E; border-left:1px solid #6F787E; padding:3px 2px; font-size:12px; }
+.button { height:28px; line-height:28px; border:1px solid #C6D2E3; background:url("/images/button_bg.gif"); font-size:12px; }
+.button_on { background:url("/images/button_bg2.gif"); border:1px solid #c3a336; }
+
+.page { font-family:宋体}
+.page a {text-decoration: none; border:1px solid #B2BFCF;background:#fff;margin-right:2px; height:18px; line-height:18px; padding:0 5px; }
+.page a:hover {position: relative;border:1px solid #577DA8; background:#FFFFE9; text-decoration:none}
+.page input { width:32px;}
+#on { border:1px solid #1D619C; background:#1972BD; color:#fff; }
+
+/*特别说明的失效*/
+.fontDash {
+border-bottom-width: 2px; 
+border-top-style: none; 
+border-right-style: none; 
+border-bottom-style: dotted; 
+border-left-style: none; 
+border-bottom-color: #0033CC; 
+}
+
+.findUser { color:Red; font-size:14px; font-weight:300;}
+
+.s14_bg {background:#a60af4;}
+.msg, .errmsg {display:block;color:#fff;left:50%;font-size:12px;text-align:center;padding:0 28px;height:20px;line-height:20px;white-space:nowrap;}
+.msg {background:#4b981d;}
+
+.btn {font-size:12px;height:22px;line-height:0!important;line-height:18px;line-height:/**/18px;padding:0 9px 2px 9px!important;padding:0;padding:/**/0;}
+
+
+#user_right input { margin:0px 5px 4px 25px;}
+#master_right input { margin:0px 5px 4px 25px;}
+
+.ipblock {position:relative; width:130px; overflow:hidden;height:25px;  line-height:25px;}
+.hit { background-color:Green; color:White; line-height:25px; height:25px; padding-left:8px;}
